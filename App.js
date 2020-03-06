@@ -1,9 +1,9 @@
-import React from "react"
-import { StyleSheet, Text, SafeAreaView, ScrollView, View } from 'react-native';
-import Constants from 'expo-constants';
-import RecepieCard from './Components/RecepieCard'
-import styled from 'styled-components/native'
-
+import React from "react";
+import { StyleSheet, Text, SafeAreaView, ScrollView, View } from "react-native";
+import Constants from "expo-constants";
+import RecepieCard from "./Components/RecepieCard";
+import SearchButton from "./Components/SearchButton";
+import styled from "styled-components/native";
 
 const App = () => (
   <StyledView>
@@ -14,28 +14,28 @@ const App = () => (
         <RecepieCard />
         <RecepieCard />
       </Scroll>
+      <SearchButton />
     </StyledSafeAreaView>
   </StyledView>
-)
-export default App
+);
+export default App;
 
 const StyledView = styled.View`
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-content: center;
- margin-top: 100px;
-`
-const StyledSafeAreaView = styled(SafeAreaView)`
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-content: center;
-`
-const Scroll = styled(ScrollView)`
- background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 100px;
 `;
-
+const StyledSafeAreaView = styled(SafeAreaView)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+`;
+const Scroll = styled(ScrollView)`
+  background-color: #ffffff;
+`;
 
 /*
 const App = () => {
