@@ -1,64 +1,45 @@
 import React from "react"
 import { StyleSheet, Text, SafeAreaView, ScrollView, View } from 'react-native';
 import Constants from 'expo-constants';
-import RecepieCard from './Components/RecepieCard'
+import RecepieIndex from './Components/RecepieIndex'
+import SustainBadge from './Components/SustainBadge'
 import styled from 'styled-components/native'
 
 
-const App = () => (
-  <StyledView>
-    <StyledSafeAreaView>
-      <Scroll horizontal={true}>
-        <RecepieCard />
-        <RecepieCard />
-        <RecepieCard />
-        <RecepieCard />
-      </Scroll>
-    </StyledSafeAreaView>
-  </StyledView>
-)
-export default App
 
-const StyledView = styled.View`
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-content: center;
- margin-top: 100px;
-`
-const StyledSafeAreaView = styled(SafeAreaView)`
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-content: center;
-`
-const Scroll = styled(ScrollView)`
- background-color: #FFFFFF;
-`;
-
-
-/*
 const App = () => {
   return (
     <Container>
-      <RecipieIndex />
-      <Title>This is your cool app!</Title>
-      <Title>Go to App.js and start coding</Title>
-      <Title>💅💅💅</Title>
+      <ScrollView horizontal={true}>
+        <RecepieIndexContainer>
+          <BadgeView>
+            <SustainBadge />
+          </BadgeView>
+          <RecepieIndex />
+        </RecepieIndexContainer>
+      </ScrollView>
     </Container>
   )
 }
+export default App
 
 const Container = styled.View`
   flex: 1;
-  background-color: papayawhip;
+  background-color: #FFFFFF;
   justify-content: center;
   align-items: center;
 `
+const RecepieIndexContainer = styled.View`
 
-const Title = styled.Text`
-  font-size: 24px;
-  color: palevioletred;
 `
+const BadgeView = styled.View`
+    z-index: 2;
+    position: absolute;
+    right:0%;
+    left: 0%;
+    top: 90px;
+    bottom:0%;
+`;
 
-export default App */
+
+
