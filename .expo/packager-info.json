@@ -1,13 +1,21 @@
 {
   "devToolsPort": 19002,
-<<<<<<< HEAD
+
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 2238,
+  "expoServerNgrokUrl": "https://sd-vdy.swolfson1.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.sd-vdy.swolfson1.final-project-front-end.exp.direct",
+  "ngrokPid": 2269
+
+
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null
-=======
+
 
   "expoServerPort": 19000,
   "packagerPort": 19001,
@@ -16,5 +24,4 @@
   "packagerNgrokUrl": "https://packager.92-bjk.swolfson1.final-project-front-end.exp.direct",
   "ngrokPid": 40485
 
->>>>>>> 76a7ccb1997497cf9f9e704a5631606bf98a18ba
 }

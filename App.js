@@ -1,5 +1,11 @@
 
 
+const reducer = combineReducers({
+  food: food.reducer
+});
+
+const store = configureStore({ reducer });
+
 import React from "react";
 import { StyleSheet, Text, SafeAreaView, ScrollView, View } from "react-native";
 import Constants from "expo-constants";
@@ -8,8 +14,14 @@ import BackButton from "./Components/BackButton";
 import SearchButton from "./Components/SearchButton";
 import styled from "styled-components/native";
 import VeggieIcons from "./Components/VeggieIcons";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import { food } from "./Reducer/food.js";
 
-const App = () => (
+const App = () => {
+
+ return(
+   <Provider store={store}>
   <StyledView>
     <StyledSafeAreaView>
       <Scroll horizontal={true}>
@@ -23,7 +35,9 @@ const App = () => (
       <VeggieIcons />
     </StyledSafeAreaView>
   </StyledView>
-);
+  </Provider>
+  )
+};
 export default App;
 
 const StyledView = styled.View`
@@ -43,10 +57,6 @@ const Scroll = styled(ScrollView)`
   background-color: #ffffff;
 `;
 
-const BadgeView = styled.View`
-position: absolute;
-top: 38%;
-`
 
 
 export default App 
