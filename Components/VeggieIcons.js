@@ -9,7 +9,7 @@ export default class App extends React.Component {
           source={require("../assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg")}
         />
         <TouchableOpacity style={styles.button}></TouchableOpacity>
-    
+
       </View>
     );
   }

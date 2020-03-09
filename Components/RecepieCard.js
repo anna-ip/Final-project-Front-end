@@ -1,32 +1,29 @@
-import React from "react";
-import { ImageBackground, Text, View } from "react-native";
-import { Card, Title, Paragraph } from "react-native-paper";
-import TimeComponent from "./TimeComponent";
-import SustainBadge from "./SustainBadge";
-import styled from "styled-components/native";
+
+import React from 'react';
+import { ImageBackground, Text } from 'react-native'
+import { Card, Title, Paragraph } from 'react-native-paper';
+import TimeComponent from './TimeComponent'
+import styled from 'styled-components/native'
 import { useSelector } from "react-redux";
+
 
 const RecepieCard = () => {
   const hey = useSelector(store => store.food.hey);
   console.log(hey);
-
-  return (
+  return(
     <StyledCard>
-      <Card.Content>
-        <BadgeView>
-          <SustainBadge />
-        </BadgeView>
-        <StyledImageBackground
-          source={require("../assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg")}
-        >
-          <StyledTitle>"Here goes the title for the recepie {}"</StyledTitle>
-          <StyledText>"Card Subtitle{}"</StyledText>
-        </StyledImageBackground>
-        <TimeView>
-          <StyledParagraph> Time component font: Poppins</StyledParagraph>
-          <TimeComponent />
-        </TimeView>
-      </Card.Content>
+        <Card.Content>
+            <StyledImageBackground source={require('../assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
+                <StyledTitle>"Here goes the title for the recepie {}"</StyledTitle>
+                <StyledText>"Card Subtitle{}"</StyledText>
+            </StyledImageBackground>
+            <TimeView>
+                <StyledParagraph> Time component font: Poppins
+
+                </StyledParagraph>
+                <TimeComponent />
+            </TimeView>
+        </Card.Content>
     </StyledCard>
   );
 };
@@ -44,33 +41,26 @@ const StyledCard = styled(Card)`
   z-index: 0;
 `;
 
-const BadgeView = styled.View`
-  z-index: 2;
-  position: absolute;
-  left: 1px;
-  top: 1px;
-`;
-
 const StyledImageBackground = styled(ImageBackground)`
-  width: 100%;
-  height: 200px;
-
-  border-radius: 30;
-  z-index: 1;
-  position: absolute;
-  left: 8%;
-  right: 0%;
-  top: 60px;
-  bottom: 0%;
+width: 100%;
+height: 200px;
+border-radius: 30;
+z-index:1;
+position: absolute;
+left: 8%;
+right: 0%;
+top: 60px;
+bottom: 0%;
 `;
 
 const StyledTitle = styled(Title)`
-  color: #ffffff;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 50.3%;
-  bottom: 3.28%;
+color: #FFFFFF;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 50.3%;
+bottom: 3.28%;
+
 `;
 
 const StyledText = styled(Text)`
