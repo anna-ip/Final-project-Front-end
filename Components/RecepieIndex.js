@@ -40,14 +40,12 @@ export default RecepieIndex
 const StyledView = styled.View`
     z-index: -1; 
     margin-top: 25%;
- 
-  `;
+ `;
 
 //background for the Scrollwiev of the cards height
 const Scroll = styled(ScrollView)`
     background-color: #FFFFFF;
-   
-  `;
+ `;
 
 const CardContainer = styled.View`
     display: flex;
