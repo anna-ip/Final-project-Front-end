@@ -2,8 +2,10 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, ScrollView, View } from "react-native";
 import Constants from "expo-constants";
 import RecepieCard from "./Components/RecepieCard";
+import BackButton from "./Components/BackButton";
 import SearchButton from "./Components/SearchButton";
 import styled from "styled-components/native";
+import VeggieIcons from "./Components/VeggieIcons";
 
 const App = () => (
   <StyledView>
@@ -15,6 +17,8 @@ const App = () => (
         <RecepieCard />
       </Scroll>
       <SearchButton />
+      <BackButton />
+      <VeggieIcons />
     </StyledSafeAreaView>
   </StyledView>
 );

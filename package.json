@@ -8,6 +8,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
     "@reduxjs/toolkit": "^1.2.5",
     "expo": "^35.0.0",
     "react": "16.8.3",
