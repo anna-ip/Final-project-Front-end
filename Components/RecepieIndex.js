@@ -1,63 +1,62 @@
-import React from "react"
-import { SafeAreaView, ScrollView } from 'react-native';
+import React from "react";
+import { SafeAreaView, ScrollView } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-import RecepieCard from './RecepieCard'
-import styled from 'styled-components/native'
+import RecepieCard from "./RecepieCard";
+import styled from "styled-components/native";
 
 const RecepieIndex = () => (
-    <StyledView>
-        <SafeAreaView>
-            {/* <Link
+  <StyledView>
+    <SafeAreaView>
+      {/* <Link
                 to={`/recepie`}
             > */}
-            <Scroll horizontal={true}>
-                <CardContainer>
-                    <CardView>
-                        <RecepieCard />
-                    </CardView>
-                </CardContainer>
+      <ScrollView horizontal={true}>
+        <CardContainer>
+          <CardView>
+            <RecepieCard />
+          </CardView>
+        </CardContainer>
 
-                <CardContainer>
-                    <CardView>
-                        <RecepieCard />
-                    </CardView>
-                </CardContainer>
+        <CardContainer>
+          <CardView>
+            <RecepieCard />
+          </CardView>
+        </CardContainer>
 
-                <CardContainer>
-                    <CardView>
-                        <RecepieCard />
-                    </CardView>
-                </CardContainer>
+        <CardContainer>
+          <CardView>
+            <RecepieCard />
+          </CardView>
+        </CardContainer>
 
-                <CardContainer>
-                    <CardView>
-                        <RecepieCard />
-                    </CardView>
-                </CardContainer>
-            </Scroll>
-            {/* </Link> */}
-        </SafeAreaView>
-    </StyledView>
-)
-export default RecepieIndex
+        <CardContainer>
+          <CardView>
+            <RecepieCard />
+          </CardView>
+        </CardContainer>
+      </ScrollView>
+      {/* </Link> */}
+    </SafeAreaView>
+  </StyledView>
+);
+export default RecepieIndex;
 
 //StyledView is the background
 const StyledView = styled.View`
-    z-index: -1; 
-    margin-top: 25%;
- `;
+  z-index: -1;
+  margin-top: 25%;
+`;
 
 //background for the Scrollwiev of the cards height
-const Scroll = styled(ScrollView)`
-    background-color: #FFFFFF;
- `;
+// const Scroll = styled(ScrollView)`
+//     background-color: #FFFFFF;
+//  `;
 
 const CardContainer = styled.View`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 
 const CardView = styled.View`
-    z-index: 1;
+  z-index: 1;
 `;
-

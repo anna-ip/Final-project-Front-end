@@ -1,11 +1,9 @@
-
-import React from 'react';
-import { ImageBackground, Text } from 'react-native'
-import { Card, Title, Paragraph } from 'react-native-paper';
-import TimeComponent from './TimeComponent'
-import styled from 'styled-components/native'
+import React from "react";
+import { ImageBackground, Text } from "react-native";
+import { Card, Title, Paragraph } from "react-native-paper";
+import TimeComponent from "./TimeComponent";
+import styled from "styled-components/native";
 import { useSelector } from "react-redux";
-
 
 const RecepieCard = () => {
   const hey = useSelector(store => store.food.hey);
@@ -42,25 +40,24 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledImageBackground = styled(ImageBackground)`
-width: 100%;
-height: 200px;
-border-radius: 30;
-z-index:1;
-position: absolute;
-left: 8%;
-right: 0%;
-top: 60px;
-bottom: 0%;
+  width: 100%;
+  height: 200px;
+  border-radius: 30;
+  z-index: 1;
+  position: absolute;
+  left: 8%;
+  right: 0%;
+  top: 60px;
+  bottom: 0%;
 `;
 
 const StyledTitle = styled(Title)`
-color: #FFFFFF;
-position: absolute;
-left: 0%;
-right: 0%;
-top: 50.3%;
-bottom: 3.28%;
-
+  color: #ffffff;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 50.3%;
+  bottom: 3.28%;
 `;
 
 const StyledText = styled(Text)`

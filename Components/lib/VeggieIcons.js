@@ -8,7 +8,7 @@ export default class VeggieIcons extends React.Component {
       <View style={styles.container}>
         <BeetIcon />
         <Image
-          source={require("../../assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg")}
+
         />
         <TouchableOpacity style={styles.button}></TouchableOpacity>
 

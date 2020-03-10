@@ -1,4 +1,4 @@
-// import "react-native-gesture-handler";
+
 
 import React from "react";
 import Routes from "./Components/Routes/Routes";
@@ -15,6 +15,7 @@ import styled from "styled-components/native";
 import { Provider } from "react-redux";
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { food } from "./Components/Reducer/food";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 
 
