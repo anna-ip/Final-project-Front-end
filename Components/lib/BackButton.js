@@ -7,16 +7,18 @@ const BackButton = () => {
   return (
     <Container>
       <IconContainer>
-        <TouchableOpacity onPress={() => Icon} activeOpacity={0.5}>
-          <Icon
-            name="Arrow_Back"
-            type="material"
-            color="#FBA896"
-            containerStyle={{ alignSelf: "center" }}
-            reverse={40}
-            size={40}
-            raised={60}
-          />
+        <TouchableOpacity onPress={() => 'Back'} activeOpacity={0.5}>
+          {/* icon={
+            <Icon
+              name="ArrowBack"
+              type="material"
+              color="#FBA896"
+              containerStyle={{ alignSelf: "center" }}
+              reverse={40}
+              size={40}
+              raised={60}
+            />
+          } */}
         </TouchableOpacity>
       </IconContainer>
     </Container>

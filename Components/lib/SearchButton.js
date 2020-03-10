@@ -2,28 +2,38 @@ import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const SearchButton = () => {
+
+const SearchButton = ({ navigation }) => {
   return (
     <Container>
       <IconContainer>
-        <TouchableOpacity onPress={() => Icon} activeOpacity={0.5}>
-          <Icon
-            name="done"
-            type="material"
-            color="#FBA896"
-            containerStyle={{ alignSelf: "center" }}
-            reverse={40}
-            size={40}
-            raised={60}
-          />
+        <TouchableOpacity
+          onPress={() => navigation.navigate('RecepieIndex')}
+
+          activeOpacity={0.5}>
+
+
+          {/* icon={
+            <Icon
+              name="done"
+              type="material"
+              color="#FBA896"
+              containerStyle={{ alignSelf: "center" }}
+              reverse={40}
+              size={40}
+              raised={60}
+            />
+          } */}
         </TouchableOpacity>
       </IconContainer>
     </Container>
   );
 };
 
-export default SearchButton;
+
 
 const Container = styled.View`
   flex: 1;
@@ -43,3 +53,4 @@ const IconContainer = styled.View`
   bottom: 0;
   z-index: 10;
 `;
+export default SearchButton;

@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import BeetIcon from '../Icons/BeetIcon'
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <BeetIcon />
         <Image
           source={require("../assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg")}
         />
