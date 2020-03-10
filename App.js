@@ -15,6 +15,7 @@ import styled from "styled-components/native";
 // import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from "react-redux";
 import { food } from "./Components/Reducer/food";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 // const Stack = createStackNavigator();
 

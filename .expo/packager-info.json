@@ -2,8 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 8657,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 10012,
+  "expoServerNgrokUrl": "https://em-gzw.swolfson1.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.em-gzw.swolfson1.final-project-front-end.exp.direct",
+  "ngrokPid": 10041
 }

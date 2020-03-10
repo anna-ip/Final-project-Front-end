@@ -1,6 +1,8 @@
 import React from "react";
 import { Route } from "react-router-native";
+import { SafeAreaView, ScrollView } from "react-native";
 import SearchPage from "../SearchPage";
+
 import RecepieIndex from "../RecepieIndex";
 import SustainBadge from "../lib/SustainBadge";
 import Recepie from "../Recepie";
@@ -8,26 +10,28 @@ import BackButton from "../lib/BackButton";
 import styled from "styled-components/native";
 
 const Routes = () => {
-  <StyledView>
-    <Route exact path="/">
-      <SearchPage />
-    </Route>
+  return (
+    <StyledView>
+      <Route exact path="/">
+        <SearchPage />
+      </Route>
 
-    <Route path="/recepieIndex">
-      <Scroll horizontal={true}>
-        <BadgeView>
-          <SustainBadge />
-        </BadgeView>
-        <RecepieIndex />
-      </Scroll>
-    </Route>
+      <Route path="/recepieIndex">
+        <Scroll horizontal={true}>
+          <BadgeView>
+            <SustainBadge />
+          </BadgeView>
+          <RecepieIndex />
+        </Scroll>
+      </Route>
 
-    {/* <Route path="/recepie" >
+      {/* <Route path="/recepie" >
             <Recepie />
         </Route> */}
 
-    {/* <BackButton /> */}
-  </StyledView>;
+      {/* <BackButton /> */}
+    </StyledView>
+  );
 };
 
 const StyledView = styled.View`
