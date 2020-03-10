@@ -2,21 +2,21 @@
 
 import React from "react";
 import Routes from "./Components/Routes/Routes";
-import { StyleSheet, Text, SafeAreaView, ScrollView, View } from "react-native";
+import { StyleSheet, Text, SafeAreaView, View } from "react-native";
 import ErrorBoundary from "./Components/ErrorBoundary";
 // import SearchPage from './Components/SearchPage'
 // import RecepieIndex from "./Components/RecepieIndex";
 // import SustainBadge from './Components/lib/SustainBadge'
 // import Recepie from './Components/Recepie'
 // import BackButton from "./Components/lib/BackButton";
-import { NativeRouter, Switch, Route, Link } from "react-router-native";
+import { NativeRouter, Switch } from "react-router-native";
 import styled from "styled-components/native";
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+
 import { Provider } from "react-redux";
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { food } from "./Components/Reducer/food";
 
-// const Stack = createStackNavigator();
+
 
 const reducer = combineReducers({
   food: food.reducer
@@ -50,17 +50,7 @@ const App = () => {
 
     // </StyledView>
 
-    // <View>
-    //   <ErrorBoundary>
-    //     <NavigationContainer>
-    //       <Stack.Navigator>
-    //         <Stack.Screen name="Home" component={SearchPage} />
-    //         <Stack.Screen name="Recepie Index" component={RecepieIndex} />
-    //       </Stack.Navigator>
-    //     </NavigationContainer>
 
-    //   </ErrorBoundary>
-    // </View>
   );
 };
 

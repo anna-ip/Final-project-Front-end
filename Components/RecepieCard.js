@@ -10,19 +10,20 @@ import { useSelector } from "react-redux";
 const RecepieCard = () => {
   const hey = useSelector(store => store.food.hey);
   console.log(hey);
-  return(
+
+  return (
     <StyledCard>
-        <Card.Content>
-            <StyledImageBackground source={require('')}>
-                <StyledTitle>"Here goes the title for the recepie {}"</StyledTitle>
-                <StyledText>"Card Subtitle{}"</StyledText>
-            </StyledImageBackground>
-            <TimeView>
-                <StyledParagraph> Time component font: Poppins
+      <Card.Content>
+        <StyledImageBackground source={require('../assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
+          <StyledTitle>"Here goes the title for the recepie {}"</StyledTitle>
+          <StyledText>"Card Subtitle{}"</StyledText>
+        </StyledImageBackground>
+        <TimeView>
+          <StyledParagraph> Time component font: Poppins
                 </StyledParagraph>
-                <TimeComponent />
-            </TimeView>
-        </Card.Content>
+          <TimeComponent />
+        </TimeView>
+      </Card.Content>
     </StyledCard>
   );
 };

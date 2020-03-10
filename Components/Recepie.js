@@ -5,9 +5,9 @@ const Recepie = () => {
     return (
         <>
             {/* <Link
-                to={`/SearchPage`}>
-                <Text>Recepies</Text>
-            </Link> */}
+                to={`/SearchPage`}> */}
+            <Text>Recepies</Text>
+            {/* </Link>  */}
 
         </>
     )
