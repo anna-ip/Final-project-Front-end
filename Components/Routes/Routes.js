@@ -10,28 +10,32 @@ import BackButton from "../lib/BackButton";
 import styled from "styled-components/native";
 
 const Routes = () => {
+
   return (
     <StyledView>
-      <Route exact path="/">
-        <SearchPage />
+      <Route exact path="/" component={SearchPage}>
+        {/* <SearchPage /> */}
       </Route>
 
-      <Route path="/recepieIndex">
-        <Scroll horizontal={true}>
+      <Route exact path="/RecepieIndex" component={RecepieIndex}>
+        {/* <Scroll horizontal={true}
+          showsHorizontalScrollIndicator={false}>
           <BadgeView>
             <SustainBadge />
           </BadgeView>
-          <RecepieIndex />
-        </Scroll>
+          {/* <RecepieIndex /> */}
+        {/* </Scroll>  */}
       </Route>
 
-      {/* <Route path="/recepie" >
+      {/* <Route path="/recepie" component={Recepie}>
             <Recepie />
         </Route> */}
 
       {/* <BackButton /> */}
     </StyledView>
+
   )
+
 }
 
 const StyledView = styled.View`

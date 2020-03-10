@@ -15,7 +15,7 @@ import styled from "styled-components/native";
 import { Provider } from "react-redux";
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { food } from "./Components/Reducer/food";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+
 
 
 
@@ -24,7 +24,8 @@ const reducer = combineReducers({
 });
 
 const store = configureStore({ reducer });
-
+//Native Router can only have one child
+//Switch makes sure only one page render at a time
 const App = () => {
   return (
     <Provider store={store}>

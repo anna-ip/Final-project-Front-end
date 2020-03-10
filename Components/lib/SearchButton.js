@@ -2,16 +2,15 @@ import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 
-const SearchButton = ({ navigation }) => {
+
+const SearchButton = ({ history }) => {
   return (
     <Container>
       <IconContainer>
         <TouchableOpacity
-          onPress={() => navigation.navigate('RecepieIndex')}
+          onPress={() => history.push('/RecepieIndex')}
 
           activeOpacity={0.5}>
 
