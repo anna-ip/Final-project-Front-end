@@ -1,20 +1,9 @@
 {
-  "devToolsPort": 19002,
-<<<<<<< HEAD
+  "devToolsPort": 19003,
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null
-=======
-
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 40465,
-  "expoServerNgrokUrl": "https://92-bjk.swolfson1.final-project-front-end.exp.direct",
-  "packagerNgrokUrl": "https://packager.92-bjk.swolfson1.final-project-front-end.exp.direct",
-  "ngrokPid": 40485
-
->>>>>>> 76a7ccb1997497cf9f9e704a5631606bf98a18ba
 }

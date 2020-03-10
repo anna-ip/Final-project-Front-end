@@ -1,11 +1,15 @@
 import React from "react"
 import { SafeAreaView, ScrollView } from 'react-native';
+import { NativeRouter, Route, Link } from "react-router-native";
 import RecepieCard from './RecepieCard'
 import styled from 'styled-components/native'
 
 const RecepieIndex = () => (
     <StyledView>
         <SafeAreaView>
+            {/* <Link
+                to={`/recepie`}
+            > */}
             <Scroll horizontal={true}>
                 <CardContainer>
                     <CardView>
@@ -31,6 +35,7 @@ const RecepieIndex = () => (
                     </CardView>
                 </CardContainer>
             </Scroll>
+            {/* </Link> */}
         </SafeAreaView>
     </StyledView>
 )

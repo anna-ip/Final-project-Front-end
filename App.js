@@ -1,52 +1,80 @@
-
-
+import 'react-native-gesture-handler';
 import React from "react";
+import Routes from './Components/Routes/Routes'
 import { StyleSheet, Text, SafeAreaView, ScrollView, View } from "react-native";
-import Constants from "expo-constants";
-import RecepieCard from "./Components/RecepieCard";
-import BackButton from "./Components/BackButton";
-import SearchButton from "./Components/SearchButton";
+import ErrorBoundary from './Components/ErrorBoundary'
+// import SearchPage from './Components/SearchPage'
+// import RecepieIndex from "./Components/RecepieIndex";
+// import SustainBadge from './Components/lib/SustainBadge'
+// import Recepie from './Components/Recepie'
+// import BackButton from "./Components/lib/BackButton";
+import { NativeRouter, Switch, Route, Link } from "react-router-native";
 import styled from "styled-components/native";
-import VeggieIcons from "./Components/VeggieIcons";
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createStackNavigator } from '@react-navigation/stack';
+import { Provider } from "react-redux";
+import { food } from "./Components/Reducer/food";
 
-const App = () => (
-  <StyledView>
-    <StyledSafeAreaView>
-      <Scroll horizontal={true}>
-        <BadgeView>
-          <SustainBadge />
-        </BadgeView>
-        <RecepieIndex />
-      </Scroll>
-      <SearchButton />
-      <BackButton />
-      <VeggieIcons />
-    </StyledSafeAreaView>
-  </StyledView>
-);
-export default App;
 
-const StyledView = styled.View`
-  display: flex;
-  flex-direction: column;
+
+// const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+    <Provider store={store}>
+
+      <NativeRouter>
+        <Container>
+          <Switch>
+            <Routes />
+          </Switch>
+        </Container>
+      </NativeRouter>
+    </Provider>
+
+    // <StyledView>
+    //   <Scroll horizontal={true}>
+    //     <BadgeView>
+    //       <SustainBadge />
+    //     </BadgeView>
+    //     <RecepieIndex />
+    //   </Scroll>
+    //   {/* <SearchPage /> */}
+    //   {/* <Recepie /> */}
+
+
+    //   {/* <BackButton /> */}
+
+    // </StyledView>
+
+
+    // <View>
+    //   <ErrorBoundary>
+    //     <NavigationContainer>
+    //       <Stack.Navigator>
+    //         <Stack.Screen name="Home" component={SearchPage} />
+    //         <Stack.Screen name="Recepie Index" component={RecepieIndex} />
+    //       </Stack.Navigator>
+    //     </NavigationContainer>
+
+
+
+
+    //   </ErrorBoundary>
+    // </View>
+
+
+
+
+  )
+};
+
+const Container = styled.View`
+  flex: 1;
+  background-color: white;
   justify-content: center;
-  align-content: center;
-  margin-top: 100px;
-`;
-const StyledSafeAreaView = styled(SafeAreaView)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-`;
-const Scroll = styled(ScrollView)`
-  background-color: #ffffff;
+  align-items: center;
 `;
 
-const BadgeView = styled.View`
-position: absolute;
-top: 38%;
-`
 
-
-export default App 
+export default App
