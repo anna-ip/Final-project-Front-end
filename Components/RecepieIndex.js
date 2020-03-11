@@ -39,7 +39,7 @@ const RecepieIndex = ({ history }) => (
         </CardContainer>
       </ScrollView>
       {/* </Link> */}
-      <Button title='Search' onPress={() => history.push('/')} />
+      <Button title='Search' onPress={() => history.push('/recepie')} />
     </SafeAreaView>
   </StyledView>
 );

@@ -27,9 +27,9 @@ const Routes = () => {
         {/* </Scroll>  */}
       </Route>
 
-      {/* <Route path="/recepie" component={Recepie}>
-            <Recepie />
-        </Route> */}
+      <Route path="/recepie" component={Recepie}>
+        {/* <Recepie /> */}
+      </Route>
 
       {/* <BackButton /> */}
     </StyledView>
