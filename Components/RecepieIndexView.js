@@ -6,7 +6,8 @@ import styled from "styled-components/native";
 const RecepieIndexView = () => {
     return (
         <StyledView>
-            <Scroll horizontal={true}>
+            <Scroll horizontal={true}
+                showsHorizontalScrollIndicator={false}>
                 <BadgeView>
                     <SustainBadge />
                 </BadgeView>
