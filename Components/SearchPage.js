@@ -4,21 +4,12 @@ import VeggieIcons from "./lib/VeggieIcons";
 import SearchButton from "./lib/SearchButton";
 import { View, Button } from "react-native";
 import styled from "styled-components/native";
-import { Line } from "react-native-svg";
 
-<<<<<<< HEAD
 const SearchPage = ({ history }) => {
   return (
     <View>
       <Title>Welcome</Title>
-      <View
-        style={{
-          borderBottomColor: "black",
-          borderBottomWidth: 1,
-          marginLeft: 5,
-          marginRight: 5
-        }}
-      />
+
       <VeggieIcons />
 
       <Button title="Search" onPress={() => history.push("/RecepieIndex")} />
@@ -26,20 +17,15 @@ const SearchPage = ({ history }) => {
   );
 };
 
-
-
 const Container = styled.View`
-display: flex;
-flex-direction: column;
-align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Title = styled.Text`
-
   color: black;
   text-align: center;
 `;
-
-
 
 export default SearchPage;
