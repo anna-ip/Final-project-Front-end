@@ -6,6 +6,7 @@ import { View, Button } from "react-native";
 import styled from "styled-components/native";
 import { Line } from "react-native-svg";
 
+<<<<<<< HEAD
 const SearchPage = ({ history }) => {
   return (
     <View>
@@ -25,9 +26,20 @@ const SearchPage = ({ history }) => {
   );
 };
 
+
+
+const Container = styled.View`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
 const Title = styled.Text`
+
   color: black;
   text-align: center;
 `;
+
+
 
 export default SearchPage;

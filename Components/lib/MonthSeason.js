@@ -27,7 +27,7 @@ const Container = styled.View`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 120%;
+  width: 150%;
   height: 357px;
   border-radius: 8px;
   background-color: #BDE7FF;
@@ -43,18 +43,19 @@ right: 0%;
 top: 5.81%;
 bottom: 81.87%;
 
-
 font-style: normal;
 font-weight: 600;
 font-size: 12px;
 line-height: 18px;
 color: #FFFCFC;
+
 `
 //font-family: Eczar;
 const Textfield = styled.Text`
 position: absolute;
 left: 17.07%;
 right: 16.8%;
+
 top: 19.73%;
 bottom: 57.98%;
 
@@ -64,12 +65,13 @@ font-size: 14px;
 line-height: 25px;
 text-align: center;
 color: #111010;
+color: black;
 `
 const MonthAvatarView = styled.View`
 position: absolute;
 width: 294px;
 height: 153px;
-left: 20px;
-top: 150px;
+right: -180px;
+top: 120px;
 `
 export default MonthSeason

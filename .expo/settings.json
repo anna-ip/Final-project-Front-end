@@ -3,6 +3,10 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
+<<<<<<< HEAD
   "urlRandomness": "qd-2ya",
+=======
+  "urlRandomness": "kr-qmt",
+>>>>>>> bf82bf8b233ce7b441c8da5a149f1ec864f670a1
   "https": false
 }

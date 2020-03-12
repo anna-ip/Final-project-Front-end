@@ -2,15 +2,13 @@ import React from 'react'
 import { Text, Button, ScrollView, SafeAreaView } from 'react-native'
 import SeasonalView from "./SeasonalView"
 import ProgressCircle from "./ProgressCircle"
+import RecepieCard from "./RecepieCard"
 import BackButton from './lib/BackButton'
 import styled from "styled-components";
 
 const Recepie = () => {
 
     return (
-
-
-
         <StyledView>
             <SafeAreaView>
                 <Text>Recepies</Text>
@@ -18,17 +16,22 @@ const Recepie = () => {
                     <SeasonConatiner>
                         <SeasonalView />
                     </SeasonConatiner>
+
                     <ProgressContainer>
                         <ProgressCircle />
                     </ProgressContainer>
-                    <ButtonContainer>
+                    <RecepieCardContainer>
+                        <RecepieCard />
+                    </RecepieCardContainer>
+
+                    <ButtonContainer >
                         <BackButton />
                     </ButtonContainer>
                 </Scroll>
 
             </SafeAreaView>
 
-        </StyledView>
+        </StyledView >
 
     )
 }
@@ -58,6 +61,10 @@ const SeasonConatiner = styled.View`
 `
 const ProgressContainer = styled.View`
     margin-top: 150px;
+    padding: 8px;
+`
+const RecepieCardContainer = styled.View`
+    margin-top: 200px;
     padding: 8px;
 `
 const ButtonContainer = styled.View`
