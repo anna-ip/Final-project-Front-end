@@ -6,18 +6,20 @@ import { TouchableOpacity } from "react-native";
 //import { Icon } from "react-native-elements";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styled from "styled-components";
+import { withRouter } from "react-router-native"
 
 const BackButton = ({ history }) => {
   return (
     <Container>
       <IconContainer>
         <ButtonContainer
-          onPress={() => history.push('/')}
+          onPress={() => history.push("/")}
           activeOpacity={0.5}>
           <Icon
             name="check"
             type="material"
-            color="#FBA896"
+            // color="#FBA896"
+            color="yellow"
             containerStyle={{ alignSelf: "center" }}
             reverse={40}
             size={40}
@@ -40,7 +42,8 @@ const Container = styled.View`
 const IconContainer = styled.View`
   position: absolute;
   align-self: center;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: green;
   box-shadow: 0px 10px -20px rgba(75, 44, 56, 0.16);
   width: 80;
   height: 80;
@@ -56,4 +59,4 @@ align-items: center;
 top: 15px;
 `
 
-export default BackButton;
+export default withRouter(BackButton);

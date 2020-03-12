@@ -22,14 +22,18 @@ const Container = styled.View`
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 250px;
+    /* width: 100%; */
     height: 153px;
     background-color: #ecf0f1;
     padding: 8px;
 `
 
 const CardConatiner = styled(Card)`
-margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 4px;
 `
 
 export default SeasonalView

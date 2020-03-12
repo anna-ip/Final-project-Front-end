@@ -6,9 +6,9 @@ import { View, Button } from 'react-native';
 
 import styled from 'styled-components/native';
 
-const SearchPage = ({ history }) => {
+const SearchPage = () => {
     return (
-        <View>
+        <Container>
 
             {/* <VeggieIcons /> */}
             {/* <SearchButton /> */}
@@ -26,17 +26,37 @@ const SearchPage = ({ history }) => {
             <Button id={props.id} title='Fennel' onPress={() => 7} /> */}
 
 
-            <Button title='Search' onPress={() => history.push('/RecepieIndex')} />
+            {/* <TestButton title='Search' onPress={() => history.push('/RecepieIndex')} >
+
+            </TestButton> */}
             {/* <VeggieIcons />*/}
-            {/* <SearchButton /> */}
+            <ButtonContainer >
+                <SearchButton />
+            </ButtonContainer>
             {/* </Link> */}
-        </View>
+        </Container>
 
     )
 
 }
 
+const Container = styled.View`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
 const Title = styled.Text`
 color: black;
+margin-top: 300px;
+`
+
+const TestButton = styled.Button`
+justify-content: center;
+`
+
+const ButtonContainer = styled.View`
+    padding: 15px;
+    margin-top: 500px;
 `
 export default SearchPage;

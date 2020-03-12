@@ -22,13 +22,13 @@ const MonthAvatar = () => {
                 <Label> May </Label>
             </StyledAvatar>
             <StyledAvatar>
-                <Label> Jun </Label>
+                <Label primary> Jun </Label>
             </StyledAvatar>
             <StyledAvatar>
-                <Label> Jul </Label>
+                <Label primary> Jul </Label>
             </StyledAvatar>
             <StyledAvatar>
-                <Label> Aug </Label>
+                <Label primary> Aug </Label>
             </StyledAvatar>
             <StyledAvatar>
                 <Label> Sep </Label>
@@ -53,16 +53,20 @@ const Container = styled.View`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-width: 250px;
+justify-content: center;
+width: 230px;
 height: 153px;
 `
-
+//the text is a bit to much to the right?
 const StyledAvatar = styled.View`
+display: flex;
 background-color: #FFFFFF;
+background: ${props => props.primary ? "green" : "white"};
 height: 45px;
 width: 49px;
 border-radius: 60;
-justify-content:center;
+justify-content: center;
+align-content: center;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 margin: 3.5px;
 `
@@ -75,4 +79,5 @@ font-size: 14px;
 line-height: 25px;
 text-align: center;
 color: #000000;
+color:${props => props.primary ? "green" : "black"};
 `

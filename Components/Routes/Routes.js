@@ -27,7 +27,7 @@ const Routes = () => {
         {/* </Scroll>  */}
       </Route>
 
-      <Route path="/recepie" component={Recepie}>
+      <Route exact path="/recepie" component={Recepie}>
         {/* <Recepie /> */}
       </Route>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, ScrollView, Button } from "react-native";
+import { SafeAreaView, ScrollView, Button, TouchableOpacity } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 
 import RecepieCard from "./RecepieCard";
@@ -13,33 +13,41 @@ const RecepieIndex = ({ history }) => (
       > */}
       <ScrollView horizontal={true}
         showsHorizontalScrollIndicator={false}>
-        <CardContainer>
-          <CardView>
-            <RecepieCard />
+        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+          <CardContainer>
+            <CardView>
+              <RecepieCard />
 
-          </CardView>
-        </CardContainer>
+            </CardView>
+          </CardContainer>
+        </Link>
 
-        <CardContainer>
-          <CardView>
-            <RecepieCard />
-          </CardView>
-        </CardContainer>
+        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+          <CardContainer>
+            <CardView>
+              <RecepieCard />
+            </CardView>
+          </CardContainer>
+        </Link>
 
-        <CardContainer>
-          <CardView>
-            <RecepieCard />
-          </CardView>
-        </CardContainer>
+        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+          <CardContainer>
+            <CardView>
+              <RecepieCard />
+            </CardView>
+          </CardContainer>
+        </Link>
 
-        <CardContainer>
-          <CardView>
-            <RecepieCard />
-          </CardView>
-        </CardContainer>
+        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+          <CardContainer>
+            <CardView>
+              <RecepieCard />
+            </CardView>
+          </CardContainer>
+        </Link>
       </ScrollView>
       {/* </Link> */}
-      <Button title='Search' onPress={() => history.push('/recepie')} />
+      {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
     </SafeAreaView>
   </StyledView>
 );
