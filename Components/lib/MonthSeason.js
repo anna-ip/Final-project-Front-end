@@ -4,6 +4,7 @@ import { Avatar } from "react-native-paper";
 import MonthAvatar from "./MonthAvatar";
 import styled from "styled-components";
 
+//use selector to find store.veggie.month
 const MonthSeason = () => {
 
     return (

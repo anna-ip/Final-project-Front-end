@@ -5,7 +5,8 @@ import Constants from 'expo-constants';
 import styled from "styled-components";
 
 import { Card } from 'react-native-paper';
-
+//use selector to find store.veggie.month
+//use selector to find store.veggie.co2
 const SeasonalView = () => {
 
     return (
