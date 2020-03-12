@@ -2,21 +2,17 @@ import React from "react";
 import Routes from "./Components/Routes/Routes";
 import { StyleSheet, Text, SafeAreaView, View } from "react-native";
 import ErrorBoundary from "./Components/ErrorBoundary";
-// import SearchPage from './Components/SearchPage'
-// import RecepieIndex from "./Components/RecepieIndex";
-// import SustainBadge from './Components/lib/SustainBadge'
-// import Recepie from './Components/Recepie'
-// import BackButton from "./Components/lib/BackButton";
 import { NativeRouter, Switch } from "react-router-native";
 import styled from "styled-components/native";
 
 import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { food } from "./Components/reducer/food";
+import { food } from "./Components/Reducer/food";
 
 const reducer = combineReducers({
   food: food.reducer
 });
+
 
 const store = configureStore({ reducer });
 //Native Router can only have one child

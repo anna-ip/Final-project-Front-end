@@ -2,7 +2,7 @@ import React from "react";
 import { NativeRouter, Route, Link } from "react-router-native";
 import VeggieIcons from "./lib/VeggieIcons";
 import SearchButton from "./lib/SearchButton";
-import { View, Button } from "react-native";
+import { View, Button, Text } from "react-native";
 import styled from "styled-components/native";
 
 
@@ -163,14 +163,14 @@ const veggies = [
 
 const SearchPage = ({ history }) => {
     return (
-        < Container>
-            <Title>Welcome</Title>
+        <Container>
+            <Title>Seasonal Vegetables</Title>
+            <Text>What do you have in your fridge?</Text>
 
             <VeggieIcons />
 
-
             <Button title="Search" onPress={() => history.push("/RecepieIndex")} />
-        </ Container>
+        </Container>
     );
 };
 

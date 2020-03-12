@@ -31,6 +31,7 @@ export const fetchBarcodes = () => {
             .then((res) => res.json())
             .then((json) => {
                 console.log(json)
+
                 dispatch(products.actions.setBarcodes(json))
                 dispatch(ui.actions.setLoading(false))
             })
@@ -48,7 +49,7 @@ export const fetchVeggies = () => {
             .then((res) => res.json())
             .then((json) => {
                 console.log(json)
-                //dispatch(products.actions.setBarcodes(json))
+                dispatch(veggies.actions.setName(json))
                 //dispatch(ui.actions.setLoading(false))
             })
 
