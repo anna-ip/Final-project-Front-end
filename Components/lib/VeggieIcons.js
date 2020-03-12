@@ -118,34 +118,94 @@ const veggieIcons = () => {
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <IconContainer>
           {/* Asparagus */}
-          <Button id={"5e5d08acf901cfd65b8f5e37"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e37"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Asparagus.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Beet */}
-          <Button id={"5e5d08acf901cfd65b8f5e36"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e36"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Beet.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Broccoli */}
-          <Button id={"5e5d08acf901cfd65b8f5e2b"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e2b"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Broccoli.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Cabage */}
-          <Button id={"5e5d08acf901cfd65b8f5e2e"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e2e"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Cabage.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Cauliflower */}
-          <Button id={"5e5d08acf901cfd65b8f5e2c"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e2c"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Cauliflower.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Spininch */}
-          <Button id={"5e5d08acf901cfd65b8f5e38"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e38"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Spinich.png")}
+              resizeMode="contain"
+            />
+          </Button>
         </IconContainer>
       </ScrollView>
       {/* ScrollView row 2 */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <IconContainer>
           {/* Cucumber */}
-          <Button id={"5e5d08acf901cfd65b8f5e33"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e33"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Cucumber.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Eggplant */}
-          <Button id={"5e5d08acf901cfd65b8f5e30"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e30"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Eggplant.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Mushroom */}
-          <Button id={"5e5d08acf901cfd65b8f5e2f"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e2f"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Mushroom.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Pepper */}
-          <Button id={"5e5d08acf901cfd65b8f5e2d"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e2d"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Pepper.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Pumpkin */}
-          <Button id={"5e5d08acf901cfd65b8f5e35"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e35"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Pumkin.png")}
+              resizeMode="contain"
+            />
+          </Button>
           {/* Tomato */}
-          <Button id={"5e5d08acf901cfd65b8f5e3a"} Key={veggies._id}></Button>
+          <Button id={"5e5d08acf901cfd65b8f5e3a"} Key={veggies._id}>
+            <Icon
+              source={require("../assets/VeggiesIcons/Tomato.png")}
+              resizeMode="contain"
+            />
+          </Button>
         </IconContainer>
       </ScrollView>
     </Container>
@@ -153,15 +213,16 @@ const veggieIcons = () => {
 };
 
 export default veggieIcons;
-// const Icon = styled.Image`
-//   width: 60px;
-//   height: 60px;
-//   padding: 20px;
-// `
+
+const Icon = styled.Image`
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+`;
 
 const Container = styled.SafeAreaView`
   height: 300px;
-  margin: 20px;
+  margin: 5px;
 `;
 
 const IconContainer = styled.SafeAreaView`
@@ -169,6 +230,7 @@ const IconContainer = styled.SafeAreaView`
   justify-content: space-between;
   flex-wrap: wrap;
   height: 40px;
+  margin-top: 20px;
 `;
 
 const Button = styled.TouchableOpacity`
@@ -187,5 +249,3 @@ const Button = styled.TouchableOpacity`
   shadow-opacity: 0.35px;
   margin: 5px;
 `;
-
-const ButtonIcons = styled.View``;
