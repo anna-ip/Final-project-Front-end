@@ -61,7 +61,7 @@ height: 153px;
 const StyledAvatar = styled.View`
 display: flex;
 background-color: #FFFFFF;
-background: ${props => props.primary ? "green" : "white"};
+/* background: ${props => props.primary ? "green" : "white"}; */
 height: 45px;
 width: 49px;
 border-radius: 60;
@@ -78,6 +78,7 @@ font-weight: 600;
 font-size: 14px;
 line-height: 25px;
 text-align: center;
-color: #000000;
+right: 2px;
+/* color: #000000; */
 color:${props => props.primary ? "green" : "black"};
 `

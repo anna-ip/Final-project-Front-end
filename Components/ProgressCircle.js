@@ -29,6 +29,12 @@ const Container = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  background-color: #BDE7FF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
 `;
 
 const Rubrik = styled.Text`

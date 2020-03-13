@@ -14,15 +14,18 @@ const Recepie = ({ hitstory, location }) => {
 
                 <Text>Recepies</Text>
                 <Scroll >
-
-                    <SeasonConatiner>
-                        <SeasonalView />
-
-                    </SeasonConatiner>
-                    <Text>{JSON.stringify(location.state)}</Text>
                     <ProgressContainer>
                         <ProgressCircle />
                     </ProgressContainer>
+
+                    <Text>{JSON.stringify(location.state)}</Text>
+
+                    <SeasonConatiner>
+                        <SeasonalView />
+                    </SeasonConatiner>
+
+
+
                     <RecepieCardContainer>
                         <RecepieCard />
 
@@ -46,7 +49,6 @@ const StyledView = styled.View`
     flex-direction: column;
     justify-content: center;
     align-content: center; 
-    width: 100%;  
     margin-top: 100px;
 `;
 
@@ -54,7 +56,6 @@ const Scroll = styled(ScrollView)`
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 300px;
     background-color: pink;
 `;
 
@@ -63,7 +64,7 @@ const SeasonConatiner = styled.View`
     padding: 8px;
 `
 const ProgressContainer = styled.View`
-    margin-top: 150px;
+    margin-top: 1px;
     padding: 8px;
 `
 const RecepieCardContainer = styled.View`

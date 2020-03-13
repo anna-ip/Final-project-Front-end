@@ -4,6 +4,7 @@ import { NativeRouter, Route, Link } from "react-router-native";
 import { Alert } from "react-native";
 import RecepieCard from "./RecepieCard";
 import styled from "styled-components/native";
+import BackButton from "./lib/BackButton"
 
 //fetch ...../recepie 
 //use Params....kolla Movies projects   
@@ -25,8 +26,6 @@ const RecepieIndex = ({ history, location }) => {
             state: { name: location.state }
           }}
             component={TouchableOpacity} activeOpacity={0.8}
-          // key={JSON.stringify(location.state)}
-          // name={JSON.stringify(location.state)}
           >
             {/* <Link to="/recepie/${recepie.id}" component={TouchableOpacity} activeOpacity={0.8}> */}
             {/* skicka med ett id från recept db som i Movie project*/}
@@ -36,7 +35,6 @@ const RecepieIndex = ({ history, location }) => {
               <Text>{JSON.stringify(location.state)}</Text>
               <CardView>
                 <RecepieCard />
-
               </CardView>
             </CardContainer>
           </Link>
@@ -66,7 +64,7 @@ const RecepieIndex = ({ history, location }) => {
             </CardContainer>
           </Link>
         </ScrollView>
-
+        <BackButton />
         {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
       </SafeAreaView>
     </StyledView>

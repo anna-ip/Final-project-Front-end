@@ -25,16 +25,16 @@ const Container = styled.View`
     align-content: center;
     /* width: 100%; */
     height: 153px;
-    background-color: #ecf0f1;
+
     padding: 8px;
 `
 
 const CardConatiner = styled(Card)`
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 4px;
-`
+    /* align-items: center; */
+    /* width: 100%; */
+    /* margin: 4px; */
+ `
 
 export default SeasonalView

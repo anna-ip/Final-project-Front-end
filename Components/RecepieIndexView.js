@@ -16,9 +16,6 @@ const RecepieIndexView = () => {
                     <RecepieIndex />
                 </Scroll>
 
-                <ButtonContainer>
-                    <BackButton />
-                </ButtonContainer>
             </StyledSafeAreaView>
         </StyledView>
     )
@@ -51,15 +48,5 @@ const BadgeView = styled.View`
     position: absolute;
     top: 38%;
 `;
-
-const ButtonContainer = styled.View`
-    position: absolute;
-    /* top: 138%; */
-    /* padding: 15px;
-    margin-bottom: 170px; */
-    /* padding: 15px;
-    margin-top: 500px; */
-    background-color:pink;
-`
 
 export default RecepieIndexView            

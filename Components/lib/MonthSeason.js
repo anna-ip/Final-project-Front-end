@@ -28,18 +28,19 @@ const Container = styled.View`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 150%;
-  height: 357px;
+  width: 100%;
+  height: 350px;
   border-radius: 8px;
   background-color: #BDE7FF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 60px;
 `
 //add font-family: Poppins;
 const Title = styled.Text`
 display: flex;
 flex-direction: row;
 position: absolute;
-left: 40.2%;
+left: 52.2%;
 right: 0%;
 top: 5.81%;
 bottom: 81.87%;
@@ -49,13 +50,12 @@ font-weight: 600;
 font-size: 12px;
 line-height: 18px;
 color: #FFFCFC;
-
 `
 //font-family: Eczar;
 const Textfield = styled.Text`
 position: absolute;
-left: 17.07%;
-right: 16.8%;
+left: 8.07%;
+right: 10.8%;
 
 top: 19.73%;
 bottom: 57.98%;
@@ -65,14 +65,14 @@ font-weight: 600;
 font-size: 14px;
 line-height: 25px;
 text-align: center;
-color: #111010;
+/* color: #111010; */
 color: black;
 `
 const MonthAvatarView = styled.View`
 position: absolute;
 width: 294px;
 height: 153px;
-right: -180px;
-top: 120px;
+right: -20px;
+top: 150px;
 `
 export default MonthSeason
