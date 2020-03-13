@@ -1,7 +1,7 @@
 import React from "react";
-import { SafeAreaView, ScrollView, Button, TouchableOpacity } from "react-native";
+import { SafeAreaView, ScrollView, Button, TouchableOpacity, Text } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-
+import { Alert } from "react-native";
 import RecepieCard from "./RecepieCard";
 import styled from "styled-components/native";
 
@@ -9,54 +9,71 @@ import styled from "styled-components/native";
 //use Params....kolla Movies projects   
 //map through
 
-const RecepieIndex = () => (
-  <StyledView>
-    <SafeAreaView>
+const RecepieIndex = ({ history, location }) => {
 
 
-      <ScrollView horizontal={true}
-        showsHorizontalScrollIndicator={false}>
-        <Link to="/recepie/" component={TouchableOpacity} activeOpacity={0.8}>
-          {/* <Link to="/recepie/${recepie.id}" component={TouchableOpacity} activeOpacity={0.8}> */}
-          {/* skicka med ett id från recept db som i Movie project*/}
-          {/* link to */}
-          <CardContainer>
-            <CardView>
-              <RecepieCard />
 
-            </CardView>
-          </CardContainer>
-        </Link>
+  return (
+    <StyledView>
+      <SafeAreaView>
 
-        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
-          <CardContainer>
-            <CardView>
-              <RecepieCard />
-            </CardView>
-          </CardContainer>
-        </Link>
 
-        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
-          <CardContainer>
-            <CardView>
-              <RecepieCard />
-            </CardView>
-          </CardContainer>
-        </Link>
+        <ScrollView horizontal={true}
+          showsHorizontalScrollIndicator={false}>
+          <Link to={{
+            pathname: "/recepie",
+            state: { name: location.state }
+          }}
+            component={TouchableOpacity} activeOpacity={0.8}
+          // key={JSON.stringify(location.state)}
+          // name={JSON.stringify(location.state)}
+          >
+            {/* <Link to="/recepie/${recepie.id}" component={TouchableOpacity} activeOpacity={0.8}> */}
+            {/* skicka med ett id från recept db som i Movie project*/}
+            {/* link to */}
+            <CardContainer>
 
-        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
-          <CardContainer>
-            <CardView>
-              <RecepieCard />
-            </CardView>
-          </CardContainer>
-        </Link>
-      </ScrollView>
+              <Text>{JSON.stringify(location.state)}</Text>
+              <CardView>
+                <RecepieCard />
 
-      {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
-    </SafeAreaView>
-  </StyledView>
-);
+              </CardView>
+            </CardContainer>
+          </Link>
+
+
+          <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+            <CardContainer>
+              <CardView>
+                <RecepieCard />
+              </CardView>
+            </CardContainer>
+          </Link>
+
+          <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+            <CardContainer>
+              <CardView>
+                <RecepieCard />
+              </CardView>
+            </CardContainer>
+          </Link>
+
+          <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+            <CardContainer>
+              <CardView>
+                <RecepieCard />
+              </CardView>
+            </CardContainer>
+          </Link>
+        </ScrollView>
+
+        {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
+      </SafeAreaView>
+    </StyledView>
+
+  );
+}
+console.log(location, name)
 export default RecepieIndex;
 
 //StyledView is the background

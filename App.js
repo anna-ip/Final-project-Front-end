@@ -8,9 +8,11 @@ import styled from "styled-components/native";
 import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { food } from "./Components/Reducer/food";
+import { veggies } from "./Components/Reducer/veggies";
 
 const reducer = combineReducers({
-  food: food.reducer
+  food: food.reducer,
+  veggies: veggies.reducer
 });
 
 

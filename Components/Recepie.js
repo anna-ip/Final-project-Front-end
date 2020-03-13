@@ -6,17 +6,20 @@ import RecepieCard from "./RecepieCard"
 import BackButton from './lib/BackButton'
 import styled from "styled-components";
 
-const Recepie = () => {
+const Recepie = ({ hitstory, location }) => {
 
     return (
-        <StyledView>
-            <SafeAreaView>
+        <SafeAreaView>
+            <StyledView>
+
                 <Text>Recepies</Text>
                 <Scroll >
+
                     <SeasonConatiner>
                         <SeasonalView />
-                    </SeasonConatiner>
 
+                    </SeasonConatiner>
+                    <Text>{JSON.stringify(location.state)}</Text>
                     <ProgressContainer>
                         <ProgressCircle />
                     </ProgressContainer>
@@ -30,14 +33,13 @@ const Recepie = () => {
                     </ButtonContainer>
                 </Scroll>
 
-            </SafeAreaView>
-
-        </StyledView >
-
+            </StyledView >
+        </SafeAreaView>
     )
+
 }
 
-
+console.log(location, name)
 
 const StyledView = styled.View`
     display: flex;

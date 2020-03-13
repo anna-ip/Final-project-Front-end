@@ -119,7 +119,16 @@ const VeggieIcons = ({ history }) => {
         <IconContainer>
           {/* Asparagus */}
 
-          <Button id={"5e5d08acf901cfd65b8f5e37"} Key={veggies._id}>
+
+          <Button key={veggies._id}
+            onPress={() =>
+
+              history.push("/RecepieIndex", {
+
+                name: "Asparagus",
+                search: '?Asparagus'
+              })
+            }>
             <Icon
               source={require("../assets/VeggiesIcons/Asparagus.png")}
               resizeMode="contain"
@@ -127,35 +136,40 @@ const VeggieIcons = ({ history }) => {
           </Button>
 
           {/* Beet */}
-          <Button id={"5e5d08acf901cfd65b8f5e36"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e36"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Beet.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Broccoli */}
-          <Button id={"5e5d08acf901cfd65b8f5e2b"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e2b"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Broccoli.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Cabage */}
-          <Button id={"5e5d08acf901cfd65b8f5e2e"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e2e"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Cabage.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Cauliflower */}
-          <Button id={"5e5d08acf901cfd65b8f5e2c"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e2c"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Cauliflower.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Spininch */}
-          <Button id={"5e5d08acf901cfd65b8f5e38"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e38"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Spinich.png")}
               resizeMode="contain"
@@ -167,42 +181,48 @@ const VeggieIcons = ({ history }) => {
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <IconContainer>
           {/* Cucumber */}
-          <Button id={"5e5d08acf901cfd65b8f5e33"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e33"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Cucumber.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Eggplant */}
-          <Button id={"5e5d08acf901cfd65b8f5e30"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e30"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Eggplant.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Mushroom */}
-          <Button id={"5e5d08acf901cfd65b8f5e2f"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e2f"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Mushroom.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Pepper */}
-          <Button id={"5e5d08acf901cfd65b8f5e2d"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e2d"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Pepper.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Pumpkin */}
-          <Button id={"5e5d08acf901cfd65b8f5e35"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e35"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Pumkin.png")}
               resizeMode="contain"
             />
           </Button>
           {/* Tomato */}
-          <Button id={"5e5d08acf901cfd65b8f5e3a"} Key={veggies._id}>
+          <Button id={"5e5d08acf901cfd65b8f5e3a"} key={veggies._id}
+            onPress={() => history.push("/RecepieIndex")}>
             <Icon
               source={require("../assets/VeggiesIcons/Tomato.png")}
               resizeMode="contain"
@@ -210,11 +230,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
         </IconContainer>
       </ScrollView>
-    </Container>
+    </Container >
   );
 };
 
-export default veggieIcons;
+
 
 const Icon = styled.Image`
   width: 60px;
@@ -269,5 +289,4 @@ const Button = styled.TouchableOpacity`
   margin: 5px;
 `;
 
-// const ButtonIcons = styled.View``;
 export default withRouter(VeggieIcons);

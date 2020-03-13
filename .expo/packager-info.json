@@ -1,1 +1,9 @@
-{}
+{
+  "devToolsPort": 19003,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://7v-5cf.anonymous.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.7v-5cf.anonymous.final-project-front-end.exp.direct",
+  "ngrokPid": 30183
+}

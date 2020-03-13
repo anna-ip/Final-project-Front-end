@@ -9,6 +9,7 @@ const progressCircle = () => {
   const coFrontPrint = 0;
   return (
     <Container>
+
       <ProgressCircle
         percent={30}
         radius={60}
