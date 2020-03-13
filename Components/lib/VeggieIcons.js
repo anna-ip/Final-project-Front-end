@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   SafeAreaView
 } from "react-native";
-
 import styled from "styled-components";
+import { withRouter } from "react-router-native";
 
 const veggies = [
   {
@@ -111,19 +111,21 @@ const veggies = [
   }
 ];
 
-const veggieIcons = () => {
+const VeggieIcons = ({ history }) => {
   return (
     <Container>
       {/* ScrollView row 1 */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <IconContainer>
           {/* Asparagus */}
+
           <Button id={"5e5d08acf901cfd65b8f5e37"} Key={veggies._id}>
             <Icon
               source={require("../assets/VeggiesIcons/Asparagus.png")}
               resizeMode="contain"
             />
           </Button>
+
           {/* Beet */}
           <Button id={"5e5d08acf901cfd65b8f5e36"} Key={veggies._id}>
             <Icon
@@ -233,6 +235,23 @@ const IconContainer = styled.SafeAreaView`
   margin-top: 20px;
 `;
 
+const StyledButton = styled.TouchableOpacity`
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+  border: solid;
+  padding: 10px;
+  /* shadow-color: #303838;
+  shadow-radius: 10px; */
+  border-radius: 60px;
+  /* shadow-opacity: 0.35px; */
+  margin: 5px;
+`;
+
 const Button = styled.TouchableOpacity`
   border: 3px solid #ffffff;
   border-radius: 50%;
@@ -243,9 +262,12 @@ const Button = styled.TouchableOpacity`
   width: 90px;
   border: solid;
   padding: 10px;
-  shadow-color: #303838;
-  shadow-radius: 10px;
+  /* shadow-color: #303838;
+  shadow-radius: 10px; */
   border-radius: 60px;
-  shadow-opacity: 0.35px;
+  /* shadow-opacity: 0.35px; */
   margin: 5px;
 `;
+
+// const ButtonIcons = styled.View``;
+export default withRouter(VeggieIcons);

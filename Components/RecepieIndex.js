@@ -5,15 +5,21 @@ import { NativeRouter, Route, Link } from "react-router-native";
 import RecepieCard from "./RecepieCard";
 import styled from "styled-components/native";
 
-const RecepieIndex = ({ history }) => (
+//fetch ...../recepie 
+//use Params....kolla Movies projects   
+//map through
+
+const RecepieIndex = () => (
   <StyledView>
     <SafeAreaView>
-      {/* <Link
-        to={`/recepie`}
-      > */}
+
+
       <ScrollView horizontal={true}
         showsHorizontalScrollIndicator={false}>
-        <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
+        <Link to="/recepie/" component={TouchableOpacity} activeOpacity={0.8}>
+          {/* <Link to="/recepie/${recepie.id}" component={TouchableOpacity} activeOpacity={0.8}> */}
+          {/* skicka med ett id från recept db som i Movie project*/}
+          {/* link to */}
           <CardContainer>
             <CardView>
               <RecepieCard />
@@ -46,7 +52,7 @@ const RecepieIndex = ({ history }) => (
           </CardContainer>
         </Link>
       </ScrollView>
-      {/* </Link> */}
+
       {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
     </SafeAreaView>
   </StyledView>

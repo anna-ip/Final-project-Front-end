@@ -22,6 +22,7 @@ const Recepie = () => {
                     </ProgressContainer>
                     <RecepieCardContainer>
                         <RecepieCard />
+
                     </RecepieCardContainer>
 
                     <ButtonContainer >
