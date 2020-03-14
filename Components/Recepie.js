@@ -2,8 +2,8 @@ import React from 'react'
 import { Text, Button, ScrollView, SafeAreaView } from 'react-native'
 import SeasonalView from "./SeasonalView"
 import ProgressCircle from "./ProgressCircle"
-import RecepieCard from "./RecepieCard"
-import BackButton from './lib/BackButton'
+import RecipeCard from "./RecipeCard"
+import BackButton from "./lib/BackButton"
 import styled from "styled-components";
 
 const Recepie = ({ hitstory, location }) => {
@@ -27,8 +27,7 @@ const Recepie = ({ hitstory, location }) => {
 
 
                     <RecepieCardContainer>
-                        <RecepieCard />
-
+                        <RecipeCard />
                     </RecepieCardContainer>
 
                     <ButtonContainer >
@@ -49,7 +48,9 @@ const StyledView = styled.View`
     flex-direction: column;
     justify-content: center;
     align-content: center; 
+    width: 100%;
     margin-top: 100px;
+    
 `;
 
 const Scroll = styled(ScrollView)`
@@ -57,23 +58,27 @@ const Scroll = styled(ScrollView)`
     flex-direction: column;
     height: 100%;
     background-color: pink;
+    margin-bottom: 5px;
 `;
 
-const SeasonConatiner = styled.View`
-    margin-top: 100px;
-    padding: 8px;
-`
 const ProgressContainer = styled.View`
-    margin-top: 1px;
+    top: 1px;
     padding: 8px;
 `
+
+const SeasonConatiner = styled.View`
+    top: 85px;
+    padding: 8px;
+`
+
 const RecepieCardContainer = styled.View`
-    margin-top: 200px;
+    top: 250px;
     padding: 8px;
 `
 const ButtonContainer = styled.View`
+    top: 400px;
     padding: 15px;
-    margin-bottom: 170px;
+    
 `
 
 export default Recepie

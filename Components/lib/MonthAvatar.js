@@ -71,6 +71,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 margin: 3.5px;
 `
 //font-family: Eczar;
+//styling for the dif color button see styled components https://styled-components.com/docs/api under "using custom props"
 const Label = styled.Text`
 
 font-style: normal;

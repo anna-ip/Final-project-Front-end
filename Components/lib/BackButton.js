@@ -42,8 +42,7 @@ const Container = styled.View`
 const IconContainer = styled.View`
   position: absolute;
   align-self: center;
-  /* background-color: #ffffff; */
-  background-color: green;
+  background-color: #FBA896;
   box-shadow: 0px 10px -20px rgba(75, 44, 56, 0.16);
   width: 80;
   height: 80;

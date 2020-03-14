@@ -9,7 +9,7 @@ const progressCircle = () => {
   const coFrontPrint = 0;
   return (
     <Container>
-
+      <Title>Veggie name {}</Title>
       <ProgressCircle
         percent={30}
         radius={60}
@@ -29,14 +29,18 @@ const Container = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 350px;
+  width: 98%;
+  height: 300px;
   border-radius: 8px;
-  background-color: #BDE7FF;
+  background-color: #7EDABE;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
 `;
 
+const Title = styled.Text`
+  top: -20px;
+  font-size: 20px;
+`
 const Rubrik = styled.Text`
   margin-top: 20;
   text-align: center;

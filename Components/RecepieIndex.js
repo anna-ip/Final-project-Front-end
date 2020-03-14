@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, ScrollView, Button, TouchableOpacity, Text } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import { Alert } from "react-native";
-import RecepieCard from "./RecepieCard";
+import RecepiesCards from "./RecepiesCards";
 import styled from "styled-components/native";
 import BackButton from "./lib/BackButton"
 
@@ -34,7 +34,7 @@ const RecepieIndex = ({ history, location }) => {
 
               <Text>{JSON.stringify(location.state)}</Text>
               <CardView>
-                <RecepieCard />
+                <RecepiesCards />
               </CardView>
             </CardContainer>
           </Link>
@@ -43,7 +43,7 @@ const RecepieIndex = ({ history, location }) => {
           <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
             <CardContainer>
               <CardView>
-                <RecepieCard />
+                <RecepiesCards />
               </CardView>
             </CardContainer>
           </Link>
@@ -51,7 +51,7 @@ const RecepieIndex = ({ history, location }) => {
           <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
             <CardContainer>
               <CardView>
-                <RecepieCard />
+                <RecepiesCards />
               </CardView>
             </CardContainer>
           </Link>
@@ -59,7 +59,7 @@ const RecepieIndex = ({ history, location }) => {
           <Link to="/recepie" component={TouchableOpacity} activeOpacity={0.8}>
             <CardContainer>
               <CardView>
-                <RecepieCard />
+                <RecepiesCards />
               </CardView>
             </CardContainer>
           </Link>

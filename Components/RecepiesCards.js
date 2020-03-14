@@ -5,7 +5,7 @@ import TimeComponent from "./TimeComponent";
 import styled from "styled-components/native";
 import { useSelector } from "react-redux";
 
-const RecepieCard = () => {
+const RecepiesCards = () => {
   const hey = useSelector(store => store.food.hey);
   console.log(hey);
 
@@ -26,7 +26,7 @@ const RecepieCard = () => {
   );
 };
 
-export default RecepieCard;
+
 
 const StyledCard = styled(Card)`
   background-color: #ffffff;
@@ -82,3 +82,5 @@ const StyledParagraph = styled(Paragraph)`
   font-size: 12px;
   line-height: 18px;
 `;
+
+export default RecepiesCards;
