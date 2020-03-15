@@ -32,7 +32,7 @@ const Recepie = ({ hitstory, location }) => {
                     <Text>{JSON.stringify(location.state)}</Text>
 
                     <SeasonConatiner>
-                        <SeasonalView />
+                        <SeasonalView location={location.state} />
                     </SeasonConatiner>
 
 

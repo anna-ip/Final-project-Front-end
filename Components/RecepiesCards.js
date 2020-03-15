@@ -3,11 +3,11 @@ import { ImageBackground, Text } from "react-native";
 import { Card, Title, Paragraph } from "react-native-paper";
 import TimeComponent from "./TimeComponent";
 import styled from "styled-components/native";
-import { useSelector } from "react-redux";
+
 
 const RecepiesCards = () => {
-  const hey = useSelector(store => store.food.hey);
-  console.log(hey);
+
+
 
   return (
     <StyledCard>
