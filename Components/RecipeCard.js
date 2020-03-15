@@ -3,14 +3,14 @@ import { SafeAreaView, ScrollView } from 'react-native';
 import RecipeC from "./RecipeC"
 import styled from 'styled-components/native'
 
-const RecepieCard = () => {
+const RecepieCard = ({ recipe }) => {
     return (
         <StyledSafeAreaView>
             <StyledView>
 
                 <CardContainer>
                     <CardView>
-                        <RecipeC />
+                        <RecipeC recipe={recipe} />
                     </CardView>
                 </CardContainer>
 

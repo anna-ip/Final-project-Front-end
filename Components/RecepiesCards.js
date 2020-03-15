@@ -5,7 +5,7 @@ import TimeComponent from "./TimeComponent";
 import styled from "styled-components/native";
 
 
-const RecepiesCards = () => {
+const RecepiesCards = ({ recipe }) => {
 
 
 
@@ -13,13 +13,14 @@ const RecepiesCards = () => {
     <StyledCard>
       <Card.Content>
         <StyledImageBackground source={require('../Components/assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
-          <StyledTitle>"Here goes the title for the recepie {}"</StyledTitle>
-          <StyledText>"Card Subtitle{}"</StyledText>
+          {/* <StyledImageBackground source={recipe.image}> */}
+          <StyledTitle>{recipe.title}</StyledTitle>
+          {/* <StyledText>"Card Subtitle{}"</StyledText> */}
         </StyledImageBackground>
         <TimeView>
           <StyledParagraph> Time component font: Poppins
                 </StyledParagraph>
-          <TimeComponent />
+          {/* <TimeComponent recipe={recipe} /> */}
         </TimeView>
       </Card.Content>
     </StyledCard>

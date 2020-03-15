@@ -56,7 +56,7 @@ const RecepieIndex = ({ history, location }) => {
               <CardContainer>
                 <Text>{recipe.title}</Text>
                 <CardView>
-                  <RecepiesCards />
+                  <RecepiesCards recipe={recipe} />
                 </CardView>
               </CardContainer>
             </Link>

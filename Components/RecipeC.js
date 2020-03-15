@@ -7,7 +7,7 @@ import InstructionsList from "./lib/InstuctionsList"
 import styled from 'styled-components'
 
 
-const RecipeC = () => {
+const RecipeC = ({ recipe }) => {
 
     // constructor = (props) => {
     //     super(props);
@@ -21,15 +21,15 @@ const RecipeC = () => {
             <StyledCard>
                 <Card.Content>
                     <StyledImageBackground source={require('../Components/assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
-                        <StyledTitle>"Here goes the title for the recepie {}"</StyledTitle>
-                        <StyledText>"Card Subtitle{}"</StyledText>
+                        <StyledTitle>{recipe.title}</StyledTitle>
+                        {/* <StyledText>"Card Subtitle{}"</StyledText> */}
                     </StyledImageBackground>
 
 
 
                     <TimeView>
                         <StyledParagraph> Time component font: Poppins</StyledParagraph>
-                        <TimeComponent />
+                        {/* <TimeComponent recipe={recipe} /> */}
                     </TimeView>
 
                     <IngredientsView
