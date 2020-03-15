@@ -6,7 +6,7 @@ import RecipeCard from "./RecipeCard"
 import BackButton from "./lib/BackButton"
 import styled from "styled-components";
 
-const Recepie = ({ hitstory, location }) => {
+const Recepie = ({ hitstory, location, recipe }) => {
 
     // constructor = (props) => {
     //     super(props);
@@ -38,7 +38,7 @@ const Recepie = ({ hitstory, location }) => {
 
 
                     <RecepieCardContainer>
-                        <RecipeCard />
+                        <RecipeCard recipe={recipe} />
                     </RecepieCardContainer>
 
                     <ButtonContainer >
