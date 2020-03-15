@@ -8,12 +8,23 @@ import styled from "styled-components";
 
 const Recepie = ({ hitstory, location }) => {
 
+    // constructor = (props) => {
+    //     super(props);
+    //     this.state = { enableScrollViewScroll: true };
+    // }
+
     return (
         <SafeAreaView>
-            <StyledView>
+            <StyledView
+            // onStartShouldSetResponderCapture={() => {
+            //     this.setState({ enableScrollViewScroll: true });
+            // }}
+            >
 
                 <Text>Recepies</Text>
-                <Scroll >
+                <Scroll
+                // scrollEnabled={this.state.enableScrollViewScroll}
+                >
                     <ProgressContainer>
                         <ProgressCircle />
                     </ProgressContainer>
@@ -67,16 +78,16 @@ const ProgressContainer = styled.View`
 `
 
 const SeasonConatiner = styled.View`
-    top: 85px;
+    top: 70px;
     padding: 8px;
 `
 
 const RecepieCardContainer = styled.View`
-    top: 250px;
+    top: 205px;
     padding: 8px;
 `
 const ButtonContainer = styled.View`
-    top: 400px;
+    top: 180px;
     padding: 15px;
     
 `

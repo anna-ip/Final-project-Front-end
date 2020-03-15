@@ -7,9 +7,17 @@ import InstructionsList from "./lib/InstuctionsList"
 import styled from 'styled-components'
 
 
-const RecipeC = () => (
-    <SafeAreaView>
-        <ScrollView>
+const RecipeC = () => {
+
+    // constructor = (props) => {
+    //     super(props);
+    //     this.state = { enableScrollViewScroll: true };
+    // }
+
+    return (
+
+        <SafeAreaView>
+            {/* <ScrollView> */}
             <StyledCard>
                 <Card.Content>
                     <StyledImageBackground source={require('../Components/assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
@@ -24,7 +32,14 @@ const RecipeC = () => (
                         <TimeComponent />
                     </TimeView>
 
-                    <IngredientsView>
+                    <IngredientsView
+                    // onStartShouldSetResponderCapture={() => {
+                    //     this.setState({ enableScrollViewScroll: false });
+                    //     if (this.refs.myList.scrollProperties.offset === 0 && this.state.enableScrollViewScroll === false) {
+                    //         this.setState({ enableScrollViewScroll: true });
+                    //     }
+                    // }}
+                    >
                         <IngredientsList />
                     </IngredientsView>
 
@@ -34,10 +49,11 @@ const RecipeC = () => (
 
                 </Card.Content>
             </StyledCard>
-        </ScrollView>
+            {/* </ScrollView> */}
 
-    </SafeAreaView>
-);
+        </SafeAreaView>
+    )
+};
 
 export default RecipeC;
 
@@ -108,7 +124,7 @@ const IngredientsView = styled(View)`
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 400px;
+    top: 340px;
 `;
 
 const InstructionsView = styled(View)`
@@ -117,5 +133,5 @@ const InstructionsView = styled(View)`
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 700px;
+    top: 710px;
 `
