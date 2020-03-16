@@ -4,18 +4,18 @@ import { Avatar } from "react-native-paper";
 import MonthAvatar from "./MonthAvatar";
 import styled from "styled-components";
 
-//use selector to find store.veggie.month
-const MonthSeason = () => {
+
+const MonthSeason = ({ season }) => {
 
     return (
         <Container>
             <Title>SEASONAL AVALIBILITY</Title>
 
             <Textfield>
-                Check it out in Sweden........avalible these months
+                Check it out in Sweden{}avalible these months
         </Textfield>
             <MonthAvatarView>
-                <MonthAvatar />
+                <MonthAvatar season={season} />
             </MonthAvatarView>
         </Container>
     );

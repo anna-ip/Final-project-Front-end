@@ -3,8 +3,9 @@ import { SafeAreaView, Text } from 'react-native'
 import { Divider } from 'react-native-elements'
 import styled from 'styled-components/native'
 import VeggieIcons from './lib/VeggieIcons'
+import { PacmanIndicator, } from 'react-native-indicators';
 
-const localUrl = 'http://192.168.1.37:8080/veggies'
+const localUrl = 'http://192.168.1.23:8080/veggies'
 
 const SearchPage = () => {
     const [veggies, setVeggies] = useState([])
@@ -27,7 +28,10 @@ const SearchPage = () => {
         <Container>
             <Header>Seasonal vegetables, what do you have in your fridge</Header>
             <Divider style={{ height: 3, backgroundColor: '#7EDABE' }} />
-            {loading && <Text>Loading</Text>}
+            {loading && <PacmanIndicator
+                color={'#7EDABE'}
+                size={60}
+            />}
             {!loading && <VeggieIcons veggies={veggies} />}
             <Divider style={{ height: 3, backgroundColor: '#7EDABE' }} />
             {/* <Button title="Search" onPress={() => history.push("/RecepieIndex")} /> */}

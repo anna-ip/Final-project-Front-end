@@ -7,20 +7,18 @@ import styled from "styled-components/native";
 
 const RecepiesCards = ({ recipe }) => {
 
-
-
   return (
     <StyledCard>
       <Card.Content>
-        <StyledImageBackground source={require('../Components/assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
-          {/* <StyledImageBackground source={recipe.image}> */}
+        {/* <OpacityContainer> */}
+        <StyledImageBackground source={{ uri: recipe.image }}>
           <StyledTitle>{recipe.title}</StyledTitle>
-          {/* <StyledText>"Card Subtitle{}"</StyledText> */}
         </StyledImageBackground>
+        {/* </OpacityContainer> */}
         <TimeView>
           <StyledParagraph> Time component font: Poppins
-                </StyledParagraph>
-          {/* <TimeComponent recipe={recipe} /> */}
+          </StyledParagraph>
+          <TimeComponent recipe={recipe} />
         </TimeView>
       </Card.Content>
     </StyledCard>
@@ -40,25 +38,40 @@ const StyledCard = styled(Card)`
   z-index: 0;
 `;
 
+// const OpacityContainer = styled.View`
+//  background-color: black;
+//  z-index: 2;
+// `
+
 const StyledImageBackground = styled(ImageBackground)`
   width: 100%;
   height: 200px;
   border-radius: 30;
+  opacity: 0.5;
   z-index: 1;
   position: absolute;
   left: 8%;
   right: 0%;
   top: 60px;
   bottom: 0%;
+ 
 `;
 
 const StyledTitle = styled(Title)`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  font-weight: 600;
+  font-size: 20px;
   color: #ffffff;
+  /* border: 1px solid #7EDABE; */
   position: absolute;
-  left: 0%;
+  left: 2%;
   right: 0%;
-  top: 50.3%;
+  top: 75%;
   bottom: 3.28%;
+  z-index: 3;
 `;
 
 const StyledText = styled(Text)`

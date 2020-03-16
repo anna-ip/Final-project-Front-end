@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import MonthSeason from "./lib/MonthSeason"
 import Constants from 'expo-constants';
@@ -7,12 +7,13 @@ import styled from "styled-components";
 import { Card } from 'react-native-paper';
 //use selector to find store.veggie.month
 //use selector to find store.veggie.co2
-const SeasonalView = () => {
-
+const SeasonalView = (location) => {
+    const [season, setSeason] = useState(location.state)
     return (
         <Container>
             <CardConatiner>
-                <MonthSeason />
+                <Text>{JSON.stringify(location.state)}</Text>
+                <MonthSeason season={season} />
             </CardConatiner>
         </Container>
     );

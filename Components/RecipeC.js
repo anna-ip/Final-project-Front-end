@@ -21,7 +21,7 @@ const RecipeC = ({ recipe }) => {
             <StyledCard>
                 <Card.Content>
                     <StyledImageBackground source={require('../Components/assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}>
-                        <StyledTitle>{recipe.title}</StyledTitle>
+                        <StyledTitle>Title</StyledTitle>
                         {/* <StyledText>"Card Subtitle{}"</StyledText> */}
                     </StyledImageBackground>
 
