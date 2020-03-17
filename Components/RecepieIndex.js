@@ -11,13 +11,11 @@ import { Alert } from 'react-native'
 import RecepiesCards from './RecepiesCards'
 import styled from 'styled-components/native'
 import BackButton from './lib/BackButton'
+import { PacmanIndicator } from 'react-native-indicators';
 
-//fetch ...../recepie
-//use Params....kolla Movies projects
-//map through
-const localUrl = 'http://192.168.1.37:8080/recipes/'
+const localUrl = 'http://192.168.1.23:8080/recipes/'
 
-const RecepieIndex = ({ history, location }) => {
+const RecepieIndex = ({ history, location, veggie }) => {
   const [recipes, setRecipes] = useState([])
   const [loading, setLoading] = useState(false)
   console.log('location', location.state.name)
@@ -54,9 +52,10 @@ const RecepieIndex = ({ history, location }) => {
               {/* skicka med ett id från recept db som i Movie project*/}
               {/* link to */}
               <CardContainer>
-                <Text>{recipe.title}</Text>
+                {loading && <Text>Test</Text>}
+                {!loading && <Text>{recipe.title}</Text>}
                 <CardView>
-                  <RecepiesCards recipe={recipe} />
+                  <RecepiesCards veggie={veggie} recipe={recipe} />
                 </CardView>
               </CardContainer>
             </Link>

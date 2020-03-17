@@ -137,7 +137,11 @@ const VeggieIcons = ({ history }) => {
 
           {/* Beet */}
           <Button id={"5e5d08acf901cfd65b8f5e36"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Beet",
+              search: '?Beet'
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Beet.png")}
               resizeMode="contain"
@@ -145,7 +149,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Broccoli */}
           <Button id={"5e5d08acf901cfd65b8f5e2b"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Broccoli",
+              search: '?Broccoli'
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Broccoli.png")}
               resizeMode="contain"
@@ -153,7 +161,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Cabage */}
           <Button id={"5e5d08acf901cfd65b8f5e2e"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Cabage",
+              search: '?Cabage'
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Cabage.png")}
               resizeMode="contain"
@@ -161,7 +173,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Cauliflower */}
           <Button id={"5e5d08acf901cfd65b8f5e2c"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Cauliflower",
+              search: '?Cauliflower'
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Cauliflower.png")}
               resizeMode="contain"
@@ -169,7 +185,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Spininch */}
           <Button id={"5e5d08acf901cfd65b8f5e38"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Spininch",
+              search: "?Spininch"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Spinich.png")}
               resizeMode="contain"
@@ -182,7 +202,11 @@ const VeggieIcons = ({ history }) => {
         <IconContainer>
           {/* Cucumber */}
           <Button id={"5e5d08acf901cfd65b8f5e33"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Cucumber",
+              search: "?Cucumber"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Cucumber.png")}
               resizeMode="contain"
@@ -190,7 +214,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Eggplant */}
           <Button id={"5e5d08acf901cfd65b8f5e30"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Eggplant",
+              search: "?Eggplant"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Eggplant.png")}
               resizeMode="contain"
@@ -198,7 +226,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Mushroom */}
           <Button id={"5e5d08acf901cfd65b8f5e2f"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Mushroom",
+              search: "?Mushroom"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Mushroom.png")}
               resizeMode="contain"
@@ -206,7 +238,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Pepper */}
           <Button id={"5e5d08acf901cfd65b8f5e2d"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Pepper",
+              search: "?Pepper"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Pepper.png")}
               resizeMode="contain"
@@ -214,7 +250,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Pumpkin */}
           <Button id={"5e5d08acf901cfd65b8f5e35"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Pumpkin",
+              search: "?Pumpkin"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Pumkin.png")}
               resizeMode="contain"
@@ -222,7 +262,11 @@ const VeggieIcons = ({ history }) => {
           </Button>
           {/* Tomato */}
           <Button id={"5e5d08acf901cfd65b8f5e3a"} key={veggies._id}
-            onPress={() => history.push("/RecepieIndex")}>
+            onPress={() => history.push("/RecepieIndex", {
+
+              name: "Tomato",
+              search: "?Tomato"
+            })}>
             <Icon
               source={require("../assets/VeggiesIcons/Tomato.png")}
               resizeMode="contain"

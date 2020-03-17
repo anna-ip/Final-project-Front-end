@@ -4,12 +4,12 @@ import { Text, View, StyleSheet } from "react-native";
 import ProgressCircle from "react-native-progress-circle";
 import styled from "styled-components";
 
-const progressCircle = () => {
+const progressCircle = (veggie) => {
   const value = 0.66;
   const coFrontPrint = 0;
   return (
     <Container>
-      <Title>Veggie name {}</Title>
+      <Title>{veggie.name}</Title>
       <ProgressCircle
         percent={30}
         radius={60}
