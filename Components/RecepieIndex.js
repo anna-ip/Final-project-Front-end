@@ -13,12 +13,12 @@ import styled from 'styled-components/native'
 import BackButton from './lib/BackButton'
 import { PacmanIndicator } from 'react-native-indicators';
 
-const localUrl = 'http://192.168.1.23:8080/recipes/'
+const localUrl = 'http://192.168.1.17:8080/recipes/'
 
 const RecepieIndex = ({ history, location, veggie }) => {
   const [recipes, setRecipes] = useState([])
   const [loading, setLoading] = useState(false)
-  console.log('location', location.state.name)
+  console.log('location recepieIndex', location.state.name)
 
   // THIS WORKS ✅
   // fetching the recipies from DB here.
@@ -35,9 +35,11 @@ const RecepieIndex = ({ history, location, veggie }) => {
   }, [])
 
   return (
-    <StyledView>
-      <SafeAreaView>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+    <SafeAreaView>
+      <StyledView>
+
+        <ScrollView horizontal={true}
+          showsHorizontalScrollIndicator={false}>
           {recipes.map(recipe => (
             <Link
               key={recipe.id}
@@ -52,8 +54,14 @@ const RecepieIndex = ({ history, location, veggie }) => {
               {/* skicka med ett id från recept db som i Movie project*/}
               {/* link to */}
               <CardContainer>
-                {loading && <Text>Test</Text>}
-                {!loading && <Text>{recipe.title}</Text>}
+                {/* {loading && <Text>Test</Text>} */}
+                {/* <LoadingContainer> */}
+                {loading && <PacmanIndicator
+                  color={'#7EDABE'}
+                  size={60}
+                />}
+                {/* </LoadingContainer> */}
+                {!loading && <Text></Text>}
                 <CardView>
                   <RecepiesCards veggie={veggie} recipe={recipe} />
                 </CardView>
@@ -61,43 +69,24 @@ const RecepieIndex = ({ history, location, veggie }) => {
             </Link>
           ))}
 
-          {/* <Link to='/recepie' component={TouchableOpacity} activeOpacity={0.8}>
-            <CardContainer>
-              <CardView>
-                <RecepieCard />
-              </CardView>
-            </CardContainer>
-          </Link>
-​
-          <Link to='/recepie' component={TouchableOpacity} activeOpacity={0.8}>
-            <CardContainer>
-              <CardView>
-                <RecepieCard />
-              </CardView>
-            </CardContainer>
-          </Link>
-​
-          <Link to='/recepie' component={TouchableOpacity} activeOpacity={0.8}>
-            <CardContainer>
-              <CardView>
-                <RecepieCard />
-              </CardView>
-            </CardContainer>
-          </Link> */}
         </ScrollView>
-        <BackButton />
+
+        <BackButtonContainer>
+          <BackButton />
+        </BackButtonContainer>
         {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
-      </SafeAreaView>
-    </StyledView>
+
+      </StyledView>
+    </SafeAreaView>
   )
 }
-export default RecepieIndex
+
 
 //StyledView is the background
 const StyledView = styled.View`
   z-index: -1;
-  margin-top: 25%;
-`
+  margin-top: 180px;
+`;
 
 //background for the Scrollwiev of the cards height
 // const Scroll = styled(ScrollView)`
@@ -107,8 +96,25 @@ const StyledView = styled.View`
 const CardContainer = styled.View`
   display: flex;
   flex-direction: column;
-`
+  height: 100%;
+  /* position: absolute; 
+  top: 25px;  */
+`;
+
+// const LoadingContainer = styled.View`
+//   z-index: 2;
+// `
 
 const CardView = styled.View`
   z-index: 1;
-`
+`;
+
+const BackButtonContainer = styled.View`
+  position: absolute;
+  left: 50%;
+  top: 380px;
+  bottom: 5px;
+  z-index: 2;
+`;
+
+export default RecepieIndex

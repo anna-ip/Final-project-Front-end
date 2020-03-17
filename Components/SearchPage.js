@@ -5,11 +5,12 @@ import styled from 'styled-components/native'
 import VeggieIcons from './lib/VeggieIcons'
 import { PacmanIndicator, } from 'react-native-indicators';
 
-const localUrl = 'http://192.168.1.23:8080/veggies'
+const localUrl = 'http://192.168.1.17:8080/veggies'
 
 const SearchPage = () => {
     const [veggies, setVeggies] = useState([])
     const [loading, setLoading] = useState(false)
+    console.log("searchPage", veggies)
 
     // THIS WORKS ✅
     // fetching the veggies from DB here.

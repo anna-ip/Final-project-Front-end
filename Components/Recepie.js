@@ -11,6 +11,7 @@ import styled from "styled-components";
 
 const Recepie = ({ hitstory, location }) => {
     const [ingredient, setIngredient] = useState(location.state)
+    console.log("ingredient", ingredient)
     const [ingridentList, setIngredientList] = useState([
         {
             title: `${ingredient.title}`,
@@ -21,6 +22,7 @@ const Recepie = ({ hitstory, location }) => {
 
         }
     ])
+    console.log("ingredientList", ingridentList)
 
 
     return (
@@ -146,13 +148,14 @@ const StyledImageCard = styled(Card)`
     padding-right: 15px;
     border-radius: 8px;
     border: 0.75px solid #FFDF7F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
     z-index: 0;
 `;
 
 const StyledImageBackground = styled(ImageBackground)`
     width: 110%;
     height: 200px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
     /* background-position: center; */
     border-radius: 8px;
     z-index:1;

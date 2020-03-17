@@ -7,7 +7,7 @@ const TimeComponent = ({ recipe }) => {
 
     return (
         <View>
-            <DataTable>
+            <StyledDataTable>
                 <DataTable.Header>
                     <DataTable.Title>Prep time: </DataTable.Title>
                     <DataTable.Title numeric> Cook time: </DataTable.Title>
@@ -19,18 +19,20 @@ const TimeComponent = ({ recipe }) => {
                     <DataTable.Cell numeric>{recipe.cookingMinutes} min</DataTable.Cell>
                     <DataTable.Cell numeric>{recipe.readyInMinutes} min</DataTable.Cell>
                 </DataTable.Row>
-            </DataTable>
+            </StyledDataTable>
         </View>
     );
 
 }
 
-export default TimeComponent
 
-// const Title = styled.h1`
-// font-family: Poppins;
-// font-weight: 600;
-// font-size: 12px;
-// line-height: 18px;
-// `
+
+const StyledDataTable = styled(DataTable)`
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: black;
+`;
+
+export default TimeComponent
 

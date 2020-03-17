@@ -12,7 +12,9 @@ const RecepiesCards = ({ recipe }) => {
       <Card.Content>
         {/* <OpacityContainer> */}
         <StyledImageBackground source={{ uri: recipe.image }}>
-          <StyledTitle>{recipe.title}</StyledTitle>
+
+          <StyledTitle >{recipe.title}</StyledTitle>
+
         </StyledImageBackground>
         {/* </OpacityContainer> */}
         <TimeView>
@@ -38,24 +40,34 @@ const StyledCard = styled(Card)`
   z-index: 0;
 `;
 
-// const OpacityContainer = styled.View`
-//  background-color: black;
-//  z-index: 2;
-// `
+const OpacityContainer = styled.View`
+  /* background-color:rgba(255,0,0,0.5); */
+ background-color: black;
+ z-index: 2;
+`
 
 const StyledImageBackground = styled(ImageBackground)`
   width: 100%;
   height: 200px;
-  border-radius: 30;
-  opacity: 0.5;
+  /* border-radius: 30; */
+  border-top-left-radius: 30;
+  opacity: 0.6;
   z-index: 1;
   position: absolute;
   left: 8%;
   right: 0%;
-  top: 60px;
+  top: 50px;
   bottom: 0%;
- 
+  background: rgba(0, 0, 0, 0.5);
+  /* filter: brightness(20%);
+  background: rgba(0,0,0,.5); */
 `;
+
+
+// const Overlay = styled.View`
+//   background: rgba(0, 0, 0, 0.5);
+//   z-index: 2;
+// `
 
 const StyledTitle = styled(Title)`
   display: flex;
@@ -71,23 +83,25 @@ const StyledTitle = styled(Title)`
   right: 0%;
   top: 75%;
   bottom: 3.28%;
+  /* opacity: 0; */
   z-index: 3;
+  text-transform: capitalize;
 `;
 
-const StyledText = styled(Text)`
-  color: #ffffff;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 85.3%;
-  bottom: 3.28%;
-`;
+// const StyledText = styled(Text)`
+//   color: #ffffff;
+//   position: absolute;
+//   left: 0%;
+//   right: 0%;
+//   top: 85.3%;
+//   bottom: 3.28%;
+// `;
 
 const TimeView = styled.View`
   position: absolute;
   left: 0%;
   right: 0%;
-  top: 255px;
+  top: 295px;
   bottom: 0%;
 `;
 

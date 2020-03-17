@@ -82,6 +82,7 @@ const StyledImageBackground = styled(ImageBackground)`
     position: absolute;
     top: 10px;
     bottom: 0%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
     /* linear-gradient: 180deg, #FFFFFF, 0%, rgba(255, 255, 255, 0), 100%; */
 `;
 
@@ -93,6 +94,7 @@ const StyledTitle = styled(Title)`
     right: 0%;
     top: 110px;
     z-index:2;
+    
 `;
 
 const StyledText = styled(Text)`
