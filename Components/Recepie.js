@@ -23,16 +23,15 @@ import styled from "styled-components";
 const Recepie = ({ hitstory, location }) => {
   const [ingredient, setIngredient] = useState(location.state);
   console.log("ingredient", ingredient);
-  const [ingridentList, setIngredientList] = useState([
-    {
-      title: `${ingredient.title}`,
-      ingredientsList: `${ingredient.missedIngredients}`
-      // listName: `${ingredient.analyzedInstructions.steps.ingredients.name}`,
-      // listAmount: `${ingredient.missedIngredients.amount}`,
-      // listUnit: `${ingredient.missedIngredients.unit}`,
-    }
-  ]);
-  console.log("ingredientList", ingridentList);
+  // const [ingridentList, setIngredientList] = useState([
+  //   {
+  //     title: `${ingredient.title}`,
+  //     ingredientsList: `${ingredient.missedIngredients}`
+  //     // listName: `${ingredient.analyzedInstructions.steps.ingredients.name}`,
+  //     // listAmount: `${ingredient.missedIngredients.amount}`,
+  //     // listUnit: `${ingredient.missedIngredients.unit}`,
+  //   }
+  // ]);
 
   return (
     // this logs ingredients but i still cant map through each array to find them
@@ -47,9 +46,7 @@ const Recepie = ({ hitstory, location }) => {
               <StyledImageCard>
                 <Card.Content>
                   <StyledImageBackground source={{ uri: ingredient.image }}>
-                    {/* <StyledImageBackground source={require('../Components/assets/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg')}> */}
                     <StyledTitle>{`${ingredient.title}`}</StyledTitle>
-                    {/* <Text>{recipe.title}</Text> */}
                   </StyledImageBackground>
                 </Card.Content>
               </StyledImageCard>
@@ -105,14 +102,15 @@ const Recepie = ({ hitstory, location }) => {
                     </TimeView>
 
                     <IngredientsView>
-                      <FlatList
-                        data={ingredient}
-                        renderItem={({ item }) => <Text>{item.title}</Text>}
-                      />
+                      {ingredient.missedIngredients.map(item => (
+                        <Text>{item.originalString}</Text>
+                      ))}
                     </IngredientsView>
 
                     <InstructionsView>
-                      <InstructionsList />
+                      {ingredient.analyzedInstructions.map(item => (
+                        <Text>{item.steps[1].step}</Text>
+                      ))}
                     </InstructionsView>
                   </Card.Content>
                 </StyledCard>
