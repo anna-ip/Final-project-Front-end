@@ -1,41 +1,40 @@
-import React, { useState } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import MonthSeason from "./lib/MonthSeason"
-import Constants from 'expo-constants';
+import React, { useState } from "react";
+import { Text, View, StyleSheet } from "react-native";
+import MonthSeason from "./lib/MonthSeason";
+import Constants from "expo-constants";
 import styled from "styled-components";
 
-import { Card } from 'react-native-paper';
+import { Card } from "react-native-paper";
 //use selector to find store.veggie.month
 //use selector to find store.veggie.co2
-const SeasonalView = (location) => {
-    const [season, setSeason] = useState(location.state)
-    return (
-        <Container>
-            <CardConatiner>
-                <Text>{JSON.stringify(location.state)}</Text>
-                <MonthSeason season={season} />
-            </CardConatiner>
-        </Container>
-    );
-
-}
+const SeasonalView = location => {
+  const [season, setSeason] = useState(location.state);
+  return (
+    <Container>
+      <CardConatiner>
+        <Text>{JSON.stringify(location.state)}</Text>
+        <MonthSeason season={season} />
+      </CardConatiner>
+    </Container>
+  );
+};
 
 const Container = styled.View`
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    /* width: 100%; */
-    height: 153px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* width: 100%; */
+  height: 153px;
 
-    padding: 8px;
-`
+  padding: 8px;
+`;
 
 const CardConatiner = styled(Card)`
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    /* width: 100%; */
-    /* margin: 4px; */
- `
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* width: 100%; */
+  /* margin: 4px; */
+`;
 
-export default SeasonalView
+export default SeasonalView;

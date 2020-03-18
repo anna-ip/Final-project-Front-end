@@ -1,0 +1,1157 @@
+{
+  "results": [
+    {
+      "vegetarian": true,
+      "vegan": false,
+      "glutenFree": true,
+      "dairyFree": false,
+      "veryHealthy": false,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "weightWatcherSmartPoints": 5,
+      "gaps": "no",
+      "lowFodmap": false,
+      "sourceUrl": "http://www.vegetariantimes.com/recipe/beet-dip/",
+      "spoonacularSourceUrl": "https://spoonacular.com/beet-dip-761295",
+      "aggregateLikes": 55,
+      "spoonacularScore": 29.0,
+      "healthScore": 2.0,
+      "creditsText": "Vegetarian Times",
+      "sourceName": "Vegetarian Times",
+      "pricePerServing": 66.15,
+      "id": 761295,
+      "title": "Beet Dip",
+      "readyInMinutes": 45,
+      "servings": 6,
+      "image": "https://spoonacular.com/recipeImages/761295-312x231.jpg",
+      "imageType": "jpg",
+      "summary": "Beet Dip might be just the hor d'oeuvre you are searching for. This recipe serves 6 and costs 65 cents per serving. One serving contains <b>147 calories</b>, <b>3g of protein</b>, and <b>13g of fat</b>. 55 people have tried and liked this recipe. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. It is a good option if you're following a <b>gluten free, primal, and vegetarian</b> diet. It can be enjoyed any time, but it is especially good for <b>The Super Bowl</b>. Head to the store and pick up chives, cream cheese, beets, and a few other things to make it today. All things considered, we decided this recipe <b>deserves a spoonacular score of 31%</b>. This score is rather bad. Similar recipes include <a href=\"https://spoonacular.com/recipes/pecan-roasted-beet-dip-with-sage-922310\">Pecan Roasted Beet Dip with Sage</a>, <a href=\"https://spoonacular.com/recipes/roasted-beet-and-shallot-salad-over-wilted-beet-greens-and-arugula-8283\">Roasted Beet and Shallot Salad over Wilted Beet Greens and Arugula</a>, and <a href=\"https://spoonacular.com/recipes/golden-beet-beet-greens-pasta-w-ricotta-and-feta-cheese-521860\">Golden Beet & Beet Greens Pasta W/ Ricottan and Feta Cheese</a>.",
+      "cuisines": [],
+      "dishTypes": ["condiment", "dip", "spread"],
+      "diets": ["gluten free", "lacto ovo vegetarian"],
+      "occasions": ["super bowl"],
+      "winePairing": {},
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "In bowl of food processor, pulse beets, scallion and spinach until finely chopped.",
+              "ingredients": [
+                {
+                  "id": 11291,
+                  "name": "green onions",
+                  "image": "spring-onions.jpg"
+                },
+                {
+                  "id": 10011457,
+                  "name": "spinach",
+                  "image": "spinach.jpg"
+                },
+                {
+                  "id": 11080,
+                  "name": "beet",
+                  "image": "beets.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404771,
+                  "name": "food processor",
+                  "image": "food-processor.png"
+                },
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "image": "bowl.jpg"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "Add cream cheese, lemon juice and salt, and process until well blended, leaving some texture in dip.",
+              "ingredients": [
+                {
+                  "id": 1017,
+                  "name": "cream cheese",
+                  "image": "cream-cheese.jpg"
+                },
+                {
+                  "id": 9152,
+                  "name": "lemon juice",
+                  "image": "lemon-juice.jpg"
+                },
+                {
+                  "id": 2047,
+                  "name": "salt",
+                  "image": "salt.jpg"
+                }
+              ],
+              "equipment": []
+            },
+            {
+              "number": 3,
+              "step": "Transfer to bowl, and stir in chives.",
+              "ingredients": [
+                {
+                  "id": 11156,
+                  "name": "chives",
+                  "image": "fresh-chives.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "image": "bowl.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "usedIngredientCount": 0,
+      "missedIngredientCount": 6,
+      "missedIngredients": [
+        {
+          "id": 11156,
+          "amount": 2.0,
+          "unit": "tsp",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp",
+          "aisle": "Produce",
+          "name": "chives",
+          "original": "2 tsp. snipped chives",
+          "originalString": "2 tsp. snipped chives",
+          "originalName": "snipped chives",
+          "metaInformation": ["snipped"],
+          "meta": ["snipped"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/fresh-chives.jpg"
+        },
+        {
+          "id": 1017,
+          "amount": 8.0,
+          "unit": "oz",
+          "unitLong": "ounces",
+          "unitShort": "oz",
+          "aisle": "Cheese",
+          "name": "cream cheese",
+          "original": "8 oz. cream cheese",
+          "originalString": "8 oz. cream cheese",
+          "originalName": "cream cheese",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/cream-cheese.jpg"
+        },
+        {
+          "id": 9152,
+          "amount": 2.0,
+          "unit": "tsp",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp",
+          "aisle": "Produce",
+          "name": "lemon juice",
+          "original": "2 tsp. freshly squeezed lemon juice",
+          "originalString": "2 tsp. freshly squeezed lemon juice",
+          "originalName": "freshly squeezed lemon juice",
+          "metaInformation": ["freshly squeezed"],
+          "meta": ["freshly squeezed"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/lemon-juice.jpg"
+        },
+        {
+          "id": 11080,
+          "amount": 0.5,
+          "unit": "lb",
+          "unitLong": "pounds",
+          "unitShort": "lb",
+          "aisle": "Produce",
+          "name": "red beets",
+          "original": "½ lb. red beets (l large), peeled and coarsely chopped",
+          "originalString": "½ lb. red beets (l large), peeled and coarsely chopped",
+          "originalName": "red beets (l large), peeled and coarsely chopped",
+          "metaInformation": ["red", "peeled", "coarsely chopped", "(l large)"],
+          "meta": ["red", "peeled", "coarsely chopped", "(l large)"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/beets.jpg"
+        },
+        {
+          "id": 11291,
+          "amount": 1.0,
+          "unit": "large",
+          "unitLong": "large",
+          "unitShort": "large",
+          "aisle": "Produce",
+          "name": "scallion",
+          "original": "1 large scallion, chopped",
+          "originalString": "1 large scallion, chopped",
+          "originalName": "scallion, chopped",
+          "metaInformation": ["chopped"],
+          "meta": ["chopped"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/spring-onions.jpg"
+        },
+        {
+          "id": 10011457,
+          "amount": 0.25,
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "spinach",
+          "original": "¼ cup (packed) chopped fresh spinach",
+          "originalString": "¼ cup (packed) chopped fresh spinach",
+          "originalName": "(packed) chopped fresh spinach",
+          "metaInformation": ["fresh", "packed", "chopped", "()"],
+          "meta": ["fresh", "packed", "chopped", "()"],
+          "extendedName": "fresh spinach",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/spinach.jpg"
+        }
+      ],
+      "likes": 0,
+      "usedIngredients": [],
+      "unusedIngredients": []
+    },
+    {
+      "vegetarian": false,
+      "vegan": false,
+      "glutenFree": false,
+      "dairyFree": false,
+      "veryHealthy": false,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "weightWatcherSmartPoints": 11,
+      "gaps": "no",
+      "lowFodmap": false,
+      "preparationMinutes": 15,
+      "cookingMinutes": 45,
+      "sourceUrl": "http://www.tasteofhome.com/Recipes/beet-cake",
+      "spoonacularSourceUrl": "https://spoonacular.com/beet-cake-374194",
+      "aggregateLikes": 0,
+      "spoonacularScore": 10.0,
+      "healthScore": 1.0,
+      "creditsText": "Taste of Home",
+      "sourceName": "Taste of Home",
+      "pricePerServing": 42.99,
+      "id": 374194,
+      "title": "Beet Cake",
+      "readyInMinutes": 60,
+      "servings": 20,
+      "image": "https://spoonacular.com/recipeImages/374194-312x231.jpg",
+      "imageType": "jpg",
+      "summary": "One portion of this dish contains about <b>3g of protein</b>, <b>12g of fat</b>, and a total of <b>248 calories</b>. For <b>43 cents per serving</b>, this recipe <b>covers 4%</b> of your daily requirements of vitamins and minerals. This recipe serves 20. A mixture of flour, beets, eggs, and a handful of other ingredients are all it takes to make this recipe so yummy. This recipe from Taste of Home has 1 fans. From preparation to the plate, this recipe takes about <b>1 hour</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 14%</b>. This score is rather bad. Try <a href=\"https://spoonacular.com/recipes/polish-beet-cake-374206\">Polish Beet Cake</a>, <a href=\"https://spoonacular.com/recipes/chocolate-beet-cake-403597\">Chocolate Beet Cake</a>, and <a href=\"https://spoonacular.com/recipes/beet-chocolate-cake-158978\">Beet Chocolate Cake</a> for similar recipes.",
+      "cuisines": [],
+      "dishTypes": [
+        "antipasti",
+        "starter",
+        "snack",
+        "appetizer",
+        "antipasto",
+        "hor d'oeuvre"
+      ],
+      "diets": [],
+      "occasions": [],
+      "winePairing": {},
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "In a microwave, melt chocolate and 1/4 cup butter; stir until smooth. Cool slightly. Meanwhile, in a large bowl, cream the remaining butter and brown sugar until light and fluffy. Beat in eggs.",
+              "ingredients": [
+                {
+                  "id": 19334,
+                  "name": "brown sugar",
+                  "image": "dark-brown-sugar.png"
+                },
+                {
+                  "id": 1001,
+                  "name": "butter",
+                  "image": "butter-sliced.jpg"
+                },
+                {
+                  "id": 1123,
+                  "name": "egg",
+                  "image": "egg.png"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404762,
+                  "name": "microwave",
+                  "image": "microwave.jpg"
+                },
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "image": "bowl.jpg"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "In a small bowl, combine the chocolate mixture, beets and vanilla.",
+              "ingredients": [
+                {
+                  "id": 2050,
+                  "name": "vanilla",
+                  "image": "vanilla.jpg"
+                },
+                {
+                  "id": 11080,
+                  "name": "beet",
+                  "image": "beets.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "image": "bowl.jpg"
+                }
+              ]
+            },
+            {
+              "number": 3,
+              "step": "Beat into creamed mixture (mixture will appear separated).",
+              "ingredients": [],
+              "equipment": []
+            },
+            {
+              "number": 4,
+              "step": "Combine flour, baking soda and salt; gradually add to creamed mixture.",
+              "ingredients": [
+                {
+                  "id": 18372,
+                  "name": "baking soda",
+                  "image": "white-powder.jpg"
+                },
+                {
+                  "id": 20081,
+                  "name": "all purpose flour",
+                  "image": "flour.png"
+                },
+                {
+                  "id": 2047,
+                  "name": "salt",
+                  "image": "salt.jpg"
+                }
+              ],
+              "equipment": []
+            },
+            {
+              "number": 5,
+              "step": "Pour into a greased and floured 10-in. fluted tube pan.",
+              "ingredients": [],
+              "equipment": [
+                {
+                  "id": 404645,
+                  "name": "frying pan",
+                  "image": "pan.png"
+                }
+              ]
+            },
+            {
+              "number": 6,
+              "step": "Bake at 375° for 45-55 minutes or until a toothpick inserted near the center comes out clean. Cool in pan 10 minutes before removing to a wire rack to cool completely. Before serving, dust with confectioners' sugar.",
+              "ingredients": [
+                {
+                  "id": 19336,
+                  "name": "powdered sugar",
+                  "image": "powdered-sugar.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404644,
+                  "name": "toothpicks",
+                  "image": "toothpicks.jpg"
+                },
+                {
+                  "id": 405900,
+                  "name": "wire rack",
+                  "image": "wire-rack.jpg"
+                },
+                {
+                  "id": 404645,
+                  "name": "frying pan",
+                  "image": "pan.png"
+                }
+              ],
+              "length": {
+                "number": 65,
+                "unit": "minutes"
+              }
+            }
+          ]
+        }
+      ],
+      "usedIngredientCount": 0,
+      "missedIngredientCount": 6,
+      "missedIngredients": [
+        {
+          "id": 18372,
+          "amount": 2.0,
+          "unit": "teaspoons",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp",
+          "aisle": "Baking",
+          "name": "baking soda",
+          "original": "2 teaspoons baking soda",
+          "originalString": "2 teaspoons baking soda",
+          "originalName": "baking soda",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/white-powder.jpg"
+        },
+        {
+          "id": 11080,
+          "amount": 2.0,
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "beets",
+          "original": "2 cups pureed cooked beets",
+          "originalString": "2 cups pureed cooked beets",
+          "originalName": "pureed cooked beets",
+          "metaInformation": ["pureed", "cooked"],
+          "meta": ["pureed", "cooked"],
+          "extendedName": "cooked pureed beets",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/beets.jpg"
+        },
+        {
+          "id": 1001,
+          "amount": 1.0,
+          "unit": "cup",
+          "unitLong": "cup",
+          "unitShort": "cup",
+          "aisle": "Milk, Eggs, Other Dairy",
+          "name": "butter",
+          "original": "1 cup butter, softened, divided",
+          "originalString": "1 cup butter, softened, divided",
+          "originalName": "butter, softened, divided",
+          "metaInformation": ["divided", "softened"],
+          "meta": ["divided", "softened"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/butter-sliced.jpg"
+        },
+        {
+          "id": 1123,
+          "amount": 3.0,
+          "unit": "",
+          "unitLong": "",
+          "unitShort": "",
+          "aisle": "Milk, Eggs, Other Dairy",
+          "name": "eggs",
+          "original": "3 eggs",
+          "originalString": "3 eggs",
+          "originalName": "eggs",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/egg.png"
+        },
+        {
+          "id": 19903,
+          "amount": 4.0,
+          "unit": "ounces",
+          "unitLong": "ounces",
+          "unitShort": "oz",
+          "aisle": "Sweet Snacks",
+          "name": "semisweet chocolate",
+          "original": "4 ounces semisweet chocolate, chopped",
+          "originalString": "4 ounces semisweet chocolate, chopped",
+          "originalName": "semisweet chocolate, chopped",
+          "metaInformation": ["chopped"],
+          "meta": ["chopped"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/dark-chocolate-pieces.jpg"
+        },
+        {
+          "id": 2050,
+          "amount": 1.0,
+          "unit": "teaspoon",
+          "unitLong": "teaspoon",
+          "unitShort": "tsp",
+          "aisle": "Baking",
+          "name": "vanilla extract",
+          "original": "1 teaspoon vanilla extract",
+          "originalString": "1 teaspoon vanilla extract",
+          "originalName": "vanilla extract",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/vanilla.jpg"
+        }
+      ],
+      "likes": 0,
+      "usedIngredients": [],
+      "unusedIngredients": []
+    },
+    {
+      "vegetarian": true,
+      "vegan": false,
+      "glutenFree": true,
+      "dairyFree": true,
+      "veryHealthy": false,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "weightWatcherSmartPoints": 3,
+      "gaps": "no",
+      "lowFodmap": false,
+      "preparationMinutes": 20,
+      "cookingMinutes": 0,
+      "sourceUrl": "http://lexiscleankitchen.com/2016/07/19/beet-slaw/",
+      "spoonacularSourceUrl": "https://spoonacular.com/beet-slaw-793790",
+      "aggregateLikes": 143,
+      "spoonacularScore": 90.0,
+      "healthScore": 27.0,
+      "creditsText": "Lexi's Clean Kitchen",
+      "sourceName": "Lexi's Clean Kitchen",
+      "pricePerServing": 173.94,
+      "id": 793790,
+      "title": "Beet Slaw",
+      "readyInMinutes": 20,
+      "servings": 4,
+      "image": "https://spoonacular.com/recipeImages/793790-312x231.jpg",
+      "imageType": "jpg",
+      "summary": "Beet Slaw might be just the side dish you are searching for. This recipe makes 4 servings with <b>167 calories</b>, <b>5g of protein</b>, and <b>7g of fat</b> each. For <b>95 cents per serving</b>, this recipe <b>covers 10%</b> of your daily requirements of vitamins and minerals. A mixture of honey, golden raisins, sea salt, and a handful of other ingredients are all it takes to make this recipe so yummy. 143 people have made this recipe and would make it again. From preparation to the plate, this recipe takes around <b>20 minutes</b>. <b>The Fourth Of July</b> will be even more special with this recipe. It is a good option if you're following a <b>caveman, gluten free, dairy free, and primal</b> diet. All things considered, we decided this recipe <b>deserves a spoonacular score of 76%</b>. This score is solid. Try <a href=\"https://spoonacular.com/recipes/beet-slaw-634798\">Beet Slaw</a>, <a href=\"https://spoonacular.com/recipes/raw-beet-and-apple-slaw-629196\">Raw Beet and Apple Slaw</a>, and <a href=\"https://spoonacular.com/recipes/vinaigrette-beet-slaw-534680\">Vinaigrette Beet Slaw</a> for similar recipes.",
+      "cuisines": [],
+      "dishTypes": ["side dish"],
+      "diets": [
+        "gluten free",
+        "dairy free",
+        "paleolithic",
+        "lacto ovo vegetarian",
+        "primal"
+      ],
+      "occasions": ["father's day", "4th of july", "summer"],
+      "winePairing": {},
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "Using a grater, grate beets and ginger.In a large bowl toss all ingredients together and mix well to combine.",
+              "ingredients": [
+                {
+                  "id": 11216,
+                  "name": "ginger",
+                  "image": "ginger.png"
+                },
+                {
+                  "id": 11080,
+                  "name": "beet",
+                  "image": "beets.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404631,
+                  "name": "grater",
+                  "image": "grater.jpg"
+                },
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "image": "bowl.jpg"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "Serve immediately or make ahead and store in an air-tight container in the refrigerator for 6 hours until serving.",
+              "ingredients": [],
+              "equipment": []
+            }
+          ]
+        }
+      ],
+      "usedIngredientCount": 0,
+      "missedIngredientCount": 10,
+      "missedIngredients": [
+        {
+          "id": 12061,
+          "amount": 0.3333333333333333,
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Nuts",
+          "name": "almonds",
+          "original": "1/3 cup sliced raw almonds",
+          "originalString": "1/3 cup sliced raw almonds",
+          "originalName": "sliced raw almonds",
+          "metaInformation": ["raw", "sliced"],
+          "meta": ["raw", "sliced"],
+          "extendedName": "raw almonds",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/almonds.jpg"
+        },
+        {
+          "id": 2048,
+          "amount": 1.0,
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp",
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "name": "apple cider vinegar",
+          "original": "1 tablespoon apple cider vinegar",
+          "originalString": "1 tablespoon apple cider vinegar",
+          "originalName": "apple cider vinegar",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/apple-cider-vinegar.jpg"
+        },
+        {
+          "id": 11080,
+          "amount": 3.0,
+          "unit": "large",
+          "unitLong": "larges",
+          "unitShort": "large",
+          "aisle": "Produce",
+          "name": "beets",
+          "original": "3 to 4 large raw beets, grated",
+          "originalString": "3 to 4 large raw beets, grated",
+          "originalName": "to 4 large raw beets, grated",
+          "metaInformation": ["raw", "grated"],
+          "meta": ["raw", "grated"],
+          "extendedName": "raw beets",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/beets.jpg"
+        },
+        {
+          "id": 11216,
+          "amount": 1.0,
+          "unit": "inch",
+          "unitLong": "inch",
+          "unitShort": "inch",
+          "aisle": "Produce;Ethnic Foods;Spices and Seasonings",
+          "name": "ginger",
+          "original": "1 inch chunk ginger, peeled and grated",
+          "originalString": "1 inch chunk ginger, peeled and grated",
+          "originalName": "ginger, peeled and grated",
+          "metaInformation": ["grated", "chunk", "peeled"],
+          "meta": ["grated", "chunk", "peeled"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/ginger.png"
+        },
+        {
+          "id": 9297,
+          "amount": 0.3333333333333333,
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Dried Fruits;Produce;Baking",
+          "name": "golden raisins",
+          "original": "1/3 cup golden raisins",
+          "originalString": "1/3 cup golden raisins",
+          "originalName": "golden raisins",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/golden-raisins.jpg"
+        },
+        {
+          "id": 19296,
+          "amount": 1.0,
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp",
+          "aisle": "Nut butters, Jams, and Honey;Health Foods",
+          "name": "honey",
+          "original": "1 tablespoon honey",
+          "originalString": "1 tablespoon honey",
+          "originalName": "honey",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/honey.png"
+        },
+        {
+          "id": 9152,
+          "amount": 0.5,
+          "unit": "",
+          "unitLong": "",
+          "unitShort": "",
+          "aisle": "Produce",
+          "name": "juice of lemon",
+          "original": "1/2 lemon, juiced",
+          "originalString": "1/2 lemon, juiced",
+          "originalName": "lemon, juiced",
+          "metaInformation": ["juiced"],
+          "meta": ["juiced"],
+          "extendedName": "lemon (juice)",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/lemon-juice.jpg"
+        },
+        {
+          "id": 2064,
+          "amount": 0.25,
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce;Spices and Seasonings",
+          "name": "mint",
+          "original": "1/4 cup mint, chopped fine",
+          "originalString": "1/4 cup mint, chopped fine",
+          "originalName": "mint, chopped fine",
+          "metaInformation": ["chopped", "fine"],
+          "meta": ["chopped", "fine"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/mint.jpg"
+        },
+        {
+          "id": 11291,
+          "amount": 0.3333333333333333,
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "scallion",
+          "original": "2 scallion stalks, sliced thin (about 1/3 cup)",
+          "originalString": "2 scallion stalks, sliced thin (about 1/3 cup)",
+          "originalName": "scallion stalks, sliced thin (about",
+          "metaInformation": ["sliced", "thin"],
+          "meta": ["sliced", "thin"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/spring-onions.jpg"
+        },
+        {
+          "id": 12023,
+          "amount": 1.0,
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp",
+          "aisle": "Ethnic Foods;Spices and Seasonings",
+          "name": "sesame seeds",
+          "original": "Optional: 1 tablespoon sesame seeds",
+          "originalString": "Optional: 1 tablespoon sesame seeds",
+          "originalName": "Optional: sesame seeds",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/sesame-seeds.png"
+        }
+      ],
+      "likes": 0,
+      "usedIngredients": [],
+      "unusedIngredients": []
+    },
+    {
+      "vegetarian": true,
+      "vegan": false,
+      "glutenFree": true,
+      "dairyFree": false,
+      "veryHealthy": false,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "weightWatcherSmartPoints": 2,
+      "gaps": "no",
+      "lowFodmap": false,
+      "sourceUrl": "http://www.foodista.com/recipe/HJTDBGBT/beet-slaw",
+      "spoonacularSourceUrl": "https://spoonacular.com/beet-slaw-634798",
+      "aggregateLikes": 1,
+      "spoonacularScore": 31.0,
+      "healthScore": 5.0,
+      "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+      "license": "CC BY 3.0",
+      "sourceName": "Foodista",
+      "pricePerServing": 104.01,
+      "id": 634798,
+      "title": "Beet Slaw",
+      "readyInMinutes": 45,
+      "servings": 15,
+      "image": "https://spoonacular.com/recipeImages/634798-312x231.jpg",
+      "imageType": "jpg",
+      "summary": "Beet Slaw might be just the side dish you are searching for. For <b>$1.04 per serving</b>, this recipe <b>covers 5%</b> of your daily requirements of vitamins and minerals. One serving contains <b>93 calories</b>, <b>3g of protein</b>, and <b>4g of fat</b>. This recipe is liked by 1 foodies and cooks. It is perfect for <b>The Fourth Of July</b>. If you have teaspoon salt, towels, through a rouet, and a few other ingredients on hand, you can make it. It is a good option if you're following a <b>gluten free, primal, and vegetarian</b> diet. From preparation to the plate, this recipe takes around <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 36%</b>. This score is rather bad. Try <a href=\"https://spoonacular.com/recipes/beet-slaw-793790\">Beet Slaw</a>, <a href=\"https://spoonacular.com/recipes/raw-beet-and-apple-slaw-629196\">Raw Beet and Apple Slaw</a>, and <a href=\"https://spoonacular.com/recipes/vinaigrette-beet-slaw-534680\">Vinaigrette Beet Slaw</a> for similar recipes.",
+      "cuisines": [],
+      "dishTypes": [
+        "antipasti",
+        "starter",
+        "snack",
+        "appetizer",
+        "antipasto",
+        "hor d'oeuvre"
+      ],
+      "diets": ["gluten free", "lacto ovo vegetarian"],
+      "occasions": ["father's day", "4th of july", "summer"],
+      "winePairing": {},
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "In a small bowl combine the red wine vinegar, honey, black pepper, and salt. Slowly, while whisking add the oil until the mixture is emulsified.",
+              "ingredients": [
+                {
+                  "id": 1022068,
+                  "name": "red wine vinegar",
+                  "image": "red-wine-vinegar.jpg"
+                },
+                {
+                  "id": 1002030,
+                  "name": "black pepper",
+                  "image": "pepper.jpg"
+                },
+                {
+                  "id": 19296,
+                  "name": "honey",
+                  "image": "honey.png"
+                },
+                {
+                  "id": 2047,
+                  "name": "salt",
+                  "image": "salt.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404661,
+                  "name": "whisk",
+                  "image": "whisk.png"
+                },
+                {
+                  "id": 404783,
+                  "name": "bowl",
+                  "image": "bowl.jpg"
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "Combine all vegetables and let drain in a colander.",
+              "ingredients": [],
+              "equipment": [
+                {
+                  "id": 404639,
+                  "name": "colander",
+                  "image": "colander.jpg"
+                }
+              ]
+            },
+            {
+              "number": 3,
+              "step": "Combine vegetables and dressing then toss with the lemon juice and goat cheese.This recipe yields 6 to 8 servings.",
+              "ingredients": [
+                {
+                  "id": 1159,
+                  "name": "goat cheese",
+                  "image": "goat-cheese.jpg"
+                },
+                {
+                  "id": 9152,
+                  "name": "lemon juice",
+                  "image": "lemon-juice.jpg"
+                }
+              ],
+              "equipment": []
+            }
+          ]
+        }
+      ],
+      "usedIngredientCount": 0,
+      "missedIngredientCount": 9,
+      "missedIngredients": [
+        {
+          "id": 11080,
+          "amount": 4.0,
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "beets",
+          "original": "4 cups beets boiled until tender,",
+          "originalString": "4 cups beets boiled until tender,",
+          "originalName": "beets boiled until tender,",
+          "metaInformation": ["boiled"],
+          "meta": ["boiled"],
+          "extendedName": "cooked beets",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/beets.jpg"
+        },
+        {
+          "id": 11957,
+          "amount": 3.0,
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "fennel",
+          "original": "3 cups fennel cored, halved,",
+          "originalString": "3 cups fennel cored, halved,",
+          "originalName": "fennel cored, halved,",
+          "metaInformation": ["cored", "halved"],
+          "meta": ["cored", "halved"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/fennel.png"
+        },
+        {
+          "id": 1159,
+          "amount": 6.0,
+          "unit": "ounces",
+          "unitLong": "ounces",
+          "unitShort": "oz",
+          "aisle": "Cheese",
+          "name": "goat cheese",
+          "original": "6 ounces goat cheese crumbled",
+          "originalString": "6 ounces goat cheese crumbled",
+          "originalName": "goat cheese crumbled",
+          "metaInformation": ["crumbled"],
+          "meta": ["crumbled"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/goat-cheese.jpg"
+        },
+        {
+          "id": 19296,
+          "amount": 2.0,
+          "unit": "tablespoons",
+          "unitLong": "tablespoons",
+          "unitShort": "Tbsp",
+          "aisle": "Nut butters, Jams, and Honey;Health Foods",
+          "name": "honey",
+          "original": "2 tablespoons honey",
+          "originalString": "2 tablespoons honey",
+          "originalName": "honey",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/honey.png"
+        },
+        {
+          "id": 11603,
+          "amount": 2.0,
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "jicama",
+          "original": "2 cups jicama peeled, and",
+          "originalString": "2 cups jicama peeled, and",
+          "originalName": "jicama peeled, and",
+          "metaInformation": ["peeled"],
+          "meta": ["peeled"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/jicama.jpg"
+        },
+        {
+          "id": 9152,
+          "amount": 1.0,
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp",
+          "aisle": "Produce",
+          "name": "lemon juice",
+          "original": "1 tablespoon lemon juice",
+          "originalString": "1 tablespoon lemon juice",
+          "originalName": "lemon juice",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/lemon-juice.jpg"
+        },
+        {
+          "id": 11282,
+          "amount": 1.0,
+          "unit": "cup",
+          "unitLong": "cup",
+          "unitShort": "cup",
+          "aisle": "Produce",
+          "name": "onion",
+          "original": "cup grated onion",
+          "originalString": "cup grated onion",
+          "originalName": "grated onion",
+          "metaInformation": ["grated"],
+          "meta": ["grated"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/brown-onion.png"
+        },
+        {
+          "id": 9252,
+          "amount": 1.0,
+          "unit": "",
+          "unitLong": "",
+          "unitShort": "",
+          "aisle": "Produce",
+          "name": "pear",
+          "original": "1 Asian pear halved, cored,",
+          "originalString": "1 Asian pear halved, cored,",
+          "originalName": "Asian pear halved, cored,",
+          "metaInformation": ["cored", "halved"],
+          "meta": ["cored", "halved"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/pears-bosc.jpg"
+        },
+        {
+          "id": 2068,
+          "amount": 1.0,
+          "unit": "cup",
+          "unitLong": "cup",
+          "unitShort": "cup",
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "name": "wine vinegar",
+          "original": "cup red wine vinegar",
+          "originalString": "cup red wine vinegar",
+          "originalName": "red wine vinegar",
+          "metaInformation": ["red"],
+          "meta": ["red"],
+          "extendedName": "red wine vinegar",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/red-wine-vinegar.jpg"
+        }
+      ],
+      "likes": 0,
+      "usedIngredients": [],
+      "unusedIngredients": []
+    },
+    {
+      "vegetarian": true,
+      "vegan": false,
+      "glutenFree": true,
+      "dairyFree": false,
+      "veryHealthy": false,
+      "cheap": false,
+      "veryPopular": false,
+      "sustainable": false,
+      "weightWatcherSmartPoints": 4,
+      "gaps": "no",
+      "lowFodmap": false,
+      "sourceUrl": "http://www.epicurious.com/recipes/food/views/Beet-Salad-238644",
+      "spoonacularSourceUrl": "https://spoonacular.com/beet-salad-9226",
+      "aggregateLikes": 0,
+      "spoonacularScore": 76.0,
+      "healthScore": 49.0,
+      "creditsText": "Epicurious",
+      "sourceName": "Epicurious",
+      "pricePerServing": 397.88,
+      "id": 9226,
+      "title": "Beet Salad",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "image": "https://spoonacular.com/recipeImages/9226-312x231.jpg",
+      "imageType": "jpg",
+      "summary": "Beet Salad is a <b>gluten free and vegetarian</b> side dish. This recipe makes 4 servings with <b>185 calories</b>, <b>6g of protein</b>, and <b>13g of fat</b> each. For <b>$3.55 per serving</b>, this recipe <b>covers 9%</b> of your daily requirements of vitamins and minerals. 1 person were glad they tried this recipe. Head to the store and pick up walnuts, golden beets, lowfat goat cheese, and a few other things to make it today. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 54%</b>. This score is good. Try <a href=\"https://spoonacular.com/recipes/roasted-beet-and-shallot-salad-over-wilted-beet-greens-and-arugula-8283\">Roasted Beet and Shallot Salad over Wilted Beet Greens and Arugula</a>, <a href=\"https://spoonacular.com/recipes/warm-braised-beet-salad-with-beet-greens-and-yogurt-dressing-power-foods-474474\">Warm Braised Beet Salad with Beet Greens and Yogurt Dressing (Power Foods)</a>, and <a href=\"https://spoonacular.com/recipes/beet-salad-with-moroccan-spiced-beet-greens-252775\">Beet Salad with Moroccan Spiced Beet Greens</a> for similar recipes.",
+      "cuisines": [],
+      "dishTypes": ["salad"],
+      "diets": ["gluten free", "lacto ovo vegetarian", "primal"],
+      "occasions": [],
+      "winePairing": {},
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "number": 1,
+              "step": "Heat oven to 400°F. Wrap each beet in foil. Roast until soft, about 1 hour. Cool slightly; remove foil. Rub off skins; cut into wedges. Toss with nuts and vinegar. Season with salt and pepper.",
+              "ingredients": [
+                {
+                  "id": 11080,
+                  "name": "beet",
+                  "image": "beets.jpg"
+                }
+              ],
+              "equipment": [
+                {
+                  "id": 404765,
+                  "name": "aluminum foil",
+                  "image": "aluminum-foil.png"
+                },
+                {
+                  "id": 404784,
+                  "name": "oven",
+                  "image": "oven.jpg",
+                  "temperature": {
+                    "number": 400.0,
+                    "unit": "Fahrenheit"
+                  }
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "step": "Add oil; toss. Divide among 4 plates; crumble cheese on top.",
+              "ingredients": [],
+              "equipment": []
+            },
+            {
+              "number": 3,
+              "step": "Self",
+              "ingredients": [],
+              "equipment": []
+            }
+          ]
+        }
+      ],
+      "usedIngredientCount": 0,
+      "missedIngredientCount": 5,
+      "missedIngredients": [
+        {
+          "id": 2069,
+          "amount": 1.0,
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp",
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "name": "balsamic vinegar",
+          "original": "1 tablespoon balsamic vinegar",
+          "originalString": "1 tablespoon balsamic vinegar",
+          "originalName": "balsamic vinegar",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/balsamic-vinegar.jpg"
+        },
+        {
+          "id": 10211821,
+          "amount": 4.0,
+          "unit": "servings",
+          "unitLong": "servings",
+          "unitShort": "servings",
+          "aisle": "Produce",
+          "name": "bell pepper",
+          "original": "Freshly ground black pepper",
+          "originalString": "Freshly ground black pepper",
+          "originalName": "Freshly ground black pepper",
+          "metaInformation": ["black", "freshly ground"],
+          "meta": ["black", "freshly ground"],
+          "extendedName": "black bell pepper",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/yellow-bell-pepper.jpg"
+        },
+        {
+          "id": 1159,
+          "amount": 2.0,
+          "unit": "ounces",
+          "unitLong": "ounces",
+          "unitShort": "oz",
+          "aisle": "Cheese",
+          "name": "goat cheese",
+          "original": "2 ounces lowfat goat cheese",
+          "originalString": "2 ounces lowfat goat cheese",
+          "originalName": "lowfat goat cheese",
+          "metaInformation": [],
+          "meta": [],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/goat-cheese.jpg"
+        },
+        {
+          "id": 10011080,
+          "amount": 16.0,
+          "unit": "ounces",
+          "unitLong": "ounces",
+          "unitShort": "oz",
+          "aisle": "Produce",
+          "name": "golden beets",
+          "original": "4 medium red or golden beets (4 ounces each), stems and root ends removed",
+          "originalString": "4 medium red or golden beets (4 ounces each), stems and root ends removed",
+          "originalName": "medium red or golden beets each), stems and root ends removed",
+          "metaInformation": ["red"],
+          "meta": ["red"],
+          "extendedName": "red golden beets",
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/beets-golden.jpg"
+        },
+        {
+          "id": 12155,
+          "amount": 0.3333333333333333,
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup",
+          "aisle": "Nuts;Savory Snacks;Baking",
+          "name": "walnuts",
+          "original": "1/3 cup walnuts, chopped",
+          "originalString": "1/3 cup walnuts, chopped",
+          "originalName": "walnuts, chopped",
+          "metaInformation": ["chopped"],
+          "meta": ["chopped"],
+          "image": "https://spoonacular.com/cdn/ingredients_100x100/walnuts.jpg"
+        }
+      ],
+      "likes": 0,
+      "usedIngredients": [],
+      "unusedIngredients": []
+    }
+  ],
+  "offset": 0,
+  "number": 5,
+  "totalResults": 1140
+}
