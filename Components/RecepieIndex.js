@@ -11,6 +11,7 @@ import { Alert } from "react-native";
 import RecepiesCards from "./RecepiesCards";
 import styled from "styled-components/native";
 import BackButton from "./lib/BackButton";
+import { PacmanIndicator } from "react-native-indicators";
 
 const localUrl = "http://192.168.1.8:8080/recipes/";
 
