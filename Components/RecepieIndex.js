@@ -33,8 +33,8 @@ const RecepieIndex = ({ history, location }) => {
   }, []);
 
   return (
-    <StyledView>
-      <SafeAreaView>
+    <SafeAreaView>
+      <StyledView>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {recipes.map(recipe => (
             <Link
@@ -50,50 +50,33 @@ const RecepieIndex = ({ history, location }) => {
               {/* skicka med ett id från recept db som i Movie project*/}
               {/* link to */}
               <CardContainer>
-                <Text>{recipe.title}</Text>
+                {/* {loading && <Text>Test</Text>} */}
+                {/* <LoadingContainer> */}
+                {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+                {/* </LoadingContainer> */}
+                {!loading && <Text></Text>}
+
                 <CardView>
                   <RecepiesCards recipe={recipe} />
                 </CardView>
               </CardContainer>
             </Link>
           ))}
-
-          {/* <Link to='/recepie' component={TouchableOpacity} activeOpacity={0.8}>
-            <CardContainer>
-              <CardView>
-                <RecepieCard />
-              </CardView>
-            </CardContainer>
-          </Link>
-​
-          <Link to='/recepie' component={TouchableOpacity} activeOpacity={0.8}>
-            <CardContainer>
-              <CardView>
-                <RecepieCard />
-              </CardView>
-            </CardContainer>
-          </Link>
-​
-          <Link to='/recepie' component={TouchableOpacity} activeOpacity={0.8}>
-            <CardContainer>
-              <CardView>
-                <RecepieCard />
-              </CardView>
-            </CardContainer>
-          </Link> */}
         </ScrollView>
-        <BackButton />
+
+        <BackButtonContainer>
+          <BackButton />
+        </BackButtonContainer>
         {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
-      </SafeAreaView>
-    </StyledView>
+      </StyledView>
+    </SafeAreaView>
   );
 };
-export default RecepieIndex;
 
 //StyledView is the background
 const StyledView = styled.View`
   z-index: -1;
-  margin-top: 25%;
+  margin-top: 180px;
 `;
 
 //background for the Scrollwiev of the cards height
@@ -104,8 +87,21 @@ const StyledView = styled.View`
 const CardContainer = styled.View`
   display: flex;
   flex-direction: column;
+  height: 100%;
+  /* position: absolute; 
+  top: 25px;  */
 `;
 
 const CardView = styled.View`
   z-index: 1;
 `;
+
+const BackButtonContainer = styled.View`
+  position: absolute;
+  left: 50%;
+  top: 380px;
+  bottom: 5px;
+  z-index: 2;
+`;
+
+export default RecepieIndex;

@@ -10,31 +10,29 @@ import {
   ImageBackground,
   FlatList
 } from "react-native";
-import { Card, Title, Paragraph } from "react-native-paper";
+import { Card, Title, Paragraph, DataTable } from "react-native-paper";
+
 import { List, ListItem } from "react-native-elements";
 import SeasonalView from "./SeasonalView";
 import ProgressCircle from "./ProgressCircle";
+
 import InstructionsList from "./lib/InstuctionsList";
 import BackButton from "./lib/BackButton";
 import styled from "styled-components";
 
-const Recepie = ({ history, location }) => {
+const Recepie = ({ hitstory, location }) => {
   const [ingredient, setIngredient] = useState(location.state);
-
-  /*   const ingredientList = ingredient.find(ListItem => ListItem === "name");
-
-  const list = ingredient.find(item => {
-    ingredient.missedIngredients[2][name] == "name" */ // });
-
-  // const [ingridentList, setIngredientList] = useState([
-  //   {
-  //     title: `${ingredient.title}`,
-  //     ingredientsList: `${ingredient.missedIngredients}`
-  //     // listName: `${ingredient.analyzedInstructions.steps.ingredients.name}`,
-  //     // listAmount: `${ingredient.missedIngredients.amount}`,
-  //     // listUnit: `${ingredient.missedIngredients.unit}`,
-  //   }
-  // ]);
+  console.log("ingredient", ingredient);
+  const [ingridentList, setIngredientList] = useState([
+    {
+      title: `${ingredient.title}`,
+      ingredientsList: `${ingredient.missedIngredients}`
+      // listName: `${ingredient.analyzedInstructions.steps.ingredients.name}`,
+      // listAmount: `${ingredient.missedIngredients.amount}`,
+      // listUnit: `${ingredient.missedIngredients.unit}`,
+    }
+  ]);
+  console.log("ingredientList", ingridentList);
 
   return (
     // this logs ingredients but i still cant map through each array to find them
@@ -62,33 +60,54 @@ const Recepie = ({ history, location }) => {
             <ProgressCircle />
           </ProgressContainer>
 
-          <Text>{JSON.stringify(location.state)}</Text>
+          {/* <Text>{JSON.stringify(location.state)}</Text> */}
 
           <SeasonConatiner>
             <SeasonalView location={this.state} />
           </SeasonConatiner>
 
           <RecepieCardContainer>
-            <Text>{`${ingredient.title}`}</Text>
             <CardContainer>
               <CardView>
                 <StyledCard>
                   <Card.Content>
+                    <CardTitle>{`${ingredient.title}`}</CardTitle>
                     <TimeView>
                       <StyledParagraph>
                         {" "}
                         Time component font: Poppins
-                        {/* <Text>{`${ingredient[1].analyzedInstructions.ingredients.name}`}</Text> */}
                       </StyledParagraph>
-                      {/* <TimeComponent recipe={recipe} /> */}
+                      <StyledDataTable>
+                        <DataTable.Header>
+                          <DataTable.Title>Prep time: </DataTable.Title>
+                          <DataTable.Title numeric>
+                            {" "}
+                            Cook time:{" "}
+                          </DataTable.Title>
+                          <DataTable.Title numeric>
+                            {" "}
+                            Total time:{" "}
+                          </DataTable.Title>
+                        </DataTable.Header>
+
+                        <DataTable.Row>
+                          <DataTable.Cell numeric>
+                            {`${ingredient.preparationMinutes}`} min
+                          </DataTable.Cell>
+                          <DataTable.Cell numeric>
+                            {`${ingredient.cookingMinutes}`} min
+                          </DataTable.Cell>
+                          <DataTable.Cell numeric>
+                            {`${ingredient.readyInMinutes}`} min
+                          </DataTable.Cell>
+                        </DataTable.Row>
+                      </StyledDataTable>
                     </TimeView>
 
                     <IngredientsView>
                       <FlatList
-                      // data={ingredient}
-                      // renderItem={({ item }) => (
-                      //   <Text>{ingredient.title[0].name}</Text>
-                      // )}
+                        data={ingredient}
+                        renderItem={({ item }) => <Text>{item.title}</Text>}
                       />
                     </IngredientsView>
 
@@ -143,13 +162,14 @@ const StyledImageCard = styled(Card)`
   padding-right: 15px;
   border-radius: 8px;
   border: 0.75px solid #ffdf7f;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
   z-index: 0;
 `;
 
 const StyledImageBackground = styled(ImageBackground)`
   width: 110%;
   height: 200px;
+  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
   /* background-position: center; */
   border-radius: 8px;
   z-index: 1;
@@ -159,13 +179,12 @@ const StyledImageBackground = styled(ImageBackground)`
   /* linear-gradient: 180deg, #FFFFFF, 0%, rgba(255, 255, 255, 0), 100%; */
 `;
 
-//font-family: Eczar;
 const StyledTitle = styled(Title)`
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;
   position: absolute;
-  left: 0%;
+  left: 2%;
   right: 0%;
   top: 110px;
   z-index: 2;
@@ -192,6 +211,11 @@ const CardContainer = styled.View`
   /* bottom: 500px; */
 `;
 
+const CardTitle = styled(Title)`
+  font-size: 20px;
+  text-transform: capitalize;
+`;
+
 const CardView = styled.View`
   width: 100%;
   z-index: 1;
@@ -212,7 +236,7 @@ const StyledCard = styled(Card)`
   padding-right: 15px;
   border-radius: 8px;
   border: 0.75px solid #ffdf7f;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   z-index: 0;
 `;
 
@@ -236,7 +260,14 @@ const TimeView = styled(View)`
   position: absolute;
   left: 0%;
   right: 0%;
-  top: 230px;
+  top: 100px;
+`;
+
+const StyledDataTable = styled(DataTable)`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: black;
 `;
 
 const IngredientsView = styled(View)`

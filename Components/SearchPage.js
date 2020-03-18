@@ -5,14 +5,12 @@ import styled from "styled-components/native";
 import VeggieIcons from "./lib/VeggieIcons";
 import { PacmanIndicator } from "react-native-indicators";
 
-const localUrl = "http://192.168.1.8:8080/veggies";
-//exp://:19000
-
-//exp://172.20.10.7:19004
+const localUrl = "http://192.168.1.17:8080/veggies";
 
 const SearchPage = () => {
   const [veggies, setVeggies] = useState([]);
   const [loading, setLoading] = useState(false);
+  console.log("searchPage", veggies);
 
   // THIS WORKS ✅
   // fetching the veggies from DB here.
@@ -29,8 +27,7 @@ const SearchPage = () => {
 
   return (
     <Container>
-      <Header> Sustian recipe app </Header>
-      <Subtext> What vegetable's do you have in your fridge?</Subtext>
+      <Header>Seasonal vegetables, what do you have in your fridge</Header>
       <Divider style={{ height: 3, backgroundColor: "#7EDABE" }} />
       {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
       {!loading && <VeggieIcons veggies={veggies} />}
