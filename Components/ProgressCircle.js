@@ -7,8 +7,14 @@ import styled from "styled-components";
 const progressCircle = ({ location, ingredient }) => {
   console.log("Circleeeeee", location.state) //this gives undefined
   console.log("ID::::::::::", ingredient.id) //this works
-  const value = 0.66;
+
+
+  const value = 0.62;
+  // const value = { name.carbonprint };
+  // const percent = {`${value * 100}`
+  //add another caculation to take the 0. away
   const coFrontPrint = 0;
+
   return (
     <Container>
       <Title>{`${ingredient.title}`}</Title>

@@ -12,29 +12,42 @@ import { withRouter } from "react-router-native";
 
 
 const VeggieIcons = ({ history, veggies }) => {
+  console.log("AspargusBtn", veggies)
+  //const[veggies setVeggies] = useState()
+  //onpress function with setVeggies
+  // onPress={() =>
+  //   history.push("/RecepieIndex", {
+  //     name: `${name}`,
+  //     search: `?`+`${name}`,
+  //     veggies: veggies,
+  //   })
+  //map through btns to match information and pass only one veggie
   return (
     <Container>
       {/* ScrollView row 1 */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <IconContainer>
-          {/* Asparagus */}
+          {/* {veggies.map(veggie) => ())} */}
 
+          {/* Asparagus */}
           <Button
             key={veggies._id}
+            //value={name}
             onPress={() =>
               history.push("/RecepieIndex", {
                 name: "Asparagus",
                 search: "?Asparagus",
                 veggies: veggies,
               })
+
             }
+
           >
             <Icon
               source={require("../assets/VeggiesIcons/Asparagus.png")}
               resizeMode="contain"
             />
           </Button>
-
           {/* Beet */}
           <Button
             id={"5e5d08acf901cfd65b8f5e36"}

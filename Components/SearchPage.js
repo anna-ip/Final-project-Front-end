@@ -42,9 +42,9 @@ const SearchPage = () => {
 };
 
 //top: 20px;
-//margin: 12px;
+
 const Container = styled(SafeAreaView)`
-    
+   margin: 12px; 
     
 `;
 

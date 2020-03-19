@@ -1,10 +1,10 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://wi-cxh.anonymous.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.wi-cxh.anonymous.final-project-front-end.exp.direct",
+  "ngrokPid": 67151,
   "webpackServerPort": 19006
 }

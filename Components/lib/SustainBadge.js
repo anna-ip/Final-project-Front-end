@@ -3,14 +3,14 @@ import { Avatar } from 'react-native-paper';
 import styled from 'styled-components/native';
 
 const SustainBadge = () => (
-    <StyledAvatar>
+    <Button>
         <Text> Sustainable </Text>
-    </StyledAvatar>
+    </Button>
 );
 
 export default SustainBadge
 
-const StyledAvatar = styled.View`
+const Button = styled.View`
 background-color: #7EDABE;
 height: 100px;
 width: 100px;

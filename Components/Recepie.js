@@ -154,6 +154,7 @@ const StyledImageCard = styled(Card)`
     padding-right: 15px;
     border-radius: 8px;
     border: 0.75px solid #FFDF7F;
+    /* background: linear-gradient(180deg, #FFFFFF, 0%, rgba(255, 255, 255, 0), 100%); */
     /* background-color: black; */
     /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
     z-index: 0;
@@ -287,7 +288,8 @@ const RecipeTitle = styled.Text`
     font-size: 18px;
     line-height: 27px;
     color: #000000;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-top: 20px;
 `;
 
 const InstructionsView = styled(View)`
