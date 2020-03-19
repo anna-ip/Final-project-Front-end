@@ -11,7 +11,7 @@ const TimeComponent = ({ recipe }) => {
                 <DataTable.Header>
                     <DataTable.Title>Prep time: </DataTable.Title>
                     <DataTable.Title numeric> Cook time: </DataTable.Title>
-                    <DataTable.Title numeric> Total time: </DataTable.Title>
+                    <DataTable.Title numeric> Total: </DataTable.Title>
                 </DataTable.Header>
 
                 <DataTable.Row>
@@ -22,7 +22,6 @@ const TimeComponent = ({ recipe }) => {
             </StyledDataTable>
         </View>
     );
-
 }
 
 
@@ -32,6 +31,7 @@ const StyledDataTable = styled(DataTable)`
     justify-content: center;
     align-content: center;
     color: black;
+    text-align: center;
 `;
 
 export default TimeComponent

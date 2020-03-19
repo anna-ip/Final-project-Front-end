@@ -60,12 +60,14 @@ const SearchPage = () => {
     return (
         <Container>
             <HeaderView>
-                <Header>Seasonal vegetables, what do you have in your fridge</Header>
+                <Header>Seasonal vegetables, what do you have in your fridge?</Header>
             </HeaderView>
             <Section>
                 <Divider style={{ height: 3, backgroundColor: "#7EDABE" }} />
-                {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
-                {!loading && <VeggieIcons veggies={veggies} />}
+                <VeggieContainer>
+                    {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+                    {!loading && <VeggieIcons veggies={veggies} />}
+                </VeggieContainer>
                 <Divider style={{ height: 3, backgroundColor: "#7EDABE" }} />
             </Section>
             {/* <Button title="Search" onPress={() => history.push("/RecepieIndex")} /> */}
@@ -80,14 +82,6 @@ const Container = styled(SafeAreaView)`
     
 `;
 
-// const Subtext = styled.Text`
-// text-align: center;
-//   font-weight: 600;
-//   font-size: 25px;
-//   line-height: 35px;
-//   margin-bottom: 20px;
-//   color: red;
-// `;
 
 
 // height: auto;
@@ -99,7 +93,7 @@ const HeaderView = styled.View`
     flex-direction: row;
     flex-wrap: wrap;
     height:150px;
-   padding: 10px;
+    padding: 10px;
 `;
 
 // margin-bottom: 20px;
@@ -111,15 +105,18 @@ const Header = styled.Text`
     font-size: 30px;
     line-height: 25px;
     padding-top: 30px;
-   
-   
+    left: 5px;
 `;
 
 // position: absolute;
 //bottom: 20px;
-const Section = styled.View`
+const Section = styled.View` 
     height: 300px;
-   
+`
+
+const VeggieContainer = styled.View`
+   padding-top: 65px;
+  
 `
 
 export default SearchPage;
