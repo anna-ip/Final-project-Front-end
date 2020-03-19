@@ -4,7 +4,8 @@ import {
   ScrollView,
   Button,
   TouchableOpacity,
-  Text, View
+  Text,
+  View
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import { Alert } from "react-native";
@@ -13,16 +14,17 @@ import styled from "styled-components/native";
 import BackButton from "./lib/BackButton";
 import { PacmanIndicator } from "react-native-indicators";
 
-const localUrl = "http://192.168.1.37:8080/recipes/";
+const localUrl = "http://192.168.1.8:8080/recipes/";
+// 192.168.1.8
 
 const RecepieIndex = ({ history, location }) => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const { veggie } = location.state
-  console.log('In RecipeINDEX we have VEGGIE', veggie)    // <---- WE WANT TO FIND THIS IN THE CONSOLE 👁👁👁👁👁👁👁👁👁👁👁 
+  const { veggie } = location.state;
+  console.log("In RecipeINDEX we have VEGGIE", veggie); // <---- WE WANT TO FIND THIS IN THE CONSOLE 👁👁👁👁👁👁👁👁👁👁👁
 
-  console.log('URL THAT WE TRY TO FETCH FROM:', localUrl + veggie.name)
+  console.log("URL THAT WE TRY TO FETCH FROM:", localUrl + veggie.name);
   // THIS WORKS ✅
   // fetching the recipies from DB here.
   // getting the name from that location.state that was passed from prev screen.

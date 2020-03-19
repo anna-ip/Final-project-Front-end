@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
-// import MonthSeason from "./lib/MonthSeason";
 import Constants from "expo-constants";
 import styled from "styled-components";
 
 import { Card } from "react-native-paper";
-//use selector to find store.veggie.month
-//use selector to find store.veggie.co2
 
 const MONTHS = [
   "Jan",
@@ -24,20 +21,19 @@ const MONTHS = [
 ];
 
 const SeasonalView = ({ veggie }) => {
-
   return (
     <Container>
       <CardConatiner>
         <Title>SEASONAL AVALIBILITY</Title>
         <Textfield>
-          Check it out in Sweden {veggie.name} is avalible these months
+          Check it out in Sweden {veggie.name} is available these months
         </Textfield>
         <MonthView>
           {MONTHS.map(item => {
             if (veggie.month.includes(item)) {
-              return <OptimalMonthButton key={item} title={item} />
+              return <OptimalMonthButton key={item} title={item} />;
             } else {
-              return <MonthButton key={item} title={item} />
+              return <MonthButton key={item} title={item} />;
             }
           })}
         </MonthView>
@@ -75,7 +71,7 @@ const MonthView = styled.View`
 
 const MonthButton = styled.Button`
   display: flex;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 45px;
   width: 49px;
   border-radius: 60;
@@ -87,7 +83,7 @@ const MonthButton = styled.Button`
 
 const OptimalMonthButton = styled.Button`
   display: flex;
-  background-color: #FEE598;
+  background-color: #fee598;
   height: 45px;
   width: 49px;
   border-radius: 60;
@@ -110,7 +106,7 @@ const Textfield = styled.Text`
   text-align: center;
   /* color: #111010; */
   color: black;
-`
+`;
 
 const Title = styled.Text`
   display: flex;
@@ -124,7 +120,7 @@ const Title = styled.Text`
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
-  color: #FFFCFC;
-`
+  color: #fffcfc;
+`;
 
 export default SeasonalView;

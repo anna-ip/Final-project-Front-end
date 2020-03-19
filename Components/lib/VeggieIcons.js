@@ -24,21 +24,12 @@ const icons = {
   Potato: require("../assets/VeggiesIcons/Potato.png"),
   Pumpkin: require("../assets/VeggiesIcons/Pumkin.png"),
   Spinach: require("../assets/VeggiesIcons/Spinich.png"),
-  Tomato: require("../assets/VeggiesIcons/Tomato.png"),
-}
-
+  Tomato: require("../assets/VeggiesIcons/Tomato.png")
+};
 
 const VeggieIcons = ({ history, veggies }) => {
-  console.log("AspargusBtn", veggies)
-  //const[veggies setVeggies] = useState()
-  //onpress function with setVeggies
-  // onPress={() =>
-  //   history.push("/RecepieIndex", {
-  //     name: `${name}`,
-  //     search: `?`+`${name}`,
-  //     veggies: veggies,
-  //   })
-  //map through btns to match information and pass only one veggie
+  //console.log("AspargusBtn", veggies)
+
   return (
     <Container>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -48,10 +39,7 @@ const VeggieIcons = ({ history, veggies }) => {
               key={item._id}
               onPress={() => history.push("/RecepieIndex", { veggie: item })}
             >
-              <Icon
-                source={icons[item.name]}
-                resizeMode="contain"
-              />
+              <Icon source={icons[item.name]} resizeMode="contain" />
             </Button>
           ))}
         </IconContainer>
@@ -157,7 +145,6 @@ const VeggieIcons = ({ history, veggies }) => {
     //   />
     // </Button>
 
-
     // <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
     //   <IconContainer>
     //     {/* Cucumber */}
@@ -258,7 +245,6 @@ const VeggieIcons = ({ history, veggies }) => {
     //     </Button>
     //   </IconContainer>
     // </ScrollView>
-
   );
 };
 

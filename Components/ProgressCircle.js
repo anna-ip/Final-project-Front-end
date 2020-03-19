@@ -5,30 +5,24 @@ import ProgressCircle from "react-native-progress-circle";
 import styled from "styled-components";
 
 const progressCircle = ({ veggie }) => {
-
-  console.log('veggie in PROGRESSCIRCLE', veggie) // We're passing the veggie as a prop to this component.
-
-
-  const value = 0.62;
-  // const value = { name.carbonprint };
-  // const percent = {`${value * 100}`
-  //add another caculation to take the 0. away
-  const coFrontPrint = 0;
-
   return (
     <Container>
       <Title>{`${veggie.name}`}</Title>
       <ProgressCircle
-        percent={30}
+        percent={`${veggie.carbonprint * 100}`}
         radius={60}
         borderWidth={10}
         color="#FBA896"
         shadowColor="#999"
         bgColor="#fff"
       >
-        <Text style={{ fontSize: 18 }}>{`${veggie.carbonprint * 100}%`}</Text>
+        <Text style={{ fontSize: 18 }}>0.{`${veggie.carbonprint * 100}`}</Text>
       </ProgressCircle>
-      <Rubrik>C02 footprint of {`${veggie.carbonprint}`}</Rubrik>
+      <Rubrik>
+        {" "}
+        4 portions of this recipe with {`${veggie.name}`} is the equivalent of{" "}
+        {`${veggie.carbonprint} CO2-Emission (kg)`}
+      </Rubrik>
     </Container>
   );
 };
@@ -40,18 +34,20 @@ const Container = styled.View`
   width: 98%;
   height: 300px;
   border-radius: 8px;
-  background-color: #7EDABE;
+  background-color: #7edabe;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
 `;
 
 const Title = styled.Text`
   top: -20px;
-  font-size: 20px;
-`
+  font-size: 25px;
+  font-weight: 600;
+`;
 const Rubrik = styled.Text`
-  margin-top: 20;
+padding: 20px
   text-align: center;
+  font-size:16px;
 `;
 
 export default progressCircle;
