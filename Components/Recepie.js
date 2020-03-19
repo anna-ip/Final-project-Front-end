@@ -1,241 +1,239 @@
-import React, { useState } from "react";
-import {
-  Text,
-  Button,
-  View,
-  ScrollView,
-  SafeAreaView,
-  SectionList,
-  StyleSheet,
-  ImageBackground,
-  FlatList
-} from "react-native";
-import { Card, Title, Paragraph, DataTable } from "react-native-paper";
+import React, { useState } from 'react'
+import { Text, Button, View, ScrollView, SafeAreaView, SectionList, StyleSheet, ImageBackground, FlatList } from 'react-native'
+import { Card, Title, Paragraph, DataTable } from 'react-native-paper';
 
-import { List, ListItem } from "react-native-elements";
-import SeasonalView from "./SeasonalView";
-import ProgressCircle from "./ProgressCircle";
+import { List, ListItem } from 'react-native-elements';
+import SeasonalView from "./SeasonalView"
+import ProgressCircle from "./ProgressCircle"
 
-import InstructionsList from "./lib/InstuctionsList";
-import BackButton from "./lib/BackButton";
+import InstructionsList from "./lib/InstuctionsList"
+import BackButton from "./lib/BackButton"
 import styled from "styled-components";
+import { PacmanIndicator } from "react-native-indicators";
+
 
 const Recepie = ({ hitstory, location }) => {
-  const [ingredient, setIngredient] = useState(location.state);
-  console.log("ingredient", ingredient);
-  // const [ingridentList, setIngredientList] = useState([
-  //   {
-  //     title: `${ingredient.title}`,
-  //     ingredientsList: `${ingredient.missedIngredients}`
-  //     // listName: `${ingredient.analyzedInstructions.steps.ingredients.name}`,
-  //     // listAmount: `${ingredient.missedIngredients.amount}`,
-  //     // listUnit: `${ingredient.missedIngredients.unit}`,
-  //   }
-  // ]);
+    const [ingredient, setIngredient] = useState(location.state.recipe)
+    console.log("ingredient", location.state.veggies)
+    const [loading, setLoading] = useState(false);
 
-  return (
-    // this logs ingredients but i still cant map through each array to find them
-    // console.log("ingredient", ingredient.missedIngredients[2].name);
 
-    <SafeAreaView>
-      <StyledView>
-        <Text>{`${ingredient.title}`}</Text>
-        <Scroll>
-          <ImageContainer>
-            <CardView>
-              <StyledImageCard>
-                <Card.Content>
-                  <StyledImageBackground source={{ uri: ingredient.image }}>
-                    <StyledTitle>{`${ingredient.title}`}</StyledTitle>
-                  </StyledImageBackground>
-                </Card.Content>
-              </StyledImageCard>
-            </CardView>
-          </ImageContainer>
 
-          <ProgressContainer>
-            <ProgressCircle />
-          </ProgressContainer>
 
-          {/* <Text>{JSON.stringify(location.state)}</Text> */}
+    return (
+        <SafeAreaView>
+            <StyledView>
+                {/* <Text>{JSON.stringify(location.state)}</Text> */}
+                {/* <Text >{`${ingredient.title}`}</Text> */}
+                <Scroll>
 
-          <SeasonConatiner>
-            <SeasonalView location={this.state} />
-          </SeasonConatiner>
+                    <View>
+                        <ImageContainer >
+                            <CardView>
+                                {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+                                <StyledImageCard>
 
-          <RecepieCardContainer>
-            <CardContainer>
-              <CardView>
-                <StyledCard>
-                  <Card.Content>
-                    <CardTitle>{`${ingredient.title}`}</CardTitle>
-                    <TimeView>
-                      <StyledParagraph>
-                        {" "}
-                        Time component font: Poppins
-                      </StyledParagraph>
-                      <StyledDataTable>
-                        <DataTable.Header>
-                          <DataTable.Title>Prep time: </DataTable.Title>
-                          <DataTable.Title numeric>
-                            {" "}
-                            Cook time:{" "}
-                          </DataTable.Title>
-                          <DataTable.Title numeric>
-                            {" "}
-                            Total time:{" "}
-                          </DataTable.Title>
-                        </DataTable.Header>
 
-                        <DataTable.Row>
-                          <DataTable.Cell numeric>
-                            {`${ingredient.preparationMinutes}`} min
-                          </DataTable.Cell>
-                          <DataTable.Cell numeric>
-                            {`${ingredient.cookingMinutes}`} min
-                          </DataTable.Cell>
-                          <DataTable.Cell numeric>
-                            {`${ingredient.readyInMinutes}`} min
-                          </DataTable.Cell>
-                        </DataTable.Row>
-                      </StyledDataTable>
-                    </TimeView>
+                                    <Card.Content key={ingredient.id}>
+                                        <StyledImageBackground source={{ uri: ingredient.image }}>
+                                            {/* accessibilityLabel loadingIndicatorSource */}
+                                            {!loading && <StyledTitle>{ingredient.title}</StyledTitle>}
 
-                    <IngredientsView>
-                      {ingredient.missedIngredients.map(item => (
-                        <Text>{item.originalString}</Text>
-                      ))}
-                    </IngredientsView>
+                                        </StyledImageBackground>
+                                    </Card.Content>
 
-                    <InstructionsView>
-                      {ingredient.analyzedInstructions.map(item => (
-                        <Text>{item.steps[1].step}</Text>
-                      ))}
-                    </InstructionsView>
-                  </Card.Content>
-                </StyledCard>
-              </CardView>
-            </CardContainer>
-          </RecepieCardContainer>
+                                </StyledImageCard>
+                            </CardView>
+                        </ImageContainer>
 
-          <ButtonContainer>
-            <BackButton />
-          </ButtonContainer>
-        </Scroll>
-      </StyledView>
-    </SafeAreaView>
-  );
-};
+                        <ProgressContainer>
+                            <ProgressCircle ingredient={ingredient} location={location.state.veggies} />
+                        </ProgressContainer>
+
+                        <SeasonConatiner>
+                            <SeasonalView ingredient={ingredient} location={location.state.veggies} />
+                        </SeasonConatiner>
+                        <View>
+                            <RecepieCardContainer>
+
+                                <CardContainer>
+                                    <CardView>
+                                        <StyledCard>
+                                            <Card.Content>
+                                                <CardTitle>{ingredient.title}</CardTitle>
+                                                {/* <CardTitle>{`${ingredient.title}`}</CardTitle> */}
+                                                <TimeView>
+                                                    <StyledParagraph> Time component font: Poppins</StyledParagraph>
+                                                    <StyledDataTable>
+                                                        <DataTable.Header>
+                                                            <DataTable.Title>Prep time: </DataTable.Title>
+                                                            <DataTable.Title numeric> Cook time: </DataTable.Title>
+                                                            <DataTable.Title numeric> Total time: </DataTable.Title>
+                                                        </DataTable.Header>
+
+                                                        <DataTable.Row>
+                                                            <DataTable.Cell numeric>{`${ingredient.preparationMinutes}`} min</DataTable.Cell>
+                                                            <DataTable.Cell numeric>{`${ingredient.cookingMinutes}`} min</DataTable.Cell>
+                                                            <DataTable.Cell numeric>{`${ingredient.readyInMinutes}`} min</DataTable.Cell>
+                                                        </DataTable.Row>
+                                                    </StyledDataTable>
+                                                </TimeView>
+
+                                                <IngredientsView>
+                                                    <RecipeTitle>Ingredients:</RecipeTitle>
+                                                    {ingredient.missedIngredients.map(item => (
+                                                        <View>
+                                                            <Text key={item.id}>{item.originalString}</Text>
+                                                        </View>
+                                                    ))}
+                                                </IngredientsView>
+
+                                                <InstructionsView>
+                                                    <RecipeTitle>Instructions:</RecipeTitle>
+                                                    {ingredient.analyzedInstructions.map((item, i) => (
+
+                                                        <View key={i} >
+                                                            {item.steps.map((list, ind) =>
+                                                                <Text key={ind}>{list.step}</Text>
+                                                            )}
+                                                        </View>
+                                                    ))}
+                                                </InstructionsView>
+
+                                            </Card.Content>
+                                        </StyledCard>
+                                    </CardView>
+                                </CardContainer>
+                            </RecepieCardContainer>
+                        </View>
+                        <ButtonContainer >
+                            <BackButton />
+                        </ButtonContainer>
+                    </View>
+                </Scroll>
+
+            </StyledView >
+        </SafeAreaView >
+    )
+
+}
+
+
 
 const StyledView = styled.View`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+    width: 100%;
+   
+    margin-top: 100px;  
 `;
 
 const Scroll = styled(ScrollView)`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 330px;
-  background-color: pink;
-  margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 330px;
+    background-color: pink;
+    margin-bottom: 15px;
 `;
 
 const ImageContainer = styled.View`
-  display: flex;
-  flex-direction: column;
-`;
+    display: flex;
+    flex-direction: column;
+`
 const StyledImageCard = styled(Card)`
-  display: flex;
-  flex-direction: column;
-  background-color: #f0f0f0;
-  height: 250px;
-  margin: 5px;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 8px;
-  border: 0.75px solid #ffdf7f;
-  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
-  z-index: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0;
+    height: 250px;
+    margin: 5px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px;
+    border: 0.75px solid #FFDF7F;
+    /* background-color: black; */
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
+    z-index: 0;
 `;
 
+//maybe take the box-sahdow away!!!
 const StyledImageBackground = styled(ImageBackground)`
-  width: 110%;
-  height: 200px;
-  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
-  /* background-position: center; */
-  border-radius: 8px;
-  z-index: 1;
-  position: absolute;
-  top: 10px;
-  bottom: 0%;
-  /* linear-gradient: 180deg, #FFFFFF, 0%, rgba(255, 255, 255, 0), 100%; */
+    width: 110%;
+    height: 200px;
+    box-shadow: 10px 5px 5px black; 
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); */
+    /* background-position: center; */
+    border-radius: 8px;
+    z-index:1;
+    position: absolute;
+    top: 10px;
+    bottom: 0%;
+    /* linear-gradient: 180deg, #FFFFFF, 0%, rgba(255, 255, 255, 0), 100%; */
 `;
 
+//font-family: Eczar;
 const StyledTitle = styled(Title)`
-  font-weight: 600;
-  font-size: 20px;
-  color: #ffffff;
-  position: absolute;
-  left: 2%;
-  right: 0%;
-  top: 110px;
-  z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 2%;
+    right: 0%;
+    top: 110px;
+    z-index:2;
 `;
 
 const ProgressContainer = styled.View`
-  top: 1px;
-  padding: 8px;
+    top: 1px;
+    padding: 8px;
 `;
 
 const SeasonConatiner = styled.View`
-  top: 70px;
-  padding: 8px;
+    top: 70px;
+    padding: 8px;
 `;
 
 const RecepieCardContainer = styled.View`
-  top: 205px;
-  padding: 8px;
+    top: 205px;
+    padding: 8px;
 `;
 
 const CardContainer = styled.View`
-  display: flex;
-  flex-direction: column;
-  /* bottom: 500px; */
+    display: flex;
+    flex-direction: column;
+    /* bottom: 500px; */
 `;
 
 const CardTitle = styled(Title)`
-  font-size: 20px;
-  text-transform: capitalize;
-`;
+    font-size: 20px;
+    text-transform: capitalize;
+`
 
 const CardView = styled.View`
-  width: 100%;
-  z-index: 1;
+    width: 100%;
+    z-index: 1;
 `;
 const ButtonContainer = styled.View`
-  top: 180px;
-  padding: 15px;
+    top: 180px;
+    padding: 15px;   
 `;
 
 const StyledCard = styled(Card)`
-  display: flex;
-  flex-direction: column;
-  background-color: #f0f0f0;
-  height: 800px;
-  margin: 5px;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 8px;
-  border: 0.75px solid #ffdf7f;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-  z-index: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0;
+    height: 1000px;
+    margin: 5px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px;
+    border: 0.75px solid #FFDF7F;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    z-index: 0;
 `;
 
 // const StyledText = styled(Text)`
@@ -249,51 +247,68 @@ const StyledCard = styled(Card)`
 
 //font-family: Poppins;
 const StyledParagraph = styled(Paragraph)`
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
 `;
 
 const TimeView = styled(View)`
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 100px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 100px;
 `;
 
 const StyledDataTable = styled(DataTable)`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: black;
 `;
 
 const IngredientsView = styled(View)`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 340px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 250px;
+    border-bottom-color: lightgrey;
+    border-bottom-width: 0.5px;
+    padding-bottom: 30px;
+    
+`;
+
+//font-family: Poppins;
+const RecipeTitle = styled.Text`
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    padding: 10px;
 `;
 
 const InstructionsView = styled(View)`
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 710px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 550px;
+  
 `;
 
 const StyledSectionList = styled(SectionList)`
-  padding-top: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: rgba(247, 247, 247, 1);
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(247,247,247,1.0);
+
 `;
 
-export default Recepie;
+export default Recepie

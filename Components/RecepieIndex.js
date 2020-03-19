@@ -4,7 +4,7 @@ import {
   ScrollView,
   Button,
   TouchableOpacity,
-  Text
+  Text, View
 } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import { Alert } from "react-native";
@@ -13,7 +13,7 @@ import styled from "styled-components/native";
 import BackButton from "./lib/BackButton";
 import { PacmanIndicator } from "react-native-indicators";
 
-const localUrl = "http://192.168.1.8:8080/recipes/";
+const localUrl = "http://192.168.1.37:8080/recipes/";
 
 const RecepieIndex = ({ history, location }) => {
   const [recipes, setRecipes] = useState([]);
@@ -32,7 +32,7 @@ const RecepieIndex = ({ history, location }) => {
         setLoading(false);
       });
   }, []);
-
+  console.log("REcipeIndex/Veggies", location.state.veggies)
   return (
     <SafeAreaView>
       <StyledView>
@@ -42,7 +42,11 @@ const RecepieIndex = ({ history, location }) => {
               key={recipe.id}
               to={{
                 pathname: "/recepie",
-                state: recipe // passing along the whole recipe object to next screen
+                state: {
+                  recipe,
+                  veggies: location.state.veggies
+                }
+                // passing along the whole recipe object to next screen
               }}
               component={TouchableOpacity}
               activeOpacity={0.8}
@@ -51,15 +55,12 @@ const RecepieIndex = ({ history, location }) => {
               {/* skicka med ett id från recept db som i Movie project*/}
               {/* link to */}
               <CardContainer>
-                {/* {loading && <Text>Test</Text>} */}
-                {/* <LoadingContainer> */}
-                {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
-                {/* </LoadingContainer> */}
-                {!loading && <Text></Text>}
-
-                <CardView>
-                  <RecepiesCards recipe={recipe} />
-                </CardView>
+                <View>
+                  {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+                  <CardView>
+                    {!loading && <RecepiesCards recipe={recipe} />}
+                  </CardView>
+                </View>
               </CardContainer>
             </Link>
           ))}
