@@ -5,7 +5,7 @@ import styled from "styled-components/native";
 import VeggieIcons from "./lib/VeggieIcons";
 import { PacmanIndicator } from "react-native-indicators";
 
-const localUrl = "http://192.168.1.37:8080/veggies";
+const localUrl = "http://192.168.1.17:8080/veggies";
 
 // import * as Font from 'expo-font';
 // // import { AppLoading } from 'expo';
@@ -97,13 +97,14 @@ const HeaderView = styled.View`
 `;
 
 // margin-bottom: 20px;
-//font-family: Eczar-SemiBold;
+//font-family: Baskerville-Bold;
 const Header = styled.Text`
+    font-family: TrebuchetMS-Bold;
     
     text-align: center;
     font-weight: 900;
-    font-size: 30px;
-    line-height: 25px;
+    font-size: 35px;
+    line-height: 30px;
     padding-top: 30px;
     left: 5px;
 `;
@@ -115,8 +116,8 @@ const Section = styled.View`
 `
 
 const VeggieContainer = styled.View`
-   padding-top: 65px;
-  
+    height:350px;
+    padding-top: 40px;
 `
 
 export default SearchPage;

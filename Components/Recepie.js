@@ -197,7 +197,7 @@ const ProgressContainer = styled.View`
 `;
 
 const SeasonConatiner = styled.View`
-    top: 70px;
+    top: 60px;
     padding: 8px;
 `;
 

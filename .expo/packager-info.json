@@ -3,8 +3,8 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://63-z3i.anonymous.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.63-z3i.anonymous.final-project-front-end.exp.direct",
+  "ngrokPid": 81797,
   "webpackServerPort": null
 }

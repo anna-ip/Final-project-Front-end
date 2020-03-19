@@ -11,7 +11,7 @@ import styled from "styled-components/native";
 import BackButton from "./lib/BackButton";
 import { PacmanIndicator } from "react-native-indicators";
 
-const localUrl = "http://192.168.1.37:8080/recipes/";
+const localUrl = "http://192.168.1.17:8080/recipes/";
 
 const RecepieIndex = ({ history, location }) => {
   const [recipes, setRecipes] = useState([]);

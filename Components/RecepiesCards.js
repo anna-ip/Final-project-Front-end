@@ -11,7 +11,10 @@ const RecepiesCards = ({ recipe }) => {
     <StyledCard>
       <Card.Content>
 
-        <StyledImageBackground blurRadius={0.5} source={{ uri: recipe.image }}>
+        <StyledImageBackground
+          blurRadius={0.5}
+          source={{ uri: recipe.image }}
+        >
           <Opacity>
             <StyledTitle>{recipe.title}</StyledTitle>
           </Opacity>
@@ -80,10 +83,10 @@ const StyledTitle = styled(Title)`
   flex-wrap: wrap;
   width: 200px;
   height: 200px;
-  
-  font-weight: 600;
+  font-family: TrebuchetMS-Bold;
+  font-weight: 700;
   font-size: 33px;
-  color: #ffffff;
+  color: black;
   text-transform: capitalize;
   position: absolute;
   left: 2px;
