@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Text, Button, View, ScrollView, SafeAreaView, SectionList, StyleSheet, ImageBackground, FlatList } from 'react-native'
-import { Card, Title, Paragraph, DataTable } from 'react-native-paper';
+import { Text, Button, View, ScrollView, SafeAreaView, SectionList, StyleSheet, ImageBackground, FlatList, Title } from 'react-native'
+import { Card, Paragraph, DataTable } from 'react-native-paper';
 
 import { List, ListItem } from 'react-native-elements';
 import SeasonalView from "./SeasonalView"
@@ -12,11 +12,15 @@ import styled from "styled-components";
 import { PacmanIndicator } from "react-native-indicators";
 
 
-const Recepie = ({ hitstory, location }) => {
-    const [ingredient, setIngredient] = useState(location.state.recipe)
-    console.log("ingredient", location.state.veggies)
+const Recepie = ({ history, location }) => {
+    // const [ingredient, setIngredient] = useState(location.state.recipe)
+    // console.log("ingredient", location.state.veggie)
     const [loading, setLoading] = useState(false);
 
+    const { recipe, veggie } = location.state // destructurins recipe and veggie from location state
+
+    console.log('in recipe screen we have recipe:', recipe)
+    console.log('in recipe screen we have VEGGIE:', veggie)
 
 
 
@@ -34,10 +38,10 @@ const Recepie = ({ hitstory, location }) => {
                                 <StyledImageCard>
 
 
-                                    <Card.Content key={ingredient.id}>
-                                        <StyledImageBackground source={{ uri: ingredient.image }}>
+                                    <Card.Content key={recipe.id}>
+                                        <StyledImageBackground source={{ uri: recipe.image }}>
                                             {/* accessibilityLabel loadingIndicatorSource */}
-                                            {!loading && <StyledTitle>{ingredient.title}</StyledTitle>}
+                                            {!loading && <StyledTitle>{recipe.title}</StyledTitle>}
 
                                         </StyledImageBackground>
                                     </Card.Content>
@@ -47,11 +51,11 @@ const Recepie = ({ hitstory, location }) => {
                         </ImageContainer>
 
                         <ProgressContainer>
-                            <ProgressCircle ingredient={ingredient} location={location.state.veggies} />
+                            <ProgressCircle veggie={veggie} />
                         </ProgressContainer>
 
                         <SeasonConatiner>
-                            <SeasonalView ingredient={ingredient} location={location.state.veggies} />
+                            <SeasonalView veggie={veggie} />
                         </SeasonConatiner>
                         <View>
                             <RecepieCardContainer>
@@ -60,8 +64,8 @@ const Recepie = ({ hitstory, location }) => {
                                     <CardView>
                                         <StyledCard>
                                             <Card.Content>
-                                                <CardTitle>{ingredient.title}</CardTitle>
-                                                {/* <CardTitle>{`${ingredient.title}`}</CardTitle> */}
+                                                <CardTitle>{recipe.title}</CardTitle>
+                                                {/* <CardTitle>{`${recipe.title}`}</CardTitle> */}
                                                 <TimeView>
                                                     <StyledParagraph> Time component font: Poppins</StyledParagraph>
                                                     <StyledDataTable>
@@ -72,16 +76,16 @@ const Recepie = ({ hitstory, location }) => {
                                                         </DataTable.Header>
 
                                                         <DataTable.Row>
-                                                            <DataTable.Cell numeric>{`${ingredient.preparationMinutes}`} min</DataTable.Cell>
-                                                            <DataTable.Cell numeric>{`${ingredient.cookingMinutes}`} min</DataTable.Cell>
-                                                            <DataTable.Cell numeric>{`${ingredient.readyInMinutes}`} min</DataTable.Cell>
+                                                            <DataTable.Cell numeric>{`${recipe.preparationMinutes}`} min</DataTable.Cell>
+                                                            <DataTable.Cell numeric>{`${recipe.cookingMinutes}`} min</DataTable.Cell>
+                                                            <DataTable.Cell numeric>{`${recipe.readyInMinutes}`} min</DataTable.Cell>
                                                         </DataTable.Row>
                                                     </StyledDataTable>
                                                 </TimeView>
 
                                                 <IngredientsView>
                                                     <RecipeTitle>Ingredients:</RecipeTitle>
-                                                    {ingredient.missedIngredients.map(item => (
+                                                    {recipe.missedIngredients.map(item => (
                                                         <View>
                                                             <Text key={item.id}>{item.originalString}</Text>
                                                         </View>
@@ -90,7 +94,7 @@ const Recepie = ({ hitstory, location }) => {
 
                                                 <InstructionsView>
                                                     <RecipeTitle>Instructions:</RecipeTitle>
-                                                    {ingredient.analyzedInstructions.map((item, i) => (
+                                                    {recipe.analyzedInstructions.map((item, i) => (
 
                                                         <View key={i} >
                                                             {item.steps.map((list, ind) =>
@@ -176,7 +180,7 @@ const StyledImageBackground = styled(ImageBackground)`
 `;
 
 //font-family: Eczar;
-const StyledTitle = styled(Title)`
+const StyledTitle = styled.Text`
     font-weight: 600;
     font-size: 20px;
     color: #FFFFFF;
@@ -208,7 +212,7 @@ const CardContainer = styled.View`
     /* bottom: 500px; */
 `;
 
-const CardTitle = styled(Title)`
+const CardTitle = styled.Text`
     font-size: 20px;
     text-transform: capitalize;
 `

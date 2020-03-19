@@ -7,9 +7,30 @@ import { PacmanIndicator } from "react-native-indicators";
 
 const localUrl = "http://192.168.1.37:8080/veggies";
 
+// import * as Font from 'expo-font';
+// // import { AppLoading } from 'expo';
+// // import { startAsync } from "expo/build/AR";
+
+// // const fetchFonts = () => {
+// //     return Font.loadAsync({
+// //         "Eczar": {
+// //             uri: require("./assets/Fonts/Eczar-SemiBold")
+// //             // fontDisplay: FontDisplay.FALLBACK,
+// //         }
+// //         // 'Eczar-regular': require('./assets/Fonts/Eczar-Regular.ttf')
+// //     });
+// // };
+// componentDidMount() {
+//     Font.loadAsync({
+//       'Poppins-Regular': require('./assets/Fonts/Poppins-Regular.tff'),
+//     });
+//   }
+
+
 const SearchPage = () => {
     const [veggies, setVeggies] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [dataLoaded, setDataLoaded] = useState(false);
     //console.log("searchPage", veggies);
 
     // THIS WORKS ✅
@@ -24,6 +45,17 @@ const SearchPage = () => {
                 setLoading(false);
             });
     }, []);
+
+
+
+    // if (!dataLoaded) {
+    //     return (
+    //         <AppLoading
+    //             startAsync={fetchFonts}
+    //             onFinish={() => setDataLoaded(true)}
+    //         />
+    //     )
+    // }
 
     return (
         <Container>
@@ -71,8 +103,9 @@ const HeaderView = styled.View`
 `;
 
 // margin-bottom: 20px;
+//font-family: Eczar-SemiBold;
 const Header = styled.Text`
-   
+    
     text-align: center;
     font-weight: 900;
     font-size: 30px;

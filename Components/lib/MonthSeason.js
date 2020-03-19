@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { Avatar } from "react-native-paper";
-import MonthAvatar from "./MonthAvatar";
+// import MonthAvatar from "./MonthAvatar";
 import styled from "styled-components";
 
 
@@ -15,7 +15,65 @@ const MonthSeason = ({ season }) => {
                 Check it out in Sweden{}avalible these months
         </Textfield>
             <MonthAvatarView>
-                <MonthAvatar season={season} />
+                {/* <MonthAvatar season={season} /> */}
+                <Container>
+                    {/* {veggies.month.map((month, i) => ( */}
+                    <MonthButton
+                        // key={i}
+                        // Id={1}
+                        title={"Jan"}
+                        onPress={() => ('')}
+                    />
+
+                    <MonthButton title={"Feb"} />
+
+
+
+                    <MonthButton
+                        title={"Mar"}
+                    />
+
+                    <MonthButton
+                        title={"Apr"}
+                    />
+
+                    <MonthButton
+                        title={"May"}
+                    />
+
+
+                    <MonthButton
+                        title={"Jun"}
+                    />
+
+
+                    <MonthButton
+                        title={"Jul"}
+                    />
+
+                    <MonthButton
+                        title={"Aug"}
+                    />
+
+                    <MonthButton
+                        title={"Sept"}
+                    />
+
+                    <MonthButton
+                        title={"Oct"}
+                    />
+
+
+                    <MonthButton
+                        title={"Nov"}
+
+                    />
+
+
+                    <MonthButton
+                        title={"Dec"}
+                    />
+
             </MonthAvatarView>
         </Container>
     );

@@ -19,20 +19,24 @@ const RecepieIndex = ({ history, location }) => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const { veggie } = location.state
+  console.log('In RecipeINDEX we have VEGGIE', veggie)    // <---- WE WANT TO FIND THIS IN THE CONSOLE 👁👁👁👁👁👁👁👁👁👁👁 
+
+  console.log('URL THAT WE TRY TO FETCH FROM:', localUrl + veggie.name)
   // THIS WORKS ✅
   // fetching the recipies from DB here.
   // getting the name from that location.state that was passed from prev screen.
   // setting recipies array to be from the fetch and then mapping through them to get the title to show up as a text. The cards needs to be filled of course. But at least this works :D
   useEffect(() => {
     setLoading(true);
-    fetch(localUrl + location.state.name)
+    fetch(localUrl + veggie.name)
       .then(res => res.json())
       .then(json => {
         setRecipes(json);
         setLoading(false);
       });
   }, []);
-  console.log("REcipeIndex/Veggies", location.state.veggies)
+
   return (
     <SafeAreaView>
       <StyledView>
@@ -44,7 +48,7 @@ const RecepieIndex = ({ history, location }) => {
                 pathname: "/recepie",
                 state: {
                   recipe,
-                  veggies: location.state.veggies
+                  veggie: location.state.veggie
                 }
                 // passing along the whole recipe object to next screen
               }}

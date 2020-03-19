@@ -4,9 +4,9 @@ import { Text, View, StyleSheet } from "react-native";
 import ProgressCircle from "react-native-progress-circle";
 import styled from "styled-components";
 
-const progressCircle = ({ location, ingredient }) => {
-  console.log("Circleeeeee", location.state) //this gives undefined
-  console.log("ID::::::::::", ingredient.id) //this works
+const progressCircle = ({ veggie }) => {
+
+  console.log('veggie in PROGRESSCIRCLE', veggie) // We're passing the veggie as a prop to this component.
 
 
   const value = 0.62;
@@ -17,7 +17,7 @@ const progressCircle = ({ location, ingredient }) => {
 
   return (
     <Container>
-      <Title>{`${ingredient.title}`}</Title>
+      <Title>{`${veggie.name}`}</Title>
       <ProgressCircle
         percent={30}
         radius={60}
@@ -26,9 +26,9 @@ const progressCircle = ({ location, ingredient }) => {
         shadowColor="#999"
         bgColor="#fff"
       >
-        <Text style={{ fontSize: 18 }}>{`${value * 100}%`}</Text>
+        <Text style={{ fontSize: 18 }}>{`${veggie.carbonprint * 100}%`}</Text>
       </ProgressCircle>
-      <Rubrik>C02 footprint of {`${coFrontPrint}`}</Rubrik>
+      <Rubrik>C02 footprint of {`${veggie.carbonprint}`}</Rubrik>
     </Container>
   );
 };
