@@ -55,9 +55,7 @@ const RecepieIndex = ({ history, location }) => {
               component={TouchableOpacity}
               activeOpacity={0.8}
             >
-              {/* <Link to="/recepie/${recepie.id}" component={TouchableOpacity} activeOpacity={0.8}> */}
-              {/* skicka med ett id från recept db som i Movie project*/}
-              {/* link to */}
+
               <CardContainer>
                 <View>
                   {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
@@ -73,7 +71,6 @@ const RecepieIndex = ({ history, location }) => {
         <BackButtonContainer>
           <BackButton />
         </BackButtonContainer>
-        {/* <Button title='Search' onPress={() => history.push('/recepie')} /> */}
       </StyledView>
     </SafeAreaView>
   );

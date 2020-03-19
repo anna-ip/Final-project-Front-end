@@ -74,9 +74,9 @@ const SearchPage = () => {
 };
 
 //top: 20px;
-
+//padding: 12px; 
 const Container = styled(SafeAreaView)`
-   margin: 12px; 
+   
     
 `;
 

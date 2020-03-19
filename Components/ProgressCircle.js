@@ -9,8 +9,9 @@ const progressCircle = ({ veggie }) => {
   console.log('veggie in PROGRESSCIRCLE', veggie) // We're passing the veggie as a prop to this component.
 
 
-  const value = 0.62;
-  // const value = { name.carbonprint };
+  // const value = 0.62;
+  const value = `${(veggie.carbonprint * 100).toFixed(2)}%`;
+  // const footprint = footprint.toFixed(2)
   // const percent = {`${value * 100}`
   //add another caculation to take the 0. away
   const coFrontPrint = 0;
@@ -26,7 +27,8 @@ const progressCircle = ({ veggie }) => {
         shadowColor="#999"
         bgColor="#fff"
       >
-        <Text style={{ fontSize: 18 }}>{`${veggie.carbonprint * 100}%`}</Text>
+        {/* <Text style={{ fontSize: 18 }}>{footprint}</Text> */}
+        <Text style={{ fontSize: 18 }}>{`${(veggie.carbonprint * 100).toFixed(2)} CO2`}</Text>
       </ProgressCircle>
       <Rubrik>C02 footprint of {`${veggie.carbonprint}`}</Rubrik>
     </Container>
