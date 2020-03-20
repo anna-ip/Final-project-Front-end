@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, Text } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 import { Card, Title, Paragraph } from "react-native-paper";
 import TimeComponent from "./TimeComponent";
 import styled from "styled-components/native";
@@ -10,16 +10,17 @@ const RecepiesCards = ({ recipe }) => {
   return (
     <StyledCard>
       <Card.Content>
-        {/* <OpacityContainer> */}
-        <StyledImageBackground source={{ uri: recipe.image }}>
 
-          <StyledTitle >{recipe.title}</StyledTitle>
-
+        <StyledImageBackground
+          blurRadius={0.5}
+          source={{ uri: recipe.image }}
+        >
+          <Opacity>
+            <StyledTitle>{recipe.title}</StyledTitle>
+          </Opacity>
         </StyledImageBackground>
-        {/* </OpacityContainer> */}
+
         <TimeView>
-          <StyledParagraph> Time component font: Poppins
-          </StyledParagraph>
           <TimeComponent recipe={recipe} />
         </TimeView>
       </Card.Content>
@@ -47,55 +48,53 @@ const OpacityContainer = styled.View`
 `
 
 const StyledImageBackground = styled(ImageBackground)`
-  width: 100%;
+  width: 200px;
   height: 200px;
   /* border-radius: 30; */
   border-top-left-radius: 30;
-  opacity: 0.6;
+  opacity: 0.9;
   z-index: 1;
   position: absolute;
   left: 8%;
   right: 0%;
   top: 50px;
   bottom: 0%;
-  background: rgba(0, 0, 0, 0.5);
-  /* filter: brightness(20%);
-  background: rgba(0,0,0,.5); */
+  background-color: black;
 `;
 
 
-// const Overlay = styled.View`
-//   background: rgba(0, 0, 0, 0.5);
-//   z-index: 2;
-// `
-
+const Opacity = styled.View`
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+`;
+//color: #ffffff;
+// position: absolute;
+// left: 0;
+// right: 0;
+//  top: 0;
+// bottom: 3%;
+//padding: 5px;
+// background-color: black;
+// opacity: 0.3;
 const StyledTitle = styled(Title)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 200px;
-  font-weight: 600;
-  font-size: 20px;
-  color: #ffffff;
-  /* border: 1px solid #7EDABE; */
-  position: absolute;
-  left: 2%;
-  right: 0%;
-  top: 75%;
-  bottom: 3.28%;
-  /* opacity: 0; */
-  z-index: 3;
+  height: 200px;
+  font-family: TrebuchetMS-Bold;
+  font-weight: 700;
+  font-size: 33px;
+  color: black;
   text-transform: capitalize;
+  position: absolute;
+  left: 2px;
+  right: 0;
+  top: 20px;
+  bottom: 3%;
+  z-index: 5;
 `;
-
-// const StyledText = styled(Text)`
-//   color: #ffffff;
-//   position: absolute;
-//   left: 0%;
-//   right: 0%;
-//   top: 85.3%;
-//   bottom: 3.28%;
-// `;
 
 const TimeView = styled.View`
   position: absolute;
@@ -105,10 +104,10 @@ const TimeView = styled.View`
   bottom: 0%;
 `;
 
-const StyledParagraph = styled(Paragraph)`
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-`;
+// const StyledParagraph = styled(Paragraph)`
+//   font-weight: 600;
+//   font-size: 12px;
+//   line-height: 18px;
+// `;
 
 export default RecepiesCards;

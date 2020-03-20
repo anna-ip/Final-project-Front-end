@@ -5,6 +5,7 @@ import ProgressCircle from "react-native-progress-circle";
 import styled from "styled-components";
 
 const progressCircle = ({ veggie }) => {
+
   return (
     <Container>
       <Title>{`${veggie.name}`}</Title>
@@ -16,7 +17,9 @@ const progressCircle = ({ veggie }) => {
         shadowColor="#999"
         bgColor="#fff"
       >
+
         <Text style={{ fontSize: 18 }}>0.{`${veggie.carbonprint * 100}`}</Text>
+
       </ProgressCircle>
       <Rubrik>
         {" "}

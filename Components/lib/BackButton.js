@@ -16,13 +16,13 @@ const BackButton = ({ history }) => {
           onPress={() => history.push("/")}
           activeOpacity={0.5}>
           <Icon
-            name="check"
+            name="angle-left"
             type="material"
             // color="#FBA896"
-            color="yellow"
+            color="white"
             containerStyle={{ alignSelf: "center" }}
             reverse={40}
-            size={40}
+            size={80}
             raised={60}
           />
         </ButtonContainer>
@@ -37,6 +37,7 @@ const Container = styled.View`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 6px -20px rgba(75, 44, 56, 0.16);
+  
 `;
 
 const IconContainer = styled.View`
@@ -47,15 +48,18 @@ const IconContainer = styled.View`
   width: 80;
   height: 80;
   border-radius: 80;
-  top: 50;
+  top: 40;
   bottom: 0;
   z-index: 10;
+
 `;
 
 const ButtonContainer = styled.TouchableOpacity`
 display: flex;
 align-items: center;
-top: 15px;
+top: -4px;
+left: -2px;
+
 `
 
 export default withRouter(BackButton);

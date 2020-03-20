@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import {
   View,
   Image,
@@ -28,11 +28,15 @@ const icons = {
 };
 
 const VeggieIcons = ({ history, veggies }) => {
+
   //console.log("AspargusBtn", veggies)
+
 
   return (
     <Container>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+      <StyledScrollView horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      >
         <IconContainer>
           {veggies.map(item => (
             <Button
@@ -43,6 +47,7 @@ const VeggieIcons = ({ history, veggies }) => {
             </Button>
           ))}
         </IconContainer>
+
       </ScrollView>
     </Container>
 
@@ -245,6 +250,7 @@ const VeggieIcons = ({ history, veggies }) => {
     //     </Button>
     //   </IconContainer>
     // </ScrollView>
+
   );
 };
 
@@ -259,31 +265,30 @@ const Container = styled.SafeAreaView`
   margin: 5px;
 `;
 
+//this makes the icons start 10px into the scrollview
+const StyledScrollView = styled.ScrollView`
+  padding-left: 10px;
+`
+// justify-content: space-between;
 const IconContainer = styled.SafeAreaView`
+  display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
-  height: 40px;
-  margin-top: 20px;
-  right: 20px;
+  width: 700px;
 `;
 
 const Button = styled.TouchableOpacity`
-  border: 10px solid #ffffff;
-  border-radius: 50%;
+  border: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90px;
   width: 90px;
-  border: solid;
   padding: 10px;
-  shadow-color: #303838;
-  shadow-radius: 15px;
+  border: solid;
   border-radius: 60px;
-  margin: 5px;
-  shadow-color: #303838;
-  shadow-radius: 20px;
+  margin-right: 8px;
+  margin-bottom: 50px;
 `;
 
 export default withRouter(VeggieIcons);

@@ -208,6 +208,7 @@ const CardTitle = styled.Text`
   text-align: center;
 `;
 
+
 const RecipeTitleTop = styled.Text`
   text-align: center;
   font-style: normal;
@@ -216,6 +217,7 @@ const RecipeTitleTop = styled.Text`
   line-height: 27px;
   color: #000000;
   margin: 35px;
+
 `;
 
 const RecipeTitle = styled.Text`
