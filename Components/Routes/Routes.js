@@ -38,14 +38,5 @@ const StyledView = styled.View`
   margin-top: -80px;
 `;
 
-/* const StyledSafeAreaView = styled(SafeAreaView)`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  `; */
-
-
-
 
 export default Routes;

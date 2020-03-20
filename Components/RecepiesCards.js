@@ -15,9 +15,9 @@ const RecepiesCards = ({ recipe }) => {
           blurRadius={0.5}
           source={{ uri: recipe.image }}
         >
-          <Opacity>
-            <StyledTitle>{recipe.title}</StyledTitle>
-          </Opacity>
+          {/* <Opacity> */}
+          <StyledTitle>{recipe.title}</StyledTitle>
+          {/* </Opacity> */}
         </StyledImageBackground>
 
         <TimeView>
@@ -52,7 +52,7 @@ const StyledImageBackground = styled(ImageBackground)`
   height: 200px;
   /* border-radius: 30; */
   border-top-left-radius: 30;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   z-index: 1;
   position: absolute;
   left: 8%;
@@ -63,20 +63,7 @@ const StyledImageBackground = styled(ImageBackground)`
 `;
 
 
-const Opacity = styled.View`
-  background-color: black;
-  opacity: 0.5;
-  z-index: 2;
-`;
-//color: #ffffff;
-// position: absolute;
-// left: 0;
-// right: 0;
-//  top: 0;
-// bottom: 3%;
-//padding: 5px;
-// background-color: black;
-// opacity: 0.3;
+
 const StyledTitle = styled(Title)`
   display: flex;
   flex-direction: row;
@@ -84,7 +71,7 @@ const StyledTitle = styled(Title)`
   width: 200px;
   height: 200px;
   font-family: TrebuchetMS-Bold;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 33px;
   color: black;
   text-transform: capitalize;

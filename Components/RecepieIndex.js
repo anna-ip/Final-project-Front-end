@@ -15,7 +15,7 @@ import BackButton from "./lib/BackButton";
 import { PacmanIndicator } from "react-native-indicators";
 
 
-const localUrl = "http://192.168.1.8:8080/recipes/";
+const localUrl = "http://192.168.1.37:8080/recipes/";
 // 192.168.1.8
 
 
@@ -101,7 +101,10 @@ const CardView = styled.View`
 
 const BackButtonContainer = styled.View`
   position: absolute;
-  left: 50%;
+  display: flex;
+  align-self:center;
+  flex-direction: column;
+  justify-content:center;
   top: 380px;
   bottom: 5px;
   z-index: 2;

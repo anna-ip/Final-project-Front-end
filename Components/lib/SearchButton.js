@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { View, TouchableOpacity } from "react-native";
-// import { Icon } from "react-native-elements";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styled from "styled-components";
 import { withRouter } from "react-router-native"
@@ -13,9 +12,7 @@ const SearchButton = ({ history }) => {
       <IconContainer>
         <ButtonContainer
           onPress={() => history.push('/RecepieIndex')}
-
           activeOpacity={0.5}>
-
           <Icon
             name="check"
             type="material"

@@ -3,8 +3,6 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
-
-  "urlRandomness": "6z-sag",
-
+  "urlRandomness": "bg-s63",
   "https": false
 }

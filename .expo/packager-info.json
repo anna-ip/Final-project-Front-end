@@ -1,12 +1,10 @@
 {
   "devToolsPort": 19002,
-
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 61399,
-  "expoServerNgrokUrl": "https://6z-sag.swolfson1.final-project-front-end.exp.direct",
-  "packagerNgrokUrl": "https://packager.6z-sag.swolfson1.final-project-front-end.exp.direct",
-  "ngrokPid": 61428,
-
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://bg-s63.anonymous.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.bg-s63.anonymous.final-project-front-end.exp.direct",
+  "ngrokPid": 88112,
   "webpackServerPort": null
 }

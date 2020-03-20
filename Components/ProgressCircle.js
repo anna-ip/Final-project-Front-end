@@ -18,7 +18,8 @@ const progressCircle = ({ veggie }) => {
         bgColor="#fff"
       >
 
-        <Text style={{ fontSize: 18 }}>0.{`${veggie.carbonprint * 100}`}</Text>
+        <Text style={{ fontSize: 18 }}>{`${veggie.carbonprint}`} CO2</Text>
+
 
       </ProgressCircle>
       <Rubrik>
