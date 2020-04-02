@@ -1,25 +1,16 @@
 import React from "react";
-import { ImageBackground, Text, View } from "react-native";
-import { Card, Title, Paragraph } from "react-native-paper";
+import { ImageBackground } from "react-native";
+import { Card, Title } from "react-native-paper";
 import TimeComponent from "./TimeComponent";
 import styled from "styled-components/native";
 
-
 const RecepiesCards = ({ recipe }) => {
-
   return (
     <StyledCard>
       <Card.Content>
-
-        <StyledImageBackground
-          blurRadius={0.5}
-          source={{ uri: recipe.image }}
-        >
-          {/* <Opacity> */}
+        <StyledImageBackground blurRadius={0.5} source={{ uri: recipe.image }}>
           <StyledTitle>{recipe.title}</StyledTitle>
-          {/* </Opacity> */}
         </StyledImageBackground>
-
         <TimeView>
           <TimeComponent recipe={recipe} />
         </TimeView>
@@ -27,8 +18,6 @@ const RecepiesCards = ({ recipe }) => {
     </StyledCard>
   );
 };
-
-
 
 const StyledCard = styled(Card)`
   background-color: #ffffff;
@@ -41,18 +30,9 @@ const StyledCard = styled(Card)`
   z-index: 0;
 `;
 
-const OpacityContainer = styled.View`
-  /* background-color:rgba(255,0,0,0.5); */
- background-color: black;
- z-index: 2;
-`
-
 const StyledImageBackground = styled(ImageBackground)`
   width: 200px;
   height: 200px;
-  /* border-radius: 30; */
-  border-top-left-radius: 30;
-  /* opacity: 0.9; */
   z-index: 1;
   position: absolute;
   left: 8%;
@@ -61,8 +41,6 @@ const StyledImageBackground = styled(ImageBackground)`
   bottom: 0%;
   background-color: black;
 `;
-
-
 
 const StyledTitle = styled(Title)`
   display: flex;
@@ -90,11 +68,5 @@ const TimeView = styled.View`
   top: 295px;
   bottom: 0%;
 `;
-
-// const StyledParagraph = styled(Paragraph)`
-//   font-weight: 600;
-//   font-size: 12px;
-//   line-height: 18px;
-// `;
 
 export default RecepiesCards;

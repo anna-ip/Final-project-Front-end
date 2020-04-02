@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Routes from "./Components/Routes/Routes";
-import { StyleSheet, Text, SafeAreaView, View } from "react-native";
 import { NativeRouter, Switch } from "react-router-native";
 import styled from "styled-components/native";
 
-
-//Native Router can only have one child
-//Switch makes sure only one page render at a time
 const App = () => {
-
   return (
-
     <NativeRouter>
       <Container>
         <Switch>
@@ -18,7 +12,6 @@ const App = () => {
         </Switch>
       </Container>
     </NativeRouter>
-
   );
 };
 

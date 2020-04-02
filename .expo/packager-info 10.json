@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 15233,
+  "expoServerNgrokUrl": "https://bg-s63.anonymous.final-project-front-end.exp.direct",
+  "packagerNgrokUrl": "https://packager.bg-s63.anonymous.final-project-front-end.exp.direct",
+  "ngrokPid": 15243,
+  "webpackServerPort": null
+}

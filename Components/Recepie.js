@@ -1,107 +1,96 @@
 import React, { useState } from "react";
-import {
-    Text,
-    Button,
-    View,
-    ScrollView,
-    SafeAreaView,
-    SectionList,
-    StyleSheet,
-    ImageBackground,
-    FlatList,
-    Title
-} from "react-native";
-import { Card, Paragraph, DataTable } from "react-native-paper";
+import { View, ScrollView, ImageBackground } from "react-native";
+import { Card, DataTable } from "react-native-paper";
 import { CheckBox } from "react-native-elements";
-import { List, ListItem } from "react-native-elements";
 import SeasonalView from "./SeasonalView";
 import ProgressCircle from "./ProgressCircle";
 import BackButton from "./lib/BackButton";
 import styled from "styled-components";
 import { PacmanIndicator } from "react-native-indicators";
 
-const Recepie = ({ history, location }) => {
+const Recepie = ({ location }) => {
+  const [loading, setLoading] = useState(false);
+  const [checked, setChecked] = useState(false);
 
-    const [loading, setLoading] = useState(false);
-    const [checked, setChecked] = useState(false)
+  const { recipe, veggie } = location.state; // destructurings recipes and veggies from location state
 
-    const { recipe, veggie } = location.state; // destructurins recipe and veggie from location state
+  return (
+    <Container>
+      <ScrollView>
+        <ImageContainer>
+          <CardView>
+            {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+            <StyledImageCard>
+              <Card.Content key={recipe.id}>
+                <StyledImageBackground source={{ uri: recipe.image }}>
+                  {!loading && <StyledTitle>{recipe.title}</StyledTitle>}
+                </StyledImageBackground>
+              </Card.Content>
+            </StyledImageCard>
+          </CardView>
+        </ImageContainer>
 
-    return (
-        <Container>
-            <Scroll>
-                <ImageContainer>
-                    <CardView>
-                        {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
-                        <StyledImageCard>
-                            <Card.Content key={recipe.id}>
-                                <StyledImageBackground source={{ uri: recipe.image }}>
-                                    {!loading && <StyledTitle>{recipe.title}</StyledTitle>}
-                                </StyledImageBackground>
-                            </Card.Content>
-                        </StyledImageCard>
-                    </CardView>
-                </ImageContainer>
-                <ProgressCircle veggie={veggie} />
-                <SeasonalView veggie={veggie} />
-                <CardView>
-                    <StyledCard>
-                        <CardTitle>{recipe.title}</CardTitle>
-                        <CreditsText>Author:{recipe.creditsText}</CreditsText>
-                        <TimeView>
-                            <StyledDataTable>
-                                <DataTable.Header>
-                                    <DataTable.Title>Prep time: </DataTable.Title>
-                                    <DataTable.Title numeric> Cook time: </DataTable.Title>
-                                    <DataTable.Title numeric> Total time: </DataTable.Title>
-                                </DataTable.Header>
+        <ProgressCircle veggie={veggie} />
+        <SeasonalView veggie={veggie} />
 
-                                <DataTable.Row style={{ justifyContent: "center" }}>
-                                    <DataTable.Cell numeric>
-                                        {`${recipe.preparationMinutes}`} min
-                                                </DataTable.Cell>
-                                    <DataTable.Cell numeric>
-                                        {`${recipe.cookingMinutes}`} min
-                                                 </DataTable.Cell>
-                                    <DataTable.Cell numeric>
-                                        {`${recipe.readyInMinutes}`} min
-                                                 </DataTable.Cell>
-                                </DataTable.Row>
-                            </StyledDataTable>
-                        </TimeView>
-                        <IngredientsView>
-                            <RecipeTitleTop>Ingredients:</RecipeTitleTop>
-                            {recipe.missedIngredients.map(item => (
-                                <View>
-                                    <CheckBox
-                                        key={item.id}
-                                        title={item.originalString}
-                                        checked={false}
-                                        size={30}
-                                        checkedColor="green"
-                                        checked={false}
-                                    />
-                                </View>
-                            ))}
-                        </IngredientsView>
-                        <InstructionsView>
-                            <RecipeTitle>Instructions:</RecipeTitle>
-                            {recipe.analyzedInstructions.map((item, i) => (
-                                <View key={i}>
-                                    {item.steps.map((list, ind) => (
-                                        <ListSteps key={ind}>{list.step}</ListSteps>
-                                    ))}
-                                </View>
-                            ))}
-                            <BackButton />
-                        </InstructionsView>
-                    </StyledCard>
-                </CardView>
-            </Scroll>
-        </Container>
-    );
+        <CardView>
+          <StyledCard>
+            <CardTitle>{recipe.title}</CardTitle>
+            <CreditsText>Author:{recipe.creditsText}</CreditsText>
+            <View>
+              <StyledDataTable>
+                <DataTable.Header>
+                  <DataTable.Title>Prep time: </DataTable.Title>
+                  <DataTable.Title numeric> Cook time: </DataTable.Title>
+                  <DataTable.Title numeric> Total time: </DataTable.Title>
+                </DataTable.Header>
+
+                <DataTable.Row style={{ justifyContent: "center" }}>
+                  <DataTable.Cell numeric>
+                    {`${recipe.preparationMinutes}`} min
+                  </DataTable.Cell>
+                  <DataTable.Cell numeric>
+                    {`${recipe.cookingMinutes}`} min
+                  </DataTable.Cell>
+                  <DataTable.Cell numeric>
+                    {`${recipe.readyInMinutes}`} min
+                  </DataTable.Cell>
+                </DataTable.Row>
+              </StyledDataTable>
+            </View>
+
+            <IngredientsView>
+              <RecipeTitleTop>Ingredients:</RecipeTitleTop>
+              {recipe.missedIngredients.map(item => (
+                <View key={item.name}>
+                  <CheckBox
+                    key={item.id}
+                    title={item.originalString}
+                    checked={false}
+                    size={30}
+                    checkedColor="green"
+                  />
+                </View>
+              ))}
+            </IngredientsView>
+
+            <InstructionsView>
+              <RecipeTitle>Instructions:</RecipeTitle>
+              {recipe.analyzedInstructions.map((item, i) => (
+                <View key={i}>
+                  {item.steps.map((list, ind) => (
+                    <ListSteps key={ind}>{list.step}</ListSteps>
+                  ))}
+                </View>
+              ))}
+              <BackButton />
+            </InstructionsView>
+          </StyledCard>
+        </CardView>
+      </ScrollView>
+    </Container>
+  );
 };
-
 
 const Container = styled(View)`
   display: flex;
@@ -111,15 +100,10 @@ const Container = styled(View)`
   background-color: #f7fcfc;
 `;
 
-const Scroll = styled(ScrollView)`
- 
-`;
-
 const ImageContainer = styled.View`
-   margin-top:70px;
-    display: flex;
-    flex-direction: column;
-  
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledImageCard = styled(Card)`
@@ -127,7 +111,6 @@ const StyledImageCard = styled(Card)`
   flex-direction: column;
   background-color: #f0f0f0;
   height: 250px;
-  
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -137,7 +120,6 @@ const StyledImageCard = styled(Card)`
 `;
 
 const StyledImageBackground = styled(ImageBackground)`
-
   width: 100%;
   height: 200px;
   box-shadow: 5px 5px 5px black;
@@ -156,23 +138,20 @@ const StyledTitle = styled.Text`
 `;
 
 const CreditsText = styled.Text`
-
-text-align: left;
+  text-align: left;
   font-weight: 600;
   font-style: italic;
   font-size: 15px;
-  padding:10px;
+  padding: 10px;
   z-index: 2;
-`
+`;
 
-//titles
 const CardTitle = styled.Text`
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  margin:20px
+  margin: 20px;
 `;
-
 
 const RecipeTitleTop = styled.Text`
   text-align: center;
@@ -200,7 +179,7 @@ const ListSteps = styled.Text`
 `;
 
 const CardView = styled.View`
-margin-top:20px
+  margin-top: 20px;
   width: 100%;
   z-index: 1;
   display: flex;
@@ -218,10 +197,6 @@ const StyledCard = styled(Card)`
   border-radius: 8px;
   border: 0.75px solid #ffdf7f;
   z-index: 0;
-`;
-
-const TimeView = styled(View)`
- 
 `;
 
 const StyledDataTable = styled(DataTable)`
@@ -244,10 +219,7 @@ const IngredientsView = styled(View)`
 const InstructionsView = styled(View)`
   display: flex;
   flex-direction: column;
-  /* margin-top: 35px; */
-  padding-bottom:50px;
+  padding-bottom: 50px;
 `;
-
-
 
 export default Recepie;

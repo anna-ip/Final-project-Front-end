@@ -1,41 +1,24 @@
 import React, { useEffect, useState } from "react";
-import {
-  SafeAreaView,
-  ScrollView,
-  TouchableOpacity,
-
-  Text,
-
-  View
-} from "react-native";
+import { SafeAreaView, ScrollView, TouchableOpacity, View } from "react-native";
 import { Link } from "react-router-native";
 import RecepiesCards from "./RecepiesCards";
 import styled from "styled-components/native";
 import BackButton from "./lib/BackButton";
 import { PacmanIndicator } from "react-native-indicators";
 
+const Url = "https://final-backend-project-1.herokuapp.com/recipes/";
 
-const localUrl = "http://192.168.1.37:8080/recipes/";
-// 192.168.1.8
-
-
-const RecepieIndex = ({ history, location }) => {
+const RecepieIndex = ({ location }) => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
-
   const { veggie } = location.state;
-  console.log("In RecipeINDEX we have VEGGIE", veggie); // <---- WE WANT TO FIND THIS IN THE CONSOLE 👁👁👁👁👁👁👁👁👁👁👁
 
-  console.log("URL THAT WE TRY TO FETCH FROM:", localUrl + veggie.name);
-
-  // THIS WORKS ✅
   // fetching the recipies from DB here.
   // getting the name from that location.state that was passed from prev screen.
-  // setting recipies array to be from the fetch and then mapping through them to get the title to show up as a text. The cards needs to be filled of course. But at least this works :D
   useEffect(() => {
     setLoading(true);
-    fetch(localUrl + veggie.name)
+    fetch(Url + veggie.name)
       .then(res => res.json())
       .then(json => {
         setRecipes(json);
@@ -60,7 +43,6 @@ const RecepieIndex = ({ history, location }) => {
               component={TouchableOpacity}
               activeOpacity={0.8}
             >
-
               <CardContainer>
                 <View>
                   {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
@@ -81,12 +63,10 @@ const RecepieIndex = ({ history, location }) => {
   );
 };
 
-
-//StyledView is the background
+//StyledView = background
 const StyledView = styled.View`
   z-index: -1;
   margin-top: 180px;
- 
 `;
 
 const CardContainer = styled.View`
@@ -102,9 +82,9 @@ const CardView = styled.View`
 const BackButtonContainer = styled.View`
   position: absolute;
   display: flex;
-  align-self:center;
+  align-self: center;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   top: 380px;
   bottom: 5px;
   z-index: 2;

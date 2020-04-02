@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  View,
-  Image,
-  ScrollView,
-  TouchableHighlight,
-  TouchableOpacity,
-  SafeAreaView
-} from "react-native";
 import styled from "styled-components";
 import { withRouter } from "react-router-native";
 
@@ -28,25 +20,24 @@ const icons = {
 };
 
 const VeggieIcons = ({ history, veggies }) => {
-
   return (
     <Container>
-      <StyledScrollView horizontal={true}
+      <StyledScrollView
+        horizontal={true}
         showsHorizontalScrollIndicator={false}
       >
         <IconContainer>
           {veggies.map(item => (
             <Button
               key={item._id}
-              onPress={() => history.push("/RecepieIndex", { veggie: item })} >
+              onPress={() => history.push("/RecepieIndex", { veggie: item })}
+            >
               <Icon source={icons[item.name]} resizeMode="contain" />
             </Button>
           ))}
         </IconContainer>
-
       </StyledScrollView>
     </Container>
-
   );
 };
 
@@ -61,10 +52,9 @@ const Container = styled.SafeAreaView`
   margin: 5px;
 `;
 
-//this makes the icons start 10px into the scrollview
 const StyledScrollView = styled.ScrollView`
   padding-left: 10px;
-`
+`;
 
 const IconContainer = styled.SafeAreaView`
   display: flex;
