@@ -5,8 +5,9 @@ Sustain is an app that makes cooking vegetarian dinners easier, and fun for the 
 ## sustain V 2.0
 *In the next phase of development we would like to implement and fix some features*
 * Redux
-* implement a larger ingredient search functionality 
+* Improve search functionality and implement a larger ingredient libary for searching. 
 * expand sustainability information.
+* sign in page where users can save favourite recipes
 
 
 # Tech
