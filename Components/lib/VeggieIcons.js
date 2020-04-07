@@ -4,13 +4,13 @@ import { withRouter } from "react-router-native";
 
 const icons = {
   Asparagus: require("../assets/VeggiesIcons/Asparagus.png"),
-  Beetroot: require("../assets/VeggiesIcons/Beet.png"),
+  Beets: require("../assets/VeggiesIcons/Beet.png"),
   Broccoli: require("../assets/VeggiesIcons/Broccoli.png"),
   Cabbage: require("../assets/VeggiesIcons/Cabage.png"),
   Carrot: require("../assets/VeggiesIcons/Carrot.png"),
   Cauliflower: require("../assets/VeggiesIcons/Cauliflower.png"),
   Cucumber: require("../assets/VeggiesIcons/Cucumber.png"),
-  Aubergine: require("../assets/VeggiesIcons/Eggplant.png"),
+  Eggplant: require("../assets/VeggiesIcons/Eggplant.png"),
   Mushrooms: require("../assets/VeggiesIcons/Mushroom.png"),
   Pepper: require("../assets/VeggiesIcons/Pepper.png"),
   Potato: require("../assets/VeggiesIcons/Potato.png"),

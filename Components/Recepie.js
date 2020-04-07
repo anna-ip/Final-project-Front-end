@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, ScrollView, ImageBackground } from "react-native";
+import { View, ScrollView, ImageBackground, SafeAreaView } from "react-native";
 import { Card, DataTable } from "react-native-paper";
 import { CheckBox } from "react-native-elements";
 import SeasonalView from "./SeasonalView";
@@ -10,16 +10,18 @@ import { PacmanIndicator } from "react-native-indicators";
 
 const Recepie = ({ location }) => {
   const [loading, setLoading] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
-  const { recipe, veggie } = location.state; // destructurings recipes and veggies from location state
+  const { recipe, veggie } = location.state;
 
   return (
     <Container>
       <ScrollView>
         <ImageContainer>
           <CardView>
-            {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+            <SafeAreaView>
+              {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
+            </SafeAreaView>
             <StyledImageCard>
               <Card.Content key={recipe.id}>
                 <StyledImageBackground source={{ uri: recipe.image }}>
@@ -29,7 +31,6 @@ const Recepie = ({ location }) => {
             </StyledImageCard>
           </CardView>
         </ImageContainer>
-
         <ProgressCircle veggie={veggie} />
         <SeasonalView veggie={veggie} />
 
@@ -66,7 +67,7 @@ const Recepie = ({ location }) => {
                   <CheckBox
                     key={item.id}
                     title={item.originalString}
-                    checked={false}
+                    checked={true}
                     size={30}
                     checkedColor="green"
                   />

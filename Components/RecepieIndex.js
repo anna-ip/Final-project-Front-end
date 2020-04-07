@@ -14,8 +14,6 @@ const RecepieIndex = ({ location }) => {
 
   const { veggie } = location.state;
 
-  // fetching the recipies from DB here.
-  // getting the name from that location.state that was passed from prev screen.
   useEffect(() => {
     setLoading(true);
     fetch(Url + veggie.name)
@@ -29,6 +27,9 @@ const RecepieIndex = ({ location }) => {
   return (
     <SafeAreaView>
       <StyledView>
+        <Loading>
+          {loading && <PacmanIndicator color={"#7EDABE"} size={80} />}
+        </Loading>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           {recipes.map(recipe => (
             <Link
@@ -45,7 +46,6 @@ const RecepieIndex = ({ location }) => {
             >
               <CardContainer>
                 <View>
-                  {loading && <PacmanIndicator color={"#7EDABE"} size={60} />}
                   <CardView>
                     {!loading && <RecepiesCards recipe={recipe} />}
                   </CardView>
@@ -62,8 +62,8 @@ const RecepieIndex = ({ location }) => {
     </SafeAreaView>
   );
 };
+const Loading = styled.View``;
 
-//StyledView = background
 const StyledView = styled.View`
   z-index: -1;
   margin-top: 180px;

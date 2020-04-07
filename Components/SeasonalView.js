@@ -26,7 +26,7 @@ const SeasonalView = ({ veggie }) => {
           Check it out in Sweden <Highlight>{veggie.name}</Highlight> is
           available these months:
         </TextBox>
-        <MonthView>
+        <MonthView key={veggie.month}>
           {MONTHS.map(item => {
             if (veggie.month.includes(item)) {
               return (
@@ -37,7 +37,7 @@ const SeasonalView = ({ veggie }) => {
             } else {
               return (
                 <StyledAvatar>
-                  <Label>{item}</Label>
+                  <Label key={item}>{item}</Label>
                 </StyledAvatar>
               );
             }

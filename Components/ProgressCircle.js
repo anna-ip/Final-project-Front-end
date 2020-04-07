@@ -8,6 +8,7 @@ const progressCircle = ({ veggie }) => {
     <Container>
       <Title>{`${veggie.name}`}</Title>
       <ProgressCircle
+        key={veggie}
         percent={`${veggie.carbonprint * 100}`}
         radius={60}
         borderWidth={10}
@@ -15,13 +16,13 @@ const progressCircle = ({ veggie }) => {
         shadowColor="#999"
         bgColor="#fff"
       >
-        <Text style={{ fontSize: 18 }}>{`${veggie.carbonprint}`} CO2</Text>
+        <Text style={{ fontSize: 18 }}>{veggie.carbonprint} CO2</Text>
       </ProgressCircle>
 
       <Rubrik>
         {" "}
         4 portions of this recipe with {`${veggie.name}`} is the equivalent of{" "}
-        {`${veggie.carbonprint} CO2-Emission (kg)`}
+        {`${veggie.carbonprint}`}CO2-Emission (kg)
       </Rubrik>
     </Container>
   );

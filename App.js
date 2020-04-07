@@ -1,11 +1,14 @@
 import React from "react";
+import { SafeAreaView, View } from "react-native";
 import Routes from "./Components/Routes/Routes";
 import { NativeRouter, Switch } from "react-router-native";
 import styled from "styled-components/native";
+import TopHeader from "./Components/lib/TopHeader";
 
 const App = () => {
   return (
     <NativeRouter>
+      <TopHeader />
       <Container>
         <Switch>
           <Routes />
