@@ -19,4 +19,4 @@ Sustain is an app that makes cooking vegetarian dinners easier, and fun for the 
 
 # backend
 
-[Backend Github](https://github.com/anna-ip/Final-project-Front-end "Backend Github")
+[Backend Github](https://github.com/anna-ip/Final-project-backend "Backend Github")
