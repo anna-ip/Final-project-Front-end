@@ -17,6 +17,6 @@ Sustain is an app that makes cooking vegetarian dinners easier, and fun for the 
 * useEffect
 * Javascript
 
-# backend
+# Backend
 
 [Backend Github](https://github.com/anna-ip/Final-project-backend "Backend Github")
